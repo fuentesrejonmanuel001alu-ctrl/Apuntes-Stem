@@ -1,0 +1,19 @@
+<instituto>
+    <clase>
+        <alumno>
+            <nombre>Manu</nombre>
+            <edad>45</edad>
+            <nota>9</nota>
+
+        </alumno>
+        <alumno>
+            <nombre>Luis</nombre>
+            <edad>20</edad>
+            <nota>8</nota>
+        </alumno>
+    </clase>
+    <clase>
+    </clase>
+    <clase>
+    </clase>
+</instituto>
