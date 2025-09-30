@@ -1,0 +1,17 @@
+<script>
+        //Pide al usuario su salario anual e imprime el impuesto a pagar según estos tramos:
+
+        let salarioAnual = prompt("¿Cuál es tu salario anual?")
+        salarioAnual = Number(salarioAnual)
+
+        if (salarioAnual <= 10000) {
+                console.log("Pagas 0% impuestos")
+        } else if (salarioAnual > 10000 && salarioAnual <= 20000) {
+                console.log("Pagas 10% impuestos")
+        } else if (salarioAnual > 20000 && salarioAnual <= 40000) {
+                console.log("Pagas 20% impuestos")
+        } else {
+                console.log("Pagas 30% impuestos")
+        }
+
+</script>
