@@ -10,8 +10,6 @@ Git es un **sistema de control de versiones distribuido** que permite a los desa
 
 Un equipo de desarrollo está trabajando en una nueva funcionalidad para una aplicación. Uno de los desarrolladores crea una rama independiente para realizar sus cambios sin afectar al resto del equipo. Una vez que finaliza, puede fusionar sus cambios con la rama principal y, si es necesario, revertir a una versión anterior en caso de errores.-
 
-(#211-instalación-de-git-en-linux)
-    - [**2.1.3. Instalación de Git en Windows**](#213-instalación-de-git-en-windows)
 - [**2.1.1. Instalación de Git en Linux**](#211-instalación-de-git-en-linux)
     - [**2.1.3. Instalación de Git en Windows**](#213-instalación-de-git-en-windows)
   - [**2.2. Configuración Inicial de Git: Asociación de Nombre y Correo Electrónico**](#22-configuración-inicial-de-git-asociación-de-nombre-y-correo-electrónico)
