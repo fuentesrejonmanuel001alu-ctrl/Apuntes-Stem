@@ -1,22 +1,24 @@
 <script>
+
     let numero = prompt("Dime un número")
     numero = Number(numero)
-    contador = 2
+    let contador = 2
 
-    while (numero % contador != 0) {
-        contador++
-    }
-    if (numero == contador) {
+    while (numero % contador == 0) {
 
-        console.log(numero + " Es primo ")
-    }
-    else {
-        console.log(numero + " No es primo ")
+        contador = 2
 
-    while (contador < numero ) {
+        while (numero % contador != 0) {
+            contador++
+        }
+        if (numero == contador) {
 
-        if (contador ==)
-    }
+            console.log(numero + " Es primo ")
+        } else {
+            console.log(numero + " No es primo ")
+            numero++
+        }
+        console.log("fin del bucle interno");
 
     }
 </script>
