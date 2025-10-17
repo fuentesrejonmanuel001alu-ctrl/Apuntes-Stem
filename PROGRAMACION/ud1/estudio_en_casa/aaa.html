@@ -1,0 +1,21 @@
+<script>
+  //Solicitar un número entero. Calcular si el número introducido es primo o no, y si no lo es, calcular el siguiente número primo.
+  
+  let numero = Number(prompt("Dime un número"));
+  let contador = 2; // Ni el 0 ni el 1 son primos
+  let esPrimo = false
+
+  while (!esPrimo) {
+        contador=2
+
+    while (numero % contador !=0 && contador < numero) {
+        contador++
+
+    } if (numero == contador) {
+        esPrimo = true
+    } else {
+        numero++
+    }
+}
+        console.log("El siguiente número primo es " + numero)
+        
