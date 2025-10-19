@@ -1,0 +1,29 @@
+<script>
+    ////Crea un programa que reciba las calificaciones de N estudiantes 
+    //(se piden calificaciones hasta que el usuario introduzca un "-1") y calcule el 
+    //promedio. Luego muestra cuántos estudiantes están aprobados (>=5) y cuántos suspensos.
+
+    let nota = Number(prompt("Introduce la calificación del estudiante"))
+    let sumaNotas = 0
+    let contadorEstudiantes = 0
+    let aprobados = 0
+    let suspensos = 0
+    while (nota != -1) {
+        sumaNotas = sumaNotas + nota
+        contadorEstudiantes++
+        if (nota >= 5) {
+            aprobados++
+        } else {
+            suspensos++
+        }
+        nota = Number(prompt("Introduce la calificación del estudiante"))
+    }
+    if (contadorEstudiantes > 0) {
+        console.log("El promedio de las calificaciones es: " + (sumaNotas / contadorEstudiantes).toFixed(2))
+        console.log("Número de estudiantes aprobados: " + aprobados)
+        console.log("Número de estudiantes suspensos: " + suspensos)
+    } else {
+        console.log("No se introdujeron calificaciones.")
+    }
+    
+</script>
