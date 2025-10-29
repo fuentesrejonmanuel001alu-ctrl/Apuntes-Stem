@@ -77,15 +77,14 @@
     console.log("El promedio es: " + promedio.toFixed(2))
 
     ////* El coche más rápido
-    let tiempoMasRapido = Math.max(...respuestaTiempoCoche)
+    let tiempoMasRapido = Math.min(...respuestaTiempoCoche)
     let indiceMasRapido = respuestaTiempoCoche.indexOf(tiempoMasRapido)
     let cocheMasRapido = respuestaNombreCoche[indiceMasRapido]
 
     console.log("El coche más rápido es: " + cocheMasRapido + ", con un tiempo de: " + tiempoMasRapido)
 
     for (let i = 0; i < respuestaNombreCoche.length; i++) {
-        console.log(
-            "Nombre del coche " + (i + 1) + ": " + respuestaNombreCoche[i] + " | Tiempo en boxes: " + respuestaTiempoCoche[i] + " segundos")
+        console.log("Nombre del coche " + (i + 1) + ": " + respuestaNombreCoche[i] + " | Tiempo en boxes: " + respuestaTiempoCoche[i] + " segundos")
     }
 
 </script>
