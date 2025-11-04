@@ -1,5 +1,26 @@
 <script>
 
+let palabras = ["apple", "banana", "kiwi", "watermelon"]
+
+let longitudPalabra = [] //Creamos un array vacío para introducir nuevas palabras que usaremos para usar el length
+
+let palabraMasLarga = ""
+
+for (let i= 0; i<palabras.length; i++) { //Recorremos el array. Son números, no letras
+
+longitudPalabra.push(palabras[i].length) // La [i] significa que empiezas a hacer cada recorrido desde 0 (primera posición) a lo largo de la longitud
+
+
+}
+
+palabraMasLarga= Math.max(...longitudPalabra) //Math.max solo recorre números. Por ahora, no cuenta letras. Ahora nos mostraría el número 10 (de watermelon)
+
+
+let indice = longitudPalabra.indexOf(palabraMasLarga) // Con esta variable y esta conversión, ya tenemos la palabra.
+palabraMasLarga = palabras[indice]
+
+
+console.log(palabraMasLarga)
 
 
 
