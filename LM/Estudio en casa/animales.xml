@@ -1,4 +1,4 @@
-<!DOCTYPE animales SYSTEM, "animales_externa.dtd">
+<!DOCTYPE animales SYSTEM "animales_externa.dtd">
 
 <animales>
     <tipos>
