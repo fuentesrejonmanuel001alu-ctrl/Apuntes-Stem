@@ -1,0 +1,26 @@
+<script>
+
+
+//Dado un array de números, crea dos nuevos arrays: 
+// uno que contenga solo los números pares y otro que contenga solo los números impares.
+//Ejemplo: [1, 2, 3, 4, 5, 6] debería devolver [[2, 4, 6], [1, 3, 5]].
+
+let numeros = [1, 2, 3, 4, 5, 6]
+
+let pares =[]
+
+let impares=[]
+
+for (let i= 0; i<numeros.length; i++) {
+    if(numeros[i] % 2== 0) {
+        pares.push(numeros[i])
+    }else {
+        impares.push(numeros[i])
+    }
+}
+console.log(pares.join(", "))
+console.log(impares.join(", "))
+
+
+
+</script>
