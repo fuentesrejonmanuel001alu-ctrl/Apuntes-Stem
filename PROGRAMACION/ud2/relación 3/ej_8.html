@@ -1,0 +1,24 @@
+<script>
+
+//Tienes un array de números y un número X. 
+// Escribe una función que devuelva el primer número en el array que sea mayor que X. 
+// Si no hay ninguno, que devuelva null.
+//Ejemplo: [10, 20, 30, 40, 50] y X = 25 debería devolver 30.
+
+let numeros = [10, 20, 30, 40, 50]
+
+let x=25
+
+let resultado =null
+
+
+for(let i=0; i<numeros.length; i++){
+
+    if(x<numeros[i] && resultado ==null){
+        resultado= numeros[i]
+    }
+}
+console.log(resultado)
+
+
+</script>

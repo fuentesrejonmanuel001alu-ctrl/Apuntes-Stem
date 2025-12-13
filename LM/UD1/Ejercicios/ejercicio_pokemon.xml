@@ -1,0 +1,25 @@
+<script>
+//Ejercicio 1
+
+!DOCTYPE pokemon
+
+!ELEMENT pokemon (nombre, tipo, nivel)
+
+!ELEMENT nombre (#PCDATA)>
+!ELEMENT tipo (#PCDATA)>
+!ELEMENT nivel(#PACDATA)>
+
+//Ejercicio 2
+
+<equipo>
+    <pokemon></pokemon>
+    <tipo></tipo>
+    <nivel></nivel>>
+</equipo>
+
+
+
+</pokemon<>
+
+//Ejercicio 3
+</script>

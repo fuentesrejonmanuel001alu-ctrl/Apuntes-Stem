@@ -1,0 +1,6 @@
+
+<!ELEMENT ropa (camisas)>
+<!ELEMENT camisas (camisa+)>
+<!ELEMENT camisa (tipo, color)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT color (#PCDATA)>

@@ -1,0 +1,213 @@
+<ul>
+    <li>Leche</li> <li>Pan</li>
+    <li>Huevos</li>
+</ul>
+
+<ol>
+    <li>Abrir el coche</li>
+    <li>Meter la llave</li>
+    <li>Arrancar</li>
+</ol>
+
+<ul>
+    <li>Frutas
+        <ul> <li>Manzana</li>
+            <li>Pera</li>
+        </ul> </li> <li>Verduras</li>
+</ul>
+
+//Aquí el truco es ser ordenado. Imagina la tabla fila a fila.
+
+//<table>: El contenedor.
+
+//<tr>: "Table Row" (Fila).
+
+//<th>: "Table Header" (Celda de título, sale en negrita y centrada).
+
+//<td>: "Table Data" (Celda normal con datos).
+
+//⚠️ LO MÁS IMPORTANTE DEL EXAMEN (Fusión de celdas):
+
+//colspan="2": Fusiona 2 columnas (ocupa 2 huecos a la derecha).
+
+//rowspan="2": Fusiona 2 filas (ocupa 2 huecos hacia abajo).
+
+<table border="1">
+    
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Nota</th>
+    </tr>
+
+    <tr>
+        <td>Juan</td>
+        <td>Pérez</td>
+        <td>8.5</td>
+    </tr>
+
+    <tr>
+        <td>Ana</td>
+        <td colspan="2">No presentado (Baja médica)</td>
+    </tr>
+
+    <tr>
+        <td rowspan="2">Grupo B</td> 
+        <td>Carlos</td>
+        <td>5.0</td>
+    </tr>
+    <tr>
+        <td>María</td>
+        <td>9.0</td>
+    </tr>
+
+</table>
+
+
+
+<form action="#" method="post">
+    ¡Cambio de chip activado! 🧠⚡
+
+Olvida XML, XSLT y las validaciones. Volvemos al HTML puro y duro.
+
+Para un examen práctico de Lenguaje de Marcas, lo normal es que te pidan replicar una estructura visual. Aquí tienes tu "Chuleta Maestra".
+
+Te lo he preparado en 3 Bloques (Listas, Tablas, Formularios). Copia estos códigos en tu editor para verlos y léete los comentarios, que es donde está la explicación.
+
+1. LISTAS (Lo más fácil)
+Hay dos tipos principales. La clave es no olvidar cerrar las etiquetas </li>.
+
+HTML
+
+<ul>
+    <li>Leche</li> <li>Pan</li>
+    <li>Huevos</li>
+</ul>
+
+<ol>
+    <li>Abrir el coche</li>
+    <li>Meter la llave</li>
+    <li>Arrancar</li>
+</ol>
+
+<ul>
+    <li>Frutas
+        <ul> <li>Manzana</li>
+            <li>Pera</li>
+        </ul> </li> <li>Verduras</li>
+</ul>
+2. TABLAS (Donde suele haber fallos)
+Aquí el truco es ser ordenado. Imagina la tabla fila a fila.
+
+<table>: El contenedor.
+
+<tr>: "Table Row" (Fila).
+
+<th>: "Table Header" (Celda de título, sale en negrita y centrada).
+
+<td>: "Table Data" (Celda normal con datos).
+
+⚠️ LO MÁS IMPORTANTE DEL EXAMEN (Fusión de celdas):
+
+colspan="2": Fusiona 2 columnas (ocupa 2 huecos a la derecha).
+
+rowspan="2": Fusiona 2 filas (ocupa 2 huecos hacia abajo).
+
+HTML
+
+<table border="1">
+    
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Nota</th>
+    </tr>
+
+    <tr>
+        <td>Juan</td>
+        <td>Pérez</td>
+        <td>8.5</td>
+    </tr>
+
+    <tr>
+        <td>Ana</td>
+        <td colspan="2">No presentado (Baja médica)</td>
+    </tr>
+
+    <tr>
+        <td rowspan="2">Grupo B</td> 
+        <td>Carlos</td>
+        <td>5.0</td>
+    </tr>
+    <tr>
+        <td>María</td>
+        <td>9.0</td>
+    </tr>
+
+</table>
+//3. FORMULARIOS (El bloque largo)
+//El truco aquí son los atributos:
+
+//type="...": Define qué es (texto, fecha, botón...).
+
+//name="...": OBLIGATORIO. Es el nombre interno para que se envíen los datos.
+
+//id="..." y for="...": Sirven para vincular el texto (label) con la cajita (input). Deben ser iguales.
+
+//placeholder="...": El texto gris de ayuda que desaparece al escribir.
+
+//required: Hace que no puedas enviar si está vacío.
+  
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí" required>
+    <br><br>
+
+    <label for="pass">Contraseña:</label>
+    <input type="password" id="pass" name="password">
+    <br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" min="18" max="99">
+    <br><br>
+
+    <label for="nacimiento">Fecha nacimiento:</label>
+    <input type="date" id="nacimiento" name="fecha">
+    <br><br>
+
+    <p>Sexo:</p>
+    <input type="radio" id="hombre" name="sexo" value="h">
+    <label for="hombre">Hombre</label>
+    
+    <input type="radio" id="mujer" name="sexo" value="m">
+    <label for="mujer">Mujer</label>
+    <br><br>
+
+    <p>Aficiones:</p>
+    <input type="checkbox" id="deporte" name="aficiones" value="deporte">
+    <label for="deporte">Deporte</label>
+
+    <input type="checkbox" id="cine" name="aficiones" value="cine" checked> <label for="cine">Cine</label>
+    <br><br>
+
+    <label for="ciudad">Ciudad:</label>
+    <select id="ciudad" name="ciudad">
+        <option value="madrid">Madrid</option>
+        <option value="bcn">Barcelona</option>
+        <option value="grx" selected>Granada</option> </select>
+    <br><br>
+
+    <label for="mensaje">Comentarios:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+    <br><br>
+
+    <input type="submit" value="Enviar Datos">
+    <input type="reset" value="Borrar todo">
+
+</form>
+
+3 Consejos de Oro para el examen de mañana:
+Cierra siempre las etiquetas: Si abres un <table> y no pones </table> al final, se rompe todo.
+
+Tablas: Si te lías con un colspan o rowspan, dibuja la tabla en un papel sucio primero. Tacha las celdas que se fusionan para saber cuáles NO tienes que escribir en el código.
+
+Radio Buttons: Si el profesor pide "Elige una opción" y te deja marcar las dos a la vez, es que has puesto name distintos. Ponles el mismo name (ej: name="opcion") y se arregla.
