@@ -1,0 +1,31 @@
+<script>
+
+    //Pide dos números y una operación (+, -, *, /) e imprime el resultado correspondiente.
+
+    let num1 = Number(prompt("Dime un número"))
+    let num2 = Number(prompt("Dime otro número"))
+    let operacion = prompt("Elige si quieres multiplicar (*), sumar(+), restar(-) o dividir(/)")
+
+    if (isNaN(num1) || (isNaN(num2))) {
+        alert("Ambos valores tienen que ser números enteros")
+    } else {
+
+        if (operacion == "+") {
+            console.log("El resultado es: " + (num1 + num2))
+        } else if (operacion == "-") {
+            console.log("El resultado es " + (num1 - num2))
+        } else if (operacion == "*") {
+            console.log("El resultado es " + (num1 * num2))
+        } else if (operacion == "/") {
+            if (num2 == 0) {
+                alert("Introduce otro número o vuelve a hacer otra operación")
+            } else {
+                console.log("El resultado es " + (num1 / num2))
+            }
+        } else {
+
+        }
+    }
+
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+
+    //Pide al usuario cuántos caramelos tiene y cuántos niños hay. 
+    //Calcula cuántos caramelos recibe cada niño y cuántos sobran.
+
+    let numeroCaramelos = parseInt(prompt("¿Cuántos caramelos tienes?"))
+    let numeroNinios = parseInt(prompt("¿Cuántos niños hay?"))
+
+    if (isNaN(numeroCaramelos) || (isNaN(numeroNinios))) {
+        alert("Deben ser números mayores de 0")
+    } else {
+
+        let caramelosNinio = numeroCaramelos / numeroNinios
+        let caramelosSobran = numeroCaramelos % numeroNinios
+
+        console.log("Caramelos a cada niño:" + caramelosNinio.toFixed() + " caramelos y sobran " + caramelosSobran.toFixed())
+        console.log("Caramelos a cada niño: " + caramelosNinio.toFixed() + " | " + "Caramelos sobrantes: " + caramelosSobran.toFixed())
+
+    }
+
+
+
+</script>
