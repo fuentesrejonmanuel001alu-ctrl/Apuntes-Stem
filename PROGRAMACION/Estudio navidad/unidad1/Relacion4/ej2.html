@@ -1,0 +1,25 @@
+<script>
+
+    //Escribe un programa que pida al usuario un número secreto (entre 1 y 10).
+    //Después, el programa debe pedir al jugador que adivine el número hasta que lo consiga,
+    //mostrando un mensaje de “Intenta de nuevo” cuando falle.
+    //Cuando acierte, debe mostrar:
+
+    //¡Correcto! Has adivinado el número.
+
+    let numeroSecreto = 9
+    let adivinaNumero = Number(prompt("Dime un número secreto"))
+
+    if (isNaN(adivinaNumero) || (adivinaNumero < 0 || adivinaNumero > 10)) {
+        alert("Tiene que ser un número entero menor de 10")
+    } else {
+        while (adivinaNumero != numeroSecreto) {
+            alert("Inténtalo de nuevo")
+            adivinaNumero = Number(prompt("Dime un número secreto"))            
+        }
+        console.log("¡Correcto! Has adivinado el número")
+
+    }
+
+
+</script>
