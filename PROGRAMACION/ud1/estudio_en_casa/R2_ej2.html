@@ -1,0 +1,12 @@
+<script>
+
+//Pide al usuario el total de una cuenta y el porcentaje de propina que quiere dejar. Calcula y muestra la propina.
+
+    let totalCuenta = Number(prompt("Dime cuánto ha sido la cuenta"))
+    let porcentajePropina= Number(prompt("Dime cuánto vas a dejar de propina"))
+    let propina = totalCuenta * (porcentajePropina/100)
+    let totalApagar = totalCuenta + propina
+    console.log(" El % de " + porcentajePropina + " sobre " + totalCuenta + " es " + totalApagar +  " €")
+
+
+    </script>

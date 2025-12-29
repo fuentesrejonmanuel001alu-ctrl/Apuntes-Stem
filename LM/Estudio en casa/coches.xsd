@@ -1,0 +1,49 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="coches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="coche" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="marca" type="xs:string"/>
+              <xs:element name="modelo" type="xs:string"/>
+              <xs:element name="año" type="xs:gYear"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+// Corregido por chatgpt
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="coches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="coche" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="marca" type="xs:string"/>
+              <xs:element name="modelo" type="xs:string"/>
+              <xs:element name="año" type="xs:gYear"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+           
+
+<coches>
+    <coche>
+        <marca>Ford</marca>
+        <modelo>Mustang</modelo>
+        <año>2020</año>
+    </coche>
+    <coche>
+        <marca>Chevrolet</marca>
+        <modelo>Camaro</modelo>
+        <año>2021</año>
+</coches>

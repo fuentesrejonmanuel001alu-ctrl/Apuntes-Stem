@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE animales SYSTEM "animales_externa.dtd">
+
+<animales>
+    <tipos>
+        <perros>
+            <perro>
+                <raza>caniche</raza>
+                <peso>4</peso>
+                <color>blanco</color>
+            </perro>
+            <perro>
+                <raza>pekines</raza>
+                <peso>5</peso>
+                <color>marron</color>
+            </perro>
+        </perros>
+        <gatos>
+            <gato>
+                <raza>siames</raza>
+                <peso>3</peso>
+                <color>gris</color>
+            </gato>
+            <gato>
+                <raza>persa</raza>
+                <peso>2</peso>
+                <color>negro</color>
+            </gato>
+        </gatos>
+    </tipos>
+</animales>

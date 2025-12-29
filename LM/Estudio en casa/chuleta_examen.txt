@@ -1,0 +1,158 @@
+Tipo de dato	Cómo se escribe en XSD	Qué representa
+Texto	type="xs:string"	Palabras, frases, letras
+Número entero	type="xs:integer"	Números sin decimales
+Número decimal	type="xs:decimal"	Números con decimales
+Número real (científico)	type="xs:float"	Valores con punto o notación científica
+Verdadero/Falso	type="xs:boolean"	true o false
+Año	type="xs:gYear"	Solo el año (2025)
+Fecha	type="xs:date"	Año-mes-día (2025-10-09)
+Hora	type="xs:time"	Hora (15:30:00)
+Fecha y hora	type="xs:dateTime"	Fecha completa con hora
+Enlace web	type="xs:anyURI"	URL o enlace (https://...)
+Correo (sin patrón)	type="xs:string"	Email simple, se valida solo como texto
+
+📘 Ejemplo rápido de uso:
+
+<xs:element name="nombre" type="xs:string"/>
+<xs:element name="edad" type="xs:integer"/>
+<xs:element name="precio" type="xs:decimal"/>
+<xs:element name="año" type="xs:gYear"/>
+<xs:element name="fechaCompra" type="xs:date"/>
+
+Tabla de ejemplos comunes (para memorizar)
+Lo que quieres permitir	Código del patrón (xs:pattern value="...")	Qué significa
+Solo letras mayúsculas (A–Z)	[A-Z]+	Solo letras grandes
+Solo letras minúsculas (a–z)	[a-z]+	Solo letras pequeñas
+Letras mayúsculas y minúsculas	[A-Za-z]+	Cualquier letra del alfabeto
+Letras y espacios	[A-Za-z ]+	Palabras con espacios
+Letras, espacios y tildes	[A-Za-zÁÉÍÓÚáéíóúÜüÑñ ]+	Nombres con acentos o eñes
+Letras y números	[A-Za-z0-9]+	Por ejemplo: “abc123”
+Email básico	[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}	Formato típico de email
+Solo números (sin decimales)	[0-9]+	Solo dígitos
+Teléfono (9 cifras)	[0-9]{9}	Exactamente 9 números
+🧠 Ejemplo completo con el patrón de letras A–Z
+<xs:element name="nombre">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+Cómo validar un email en XSD
+<xs:element name="email">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+🧩 Qué significa cada parte:
+Parte del patrón	Significado
+[A-Za-z0-9._%+-]+	Letras, números o símbolos como . _ % + - antes de la @
+@	Debe haber una arroba obligatoriamente
+[A-Za-z0-9.-]+	Dominio (por ejemplo, “gmail” o “hotmail”)
+\.	Punto antes del dominio final
+[A-Za-z]{2,}	Al menos dos letras (com, es, org...)
+
+✅ Ejemplos válidos:
+
+manuel@gmail.com
+
+m_fuentes23@iesmarques.es
+
+usuario.test@empresa.org
+
+❌ Ejemplos inválidos:
+
+manuelgmail.com (falta la @)
+
+manu@ (falta dominio)
+
+@gmail.com (falta nombre)
+
+¿Quieres que te lo deje también adaptado a un ejemplo completo dentro de un XML real, tipo <persona> con nombre, email y teléfono, para practicar luego?
+
+Tú dijiste:
+¿por qué restriction base, pattern value y simpleType?
+ChatGPT Plus
+
+Excelente pregunta, Manu 👏
+Esa es la base de cómo funcionan las validaciones en XSD, y te lo explico claro y corto, para que te quede mecanizado:
+
+🧩 1️⃣ <xs:simpleType>
+
+➡️ Significa que el contenido del elemento es simple (texto, número, fecha…),
+no tiene hijos dentro (no hay más etiquetas dentro).
+Por ejemplo: <email>manuel@gmail.com</email>
+
+🧩 2️⃣ <xs:restriction base="xs:string">
+
+➡️ “Voy a restringir o limitar un tipo de dato básico.”
+En este caso, parto del tipo xs:string (texto),
+pero le impongo una condición especial (como un patrón, longitud, etc.).
+
+🧩 3️⃣ <xs:pattern value="...">
+
+➡️ Aquí le digo la forma exacta que debe tener ese texto (usando una expresión regular).
+Por ejemplo, [A-Za-z]+ o [0-9]{9} o el del email que vimos.
+
+🧠 Esquema mental fácil:
+Parte	Significa	Ejemplo mental
+simpleType	Es texto simple	“Solo texto, no etiquetas dentro”
+restriction	Quiero limitar ese tipo	“Debe cumplir una condición”
+base="xs:string"	Tipo base: texto	“Empiezo con un tipo de texto”
+pattern value="..."	Reglas de forma	“Debe tener este formato exacto”
+
+🔹 En resumen:
+👉 simpleType = texto simple
+👉 restriction = limitar ese texto
+👉 pattern = definir la forma concreta que debe tener
+
+
+📞 Ejemplo 1: Teléfono (9 cifras exactas)
+<xs:element name="telefono">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+
+👉 Traducción mental:
+
+Es un texto simple (simpleType)
+
+Lo restringimos (restriction)
+
+Debe tener exactamente 9 dígitos (pattern [0-9]{9})
+
+✅ Válido: <telefono>654789123</telefono>
+❌ Inválido: <telefono>65478912</telefono> (solo 8 dígitos)
+
+📅 Ejemplo 2: Año (formato AAAA)
+<xs:element name="año">
+  <xs:simpleType>
+    <xs:restriction base="xs:gYear"/>
+  </xs:simpleType>
+</xs:element>
+
+
+👉 Aquí no hace falta pattern, porque xs:gYear ya valida el formato de año (por ejemplo, 2025).
+
+✅ Válido: <año>2025</año>
+❌ Inválido: <año>25</año> o <año>2025-10-09</año>
+
+🧠 Resumen para mecanizar:
+
+Dato que quiero validar	Tipo base o patrón que uso
+Texto normal	xs:string
+Solo letras A–Z	pattern="[A-Za-z]+"
+Solo números	pattern="[0-9]+"
+Teléfono (9 dígitos)	pattern="[0-9]{9}"
+Email	pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+Año	base="xs:gYear"
+Fecha completa (AAAA-MM-DD)	base="xs:date"
+Decimal o dinero	base="xs:decimal"

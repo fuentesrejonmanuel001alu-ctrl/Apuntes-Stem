@@ -1,0 +1,22 @@
+<script>
+  // Solicita el promedio académico del estudiante y su ingreso familiar anual:
+  //- Si tiene un promedio mayor o igual a 8 y su ingreso es menor a 20.000€, recibe una beca completa.
+  //- Si tiene un promedio mayor o igual a 8, pero su ingreso es mayor a 20.000€, recibe una beca parcial.
+  //- Si tiene un promedio menor a 8, no recibe beca.
+
+  let promedioAcademico = parseFloat(prompt("Dime tu promedio"));
+  let ingresoFamiliar = parseFloat(prompt("Dime tu ingreso familiar"));
+
+  const promedio = 8;
+  const renta = 20000;
+
+  if (promedioAcademico >= promedio && ingresoFamiliar < renta) {
+    console.log("Recibes una beca");
+  } else if (promedioAcademico >= promedio && ingresoFamiliar > renta) {
+    console.log("Recibes una beca parcial");
+  } else if (promedioAcademico < renta) {
+    console.log("no recibes beca");
+  } else {
+    console.log("Datos incorrectos");
+  }
+</script>

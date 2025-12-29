@@ -1,0 +1,23 @@
+<libros>
+
+    <libro>
+        <titulo>Titulo1</titulo>
+        <autor>Autor1</autor>
+        <anio>2020</anio>
+        <editorial>Editorial1</editorial>
+    </libro>
+
+    <libro>
+        <titulo>Titulo2</titulo>
+        <autor>Autor2</autor>
+        <anio>2020</anio>
+        <editorial>Editorial2</editorial>
+    </libro>
+
+    <libro>
+        <titulo>Titulo3</titulo>
+        <autor>Autor3</autor>
+        <anio>2020</anio>
+        <editorial>Editorial3</editorial>
+    </libro>
+</libros>

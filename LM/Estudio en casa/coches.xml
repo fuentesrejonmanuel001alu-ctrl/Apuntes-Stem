@@ -1,0 +1,13 @@
+<!DOCTYPE coches SYSTEM "coches_dtd_externa.dtd">
+
+<coches>
+    <coche>
+        <marca>Ford</marca>
+        <modelo>Mustang</modelo>
+        <año>2020</año>
+    </coche>
+    <coche>
+        <marca>Chevrolet</marca>
+        <modelo>Camaro</modelo>
+        <año>2021</año>
+</coches>

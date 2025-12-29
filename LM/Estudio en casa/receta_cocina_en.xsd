@@ -1,0 +1,28 @@
+<xs: schema xmlns: xs="http://www.w3.org/2001/XMLSchema">
+    <xs: element name="receta_cocina">
+        <xs: complexType>
+            <xs: sequence>
+                <xs: element name="nombre" type="xs:string"/>
+                <xs: element name="ingredientes">
+                    <xs: complexType>
+                        <xs: sequence>
+                            <xs: element name="ingrediente" type="xs:string" maxOccurs="unbounded"/>
+                        </xs: sequence>
+                    </xs: complexType>
+                </xs: element>
+                <xs: element name="tiempo" type="xs:string"/>
+            </xs: sequence>
+        </xs: complexType>
+    </xs: element>
+</xs: schema>
+
+<receta>
+    <nombre>Paella</nombre>
+    <ingredientes>
+        <ingrediente>Arroz</ingrediente>
+        <ingrediente>Pollo</ingrediente>
+        <ingrediente>Mariscos</ingrediente>
+        <ingrediente>Azafrán</ingrediente>
+    </ingredientes>
+    <tiempo>60 minutos</tiempo>
+</receta>

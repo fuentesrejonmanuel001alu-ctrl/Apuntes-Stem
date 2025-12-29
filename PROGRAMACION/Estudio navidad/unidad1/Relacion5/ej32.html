@@ -1,0 +1,28 @@
+<script>
+
+//Solicitar dos números enteros. 
+//Dibujar un cuadrado con tantas filas como indique el primer número introducido 
+//y tantas columnas como indique el segundo número.
+
+let filas = Number(prompt("Dime el número de filas:"));
+let columnas = Number(prompt("Dime el número de columnas:"));
+
+// 1. Fabricamos la fila "modelo" (ej: x-x-x)
+let filaModelo = "";
+for (let j = 1; j <= columnas; j++) {
+    filaModelo += "x";
+    
+    // Si NO es la última columna, añadimos el separador
+    if (j < columnas) {
+        filaModelo += "-";
+    }
+}
+
+// 2. Imprimimos esa fila tantas veces como filas nos pidieron
+for (let i = 1; i <= filas; i++) {
+    console.log(filaModelo);
+}
+
+
+    
+</script>

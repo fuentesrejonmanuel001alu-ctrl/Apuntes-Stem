@@ -1,0 +1,23 @@
+<script>
+
+    //Pide al usuario una cantidad de minutos y conviértela a horas y minutos 
+    //(por ejemplo, 150 minutos son 2 horas y 30 minutos).
+
+
+    let tiempoMinutos = parseInt(prompt("Dime una cantidad en minutos"))
+
+    if (isNaN(tiempoMinutos)) {
+        alert("Diga un número entero")
+    } else {
+
+
+        const minutosEnHoras = parseInt(tiempoMinutos / 60)
+
+        const restoMinutos = tiempoMinutos % 60
+
+        console.log(tiempoMinutos + " minutos son " + minutosEnHoras + " horas y " + restoMinutos + " minutos")
+    }
+
+
+
+</script>

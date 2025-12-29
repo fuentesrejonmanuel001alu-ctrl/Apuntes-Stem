@@ -1,0 +1,418 @@
+<script>
+
+let nombresEstudiantes = []
+let calificacionesEstudiantes = []
+
+let aniadirNombre = ""
+let aniadirCalificacion = 0
+let promedio = 0
+let sumaCalificaciones = 0
+let indice = 0
+let notaMasAlta = 0
+let notaMasBaja = 0
+
+let opcion = 0
+
+while (opcion != 5) {
+
+    opcion = Number(prompt(
+      "Selecciona una de las opciones:\n" +
+      "1. Añadir un estudiante y su calificación.\n" +
+      "2. Mostrar la calificación promedio de la clase.\n" +
+      "3. Mostrar la calificación más alta y el nombre del estudiante correspondiente.\n" +
+      "4. Mostrar la calificación más baja y el nombre del estudiante correspondiente.\n" +
+      "5. Salir del programa."
+    ))
+
+    if (opcion == 1) {
+        // Añadir estudiante
+        aniadirNombre = prompt("Dime el nombre del estudiante:")
+        aniadirCalificacion = parseFloat(prompt("Dime la calificación:"))
+
+        nombresEstudiantes.push(aniadirNombre)
+        calificacionesEstudiantes.push(aniadirCalificacion)
+
+        console.log("✅ Estudiante añadido correctamente.")
+        console.log("Lista actual de estudiantes y notas:")
+        for (let i = 0; i < nombresEstudiantes.length; i++) {
+            console.log(nombresEstudiantes[i] + " → " + calificacionesEstudiantes[i])
+        }
+
+    } else if (opcion == 2) {
+        // Promedio
+        if (calificacionesEstudiantes.length == 0) {
+            console.log("⚠️ No hay calificaciones registradas aún.")
+        } else {
+            sumaCalificaciones = 0
+            for (let i = 0; i < calificacionesEstudiantes.length; i++) {
+                sumaCalificaciones += calificacionesEstudiantes[i]
+            }
+            promedio = sumaCalificaciones / calificacionesEstudiantes.length
+            console.log("📊 La calificación media es: " + promedio.toFixed(2))
+        }
+
+    } else if (opcion == 3) {
+        // Nota más alta
+        if (calificacionesEstudiantes.length == 0) {
+            console.log("⚠️ No hay calificaciones registradas aún.")
+        } else {
+            notaMasAlta = Math.max(...calificacionesEstudiantes)
+            indice = calificacionesEstudiantes.indexOf(notaMasAlta)
+            console.log("🏆 La nota más alta es " + notaMasAlta + " y es de " + nombresEstudiantes[indice])
+        }
+
+    } else if (opcion == 4) {
+        // Nota más baja
+        if (calificacionesEstudiantes.length == 0) {
+            console.log("⚠️ No hay calificaciones registradas aún.")
+        } else {
+            notaMasBaja = Math.min(...calificacionesEstudiantes)
+            indice = calificacionesEstudiantes.indexOf(notaMasBaja)
+            console.log("📉 La nota más baja es " + notaMasBaja + " y es de " + nombresEstudiantes[indice])
+        }
+
+    } else if (opcion == 5) {
+        console.log("👋 Saliendo del programa...")
+    } else {
+        console.log("❌ Opción no válida. Inténtalo de nuevo.")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

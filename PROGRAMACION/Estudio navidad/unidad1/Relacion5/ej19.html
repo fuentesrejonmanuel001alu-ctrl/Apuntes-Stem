@@ -1,0 +1,18 @@
+<script>
+
+//Solicitar dos números enteros. 
+//Mostrar el siguiente número múltiplo del primer número introducido, 
+//a partir del segundo número introducido.
+
+let multiplo =Number(prompt("Dime un número múltiplo que busques"))
+let inicio =Number(prompt("Dime a partir de qué número lo buscas"))
+
+inicio++
+
+while(inicio % multiplo !==0){
+    inicio++
+}
+
+console.log("El siguiente múltiplo de " + multiplo + " es: " + inicio);
+
+</script>

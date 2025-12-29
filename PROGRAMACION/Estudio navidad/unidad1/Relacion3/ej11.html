@@ -1,0 +1,32 @@
+<script>
+
+    //Solicita un número del 1 al 7 e imprime el día de la semana correspondiente (1 para lunes, 2 para martes, etc.).
+
+    let diaSemana = Number(prompt("Dime un número del 1 al 7"))
+
+    if (isNaN(diaSemana) || diaSemana < 1 || diaSemana >=8) {
+        alert("Error. Tiene que ser un número comprendido entre 1 y 7")
+    } else {
+
+        if (diaSemana == 1) {
+            console.log("El día de la semana es lunes")
+        } else if (diaSemana == 2) {
+            console.log("El día de la semana es martes")
+        } else if (diaSemana == 3) {
+            console.log("El día de la semana es miércoles")
+        } else if (diaSemana == 4) {
+            console.log("El día de la semana es jueves")
+        } else if (diaSemana == 5) {
+            console.log("El día de la semana es viernes")
+        } else if (diaSemana == 6) {
+            console.log("El día de la semana es sábado")
+        } else if (diaSemana == 7) {
+            console.log("El día de la semana es domingo")
+        } else {
+
+        }
+    }
+
+
+
+</script>

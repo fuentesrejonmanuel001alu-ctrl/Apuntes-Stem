@@ -1,0 +1,9 @@
+<script>
+  //Solicitar un número entero. Mostrar el siguiente número múltiplo de 2, 3 y 5 a partir del número.
+  let numero = parseInt(prompt("Dime un número"));
+  numero++;
+  while (numero % 2 !== 0 || numero % 3 !== 0 || numero % 5 !== 0) {
+    numero++;
+  }
+  console.log("El siguiente número es " + numero);
+</script>

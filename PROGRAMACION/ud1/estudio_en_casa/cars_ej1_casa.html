@@ -1,0 +1,54 @@
+<script>
+
+    //Este ejercicio cambia a forma final de conseguir el coche más rápido
+
+
+    let nombreCoche = prompt("Dime el nombre del coche")
+    const cochesCars = ["Rayo McQueen", "Mate", "Sally", "Luigi", "Doc Hudson"]
+
+    let respuestaCoche = []
+    let tiemposCoches = []
+    let sumaTiemposCoches = 0
+    let promedio = ""
+    let tiempoMasRapido = tiemposCoches[0]
+    let cocheMasRapido = respuestaCoche[0]
+
+
+    while (nombreCoche != "FIN") {
+
+        if (cochesCars.includes(nombreCoche)) {
+            respuestaCoche.push(nombreCoche)
+
+            let tiempoCoche = parseFloat(prompt("Dime qué tiempo ha hecho"))
+            tiemposCoches.push(tiempoCoche)
+
+            nombreCoche = prompt("Dime otro nombre de coche")
+
+        } else {
+            nombreCoche = prompt("Dime otro nombre de coche")
+
+        }
+
+    }
+
+    console.log("El número total de coches es: " + respuestaCoche.length)
+
+    for (let i = 0; i < tiemposCoches.length; i++) {
+        sumaTiemposCoches += tiemposCoches[i]
+    }
+
+    promedio = sumaTiemposCoches / respuestaCoche.length
+    console.log("El promedio de los coches es: " + promedio)
+
+    for (let i = 1; i < tiemposCoches.length; i++) {
+        if (tiemposCoches[i] < tiempoMasRapido) {
+            tiempoMasRapido = tiemposCoches[i]
+            cocheMasRapido = respuestaCoche[i]
+        }
+    }
+    console.log("El coche más rápido es: " + cocheMasRapido + ", con un tiempo de: " + tiempoMasRapido)
+    nombreCoche = prompt("Dime otro nombre de coche")
+
+
+
+</script>

@@ -1,0 +1,60 @@
+<script>
+
+//Escribe un programa que permita al usuario ingresar las temperaturas registradas durante una semana (7 días). 
+// Una vez ingresadas las temperaturas, el programa debe mostrar al usuario un menú con las siguientes opciones:
+
+//1. Mostrar la temperatura más alta registrada.
+//2. Mostrar la temperatura más baja registrada.
+//3. Calcular la temperatura promedio de la semana.
+//4. Salir del programa.
+
+//El programa debe ejecutarse hasta que el usuario elija la opción de salir.
+
+const diasSemana = 7
+let temperaturaSemana = []
+let temperaturaMasAlta = ""
+let temperaturaMasBaja = ""
+let sumaTemperaturas = 0
+let promedio = 0
+let dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
+let opcion = 0
+
+for (let i = 0; i < diasSemana; i++) {
+    temperaturaSemana.push(parseFloat(prompt("Dime la temperatura del día " + (dias[i]))))
+}
+
+// menú
+while (opcion !== 4) {
+    opcion = parseInt(prompt(
+        "Elige una opción:\n1. Mostrar temperatura más alta\n2. Mostrar temperatura más baja\n3. Calcular temperatura promedio\n4. Salir"
+    ))
+
+    if (opcion === 1) {
+        temperaturaMasAlta = Math.max(...temperaturaSemana)
+        console.log("La temperatura más alta registrada es: " + temperaturaMasAlta + "ºC")
+    } 
+    
+    else if (opcion === 2) {
+        temperaturaMasBaja = Math.min(...temperaturaSemana)
+        console.log("La temperatura más baja registrada es: " + temperaturaMasBaja + "ºC")
+    } 
+    
+    else if (opcion === 3) {
+        sumaTemperaturas = 0
+        for (let i = 0; i < temperaturaSemana.length; i++) {
+            sumaTemperaturas += temperaturaSemana[i]
+        }
+        promedio = sumaTemperaturas / diasSemana
+        console.log("La temperatura promedio de la semana es: " + promedio.toFixed(2) + "ºC")
+    } 
+    
+    else if (opcion === 4) {
+        console.log("Saliendo del programa...")
+    } 
+    
+    else {
+        console.log("Opción no válida. Intenta de nuevo.")
+    }
+}
+
+</script>

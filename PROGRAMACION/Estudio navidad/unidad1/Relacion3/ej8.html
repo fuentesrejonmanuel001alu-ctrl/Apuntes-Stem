@@ -1,0 +1,20 @@
+<script>
+
+    //Solicita un número y determina si es positivo, negativo o cero.
+
+    let numeroUsuario = Number(prompt("Dime un número"))
+
+    if (isNaN(numeroUsuario)) {
+        alert("Introduce un número entero")
+    } else {
+
+        if (numeroUsuario > 0) {
+            console.log(numeroUsuario + " es positivo")
+        } else if (numeroUsuario < 0) {
+            console.log(numeroUsuario + " es negativo")
+        } else {
+            console.log(numeroUsuario + " es neutro")
+        }
+    }
+
+</script>

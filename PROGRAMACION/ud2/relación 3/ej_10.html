@@ -1,0 +1,30 @@
+<script>
+
+//Dado un array de palabras, escribe una función que devuelva el array en orden inverso 
+//(la primera palabra al final y la última palabra al inicio).
+//Ejemplo: ["apple", "banana", "cherry"] debería devolver ["cherry", "banana", "apple"].
+
+let palabras = ["apple", "banana", "cherry"]
+
+let palabrasInvertidas = palabras.slice().reverse()
+
+console.log(palabras)
+
+
+//De otro modo
+
+ let palabras = ["apple", "banana", "cherry"]
+
+    let devolucion = []
+
+
+    for (let i = palabras.length -1; i >= 0; i--) {
+        devolucion.push(palabras[i])
+    }
+
+    console.log(devolucion)
+
+
+
+
+</script>

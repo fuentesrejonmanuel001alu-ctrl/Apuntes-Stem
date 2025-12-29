@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="concesionario_coches.xsl"?>
+
+<concesionario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="desarrollo_coches.xsd">
+
+  <informacion>
+    <nombre>MotorSport Elite</nombre>
+    <ciudad>Madrid</ciudad>
+  </informacion>
+
+  <stock>
+    <coche id="C-01" etiqueta="ECO" color="rojo">
+      <marca>Toyota</marca>
+      <modelo>GR Yaris</modelo>
+      <precio>38000</precio>
+      <potencia>261</potencia>
+    </coche>
+
+    <coche id="C-02" etiqueta="C" color="negro">
+      <marca>Porsche</marca>
+      <modelo>911 GT3</modelo>
+      <precio>210000</precio>
+      <potencia>510</potencia>
+    </coche>
+  </stock>
+
+</concesionario>

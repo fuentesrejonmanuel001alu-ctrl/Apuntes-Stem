@@ -1,0 +1,12 @@
+<script>
+    //Solicitar un número entero. Sumar todos los dígitos del número.
+    let numero = prompt("Introduce un número entero:");
+    let suma = 0;
+    let digito = 0
+    while (numero > 0) {
+    digito = numero % 10;
+    suma = suma + digito;
+    numero = Math.floor(numero / 10);
+    }
+    console.log("La suma de los dígitos es: " + suma);
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE receta [
+    <!ELEMENT receta (nombre, ingredientes, tiempo)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT ingredientes (ingrediente+)>
+    <!ELEMENT ingrediente (#PCDATA)>
+    <!ELEMENT tiempo (#PCDATA)>
+    ]}
+
+
+
+
+<receta>
+    <nombre>Paella</nombre>
+    <ingredientes>
+        <ingrediente>Arroz</ingrediente>
+        <ingrediente>Pollo</ingrediente>
+        <ingrediente>Mariscos</ingrediente>
+        <ingrediente>Azafrán</ingrediente>
+    </ingredientes>
+    <tiempo>60 minutos</tiempo>
+</receta>

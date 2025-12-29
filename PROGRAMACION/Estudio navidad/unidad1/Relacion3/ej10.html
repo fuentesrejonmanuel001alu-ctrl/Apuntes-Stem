@@ -1,0 +1,33 @@
+<script>
+
+    //Pide al usuario su calificación (entre 0 y 100) y devuelve su letra correspondiente:
+    //A (90-100).
+    //B (80-89).
+    //C (70-79).
+    //D (60-69).
+    //F (0-59).
+
+
+    let calificacionUsuario = Number(prompt("Dime tu calificación"))
+
+    if (isNaN(calificacionUsuario) || (calificacionUsuario < 0) || (calificacionUsuario > 100)) {
+        alert("Error. Tienes que introducir un valor numérico entre 0 y 100")
+    } else {
+
+        if (calificacionUsuario >= 90 && calificacionUsuario <= 100) {
+            console.log("Tu calificación es A")
+        } else if (calificacionUsuario >= 80 && calificacionUsuario <= 89) {
+            console.log("Tu calificación es B")
+        } else if (calificacionUsuario >= 70 && calificacionUsuario <= 79) {
+            console.log("Tu calificación es C")
+        } else if (calificacionUsuario >= 60 && calificacionUsuario <= 69) {
+            console.log("Tu calificación es D")
+        } else if (calificacionUsuario >= 0 && calificacionUsuario <= 59) {
+            console.log("Tu calificación es F")
+        } else {
+
+        }
+
+    }
+
+</script>

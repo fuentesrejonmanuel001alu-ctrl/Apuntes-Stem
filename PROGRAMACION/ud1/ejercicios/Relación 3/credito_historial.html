@@ -1,0 +1,17 @@
+<script>
+    //Solicita la puntuación de crédito del usuario y el tiempo que ha estado en el banco:
+    let puntuacionUsuario = Number(prompt("¿Qué puntuación tienes?"))
+    let tiempoUsuario = Number(prompt("¿Cuánto tiempo has estado en el banco?"))
+    //Si la puntuación es mayor a 750 y lleva más de 5 años como cliente, se le aprueba un crédito premium.
+    mensaje = "Tu crédito es"
+    valor = 0
+    if (puntuacionUsuario > 650 && tiempoUsuario > 5) {
+        console.log(mensaje + " premium")
+    } else if
+        (puntacionUsuario > 650 && tiempoUsuario > 2 && tiempoUsuario < 5) {
+        console.log(mensaje + " estandar")
+    } else
+        (puntuacionUsuario < 650 || tiempoUsuario < 2) {
+        console.log(mensaje + " rechazado")
+    }
+</script>

@@ -1,0 +1,19 @@
+<clase>
+        <alumnos>
+            <alumno id="1">
+                <nombre>Manuel</nombre>
+                <edad>18</edad>
+                <nota>6.0</nota>
+                <dni>78945643Z</dni>
+            </alumno>
+            <alumno id="2">
+                <nombre>Reda</nombre>
+                <edad>15</edad>
+                <nota>9.5</nota>
+                <dni>12345678A</dni>
+            </alumno>
+            <edad>21</edad>
+            <nota>10</nota>
+            <dni>12345678A</dni>
+        </alumnos>
+    </clase>

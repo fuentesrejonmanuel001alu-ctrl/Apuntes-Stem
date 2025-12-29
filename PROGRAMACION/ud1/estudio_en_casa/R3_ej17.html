@@ -1,0 +1,18 @@
+<script>
+    //Pide al usuario la duración de una llamada (en minutos) y calcula el coste total según estas reglas:
+    //- Los primeros 3 minutos son gratis.
+    //- De 3 a 10 minutos cuesta 0.50€ por minuto.
+    //- Más de 10 minutos cuesta 0.30€ por minuto adicional.
+    let duracion = parseFloat(prompt("Introduce la duración de la llamada en minutos:"));
+    let coste = 0;
+    if (duracion <= 3) {
+        coste = 0;
+    } else if (duracion <= 10) {
+        coste = (duracion - 3) * 0.50;
+    } else {
+        coste = (duracion - 3) * 0.50 + (duracion - 10) * 0.30;
+        
+    }
+    console.log("El coste total de la llamada es: " + coste.toFixed(2) + "€");
+
+</script>

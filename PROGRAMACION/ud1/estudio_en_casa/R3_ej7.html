@@ -1,0 +1,19 @@
+<script>
+    //   - Pide dos números y una operación (`+`, `-`, `*`, `/`) e imprime el resultado correspondiente.
+    
+    let num1 = Number(prompt("Dime un número"))
+    let num2 = Number(prompt("Dime otro número"))
+    let operacion = prompt("Dime una operación matemática")
+    
+    if (operacion == "+") {
+        console.log("El resultado de " + num1 + " + " + num2 + " es " + (num1 + num2))
+    } else if (operacion == "-") {
+        console.log("El resultado de " + num1 + " - " + num2 + " es " + (num1 - num2))
+    } else if (operacion == "*") {
+        console.log("El resultado de " + num1 + " * " + num2 + " es " + (num1 * num2))
+    } else if (operacion == "/") {
+        console.log("El resultado de " + num1 + " / " + num2 + " es " + (num1 / num2))
+    } else {
+        console.log("Operación no válida")
+    } 
+</script>

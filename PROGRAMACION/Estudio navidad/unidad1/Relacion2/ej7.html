@@ -1,0 +1,17 @@
+<script>
+
+//Pide al usuario su peso y altura, y calcula su Índice de Masa Corporal (IMC) (fórmula: IMC = peso/altura^2).
+
+let pesoUsuario =parseFloat(prompt("Dime tu peso"))
+let alturaUsuario= parseFloat(prompt("Dime tu altura"))
+
+if (isNaN(pesoUsuario) || isNaN(alturaUsuario)){
+    alert("Debes introducir números enteros en ambos valores")
+} else {
+    const IMC = pesoUsuario/(alturaUsuario**2)
+
+console.log("Tu índice de masa corporal es " + IMC.toFixed(2))
+
+}
+
+</script>

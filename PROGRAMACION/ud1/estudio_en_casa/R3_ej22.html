@@ -1,0 +1,30 @@
+<script>
+    //  - Pide a dos jugadores que ingresen "piedra", "papel" o "tijera" y determina el ganador según las reglas del juego.
+
+    let jugador1 = prompt("Jugador 1, ingresa piedra, papel o tijera:").toLowerCase();
+    let jugador2 = prompt("Jugador 2, ingresa piedra, papel o tijera:").toLowerCase();
+
+    if (jugador1 === jugador2) {
+        console.log("¡Empate!")
+
+    } else if (
+        (jugador1 === "piedra" && jugador2 === "tijera") ||
+        (jugador1 === "tijera" && jugador2 === "papel") ||
+        (jugador1 === "papel" && jugador2 === "piedra")) {
+        console.log("Gana jugador1")
+
+    
+      
+    } else if (
+        (jugador2 === "piedra" && jugador1 === "tijera") ||
+        (jugador2 === "tijera" && jugador1 === "papel") ||
+        (jugador2 === "papel" && jugador1 === "piedra")) {
+        console.log("Gana jugador2") 
+    
+       
+    } else {
+        console.log("Entrada no válida. Por favor ingresa piedra, papel o tijera.")
+    
+    } 
+
+</script>

@@ -1,0 +1,25 @@
+<script>
+
+//Solicita la temperatura actual e imprime:
+//"Muy frío" si es menor a 0°C.
+//"Frío" si es entre 0°C y 15°C.
+//"Templado" si es entre 16°C y 25°C.
+//"Caliente" si es mayor a 25°C.
+
+let temperatura =Number(prompt("Dime la temperatura"))
+
+if(isNaN(temperatura)){
+    alert("Introduce un número entero")
+} else{  
+    if(temperatura<0){
+        console.log("Muy frío")
+    } else if (temperatura >=0 && temperatura <=15){
+        console.log("Frío")
+    } else if (temperatura>=16 && temperatura <=25){
+        console.log("Templado")
+    } else {
+        console.log("Caliente")
+    }
+}
+
+</script>

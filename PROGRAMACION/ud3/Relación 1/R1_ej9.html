@@ -1,0 +1,29 @@
+<script>
+
+
+
+//Escribe una función generarContraseña que reciba un número longitud y devuelva una cadena de caracteres 
+//aleatorios (formada por letras y números) de esa longitud. 
+//Por ejemplo, si longitud es 8, podría devolver algo como a7b3f2d8. 
+//Puedes usar un array de letras y números para ir eligiendo de forma aleatoria.
+
+
+function generarContraseña(numeroLongitud) {
+
+    
+    for (let i=0; i<numeroLongitud; i++) {
+        let indice =Math.floor(Math.random()*caracteres.length)
+        contrasenia+=caracteres[indice]
+    }   
+    
+    return contrasenia
+}
+
+let caracteres = "abcdefghijklmnñopqrstuvwxyz0123456789"
+let numeroLongitud = 4
+let contrasenia = ""
+
+console.log(generarContraseña(numeroLongitud))
+
+
+</script>

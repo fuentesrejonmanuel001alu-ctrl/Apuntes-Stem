@@ -1,0 +1,30 @@
+<script>
+
+//Tienes dos arrays con listas de compras. Quieres combinarlas en una sola, sin que se repitan elementos. 
+// Si ambos arrays tienen el mismo producto, debe aparecer solo una vez.
+//Ejemplo: ["milk", "eggs", "bread"] y ["bread", "butter", "cheese"] debería devolver ["milk", "eggs", "bread", "butter", "cheese"].
+
+let array1 = ["milk", "eggs", "bread"]
+
+let array2 = ["bread", "butter", "cheese"]
+
+let arrayUnido =[]
+
+
+
+for (let i=0; i<array1.length; i++) {
+    if(!arrayUnido.includes(array1[i])){
+    arrayUnido.push(array1[i])
+    }
+}
+
+for (let i=0; i<array2.length; i++) {
+    if(!arrayUnido.includes(array2[i])) {
+    arrayUnido.push(array2[i])
+    }
+}
+
+
+console.log(arrayUnido)
+
+</script>

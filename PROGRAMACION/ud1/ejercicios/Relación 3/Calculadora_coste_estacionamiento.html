@@ -1,0 +1,25 @@
+>
+<script>
+    let estacionamiento = Number(prompt("¿Cuántas horas estuviste estacionado?"))
+    //Calculamos el coste
+
+    let resultadoEstacionamiento = (estacionamiento * horas)
+    let precioHora1 = 5
+    let precioHora2 = 4
+    let precioHora3 = 3
+    let mensajeEstacionamiento = ""
+    let pago = 0
+
+
+    if (estacionamiento <= 2) {
+        (pago = precioHora1 * estacionamiento)
+    } else if (estacionamiento > 5) {
+        (pago = precioHora3 * estacionamiento)
+    } else {
+        (precioHora2 * estacionamiento)
+    }
+    
+    mensajeEstacionamiento = "Tienes que pagar " + pago + " €"
+    console.log(mensajeEstacionamiento)
+
+</script>

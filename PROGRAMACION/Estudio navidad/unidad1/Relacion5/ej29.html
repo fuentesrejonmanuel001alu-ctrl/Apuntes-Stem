@@ -1,0 +1,28 @@
+<script>
+
+//Solicitar un número entero. Dibujar una pirámide con tantas filas como indique el número.
+
+let numero = Number(prompt("¿Cuántas filas quieres para este espejo numérico?"));
+
+for (let i = 1; i <= numero; i++) {
+    let espacios = " ".repeat(numero - i);
+    let izquierda = "";
+    let derecha = "";
+
+    // 1. Construimos la parte que baja (3, 2, 1...)
+    for (let j = i; j >= 1; j--) {
+        izquierda += j;
+    }
+
+    // 2. Construimos la parte que sube (...1, 2, 3)
+    for (let j = 1; j <= i; j++) {
+        derecha += j;
+    }
+
+    // 3. Lo juntamos todo
+    console.log(espacios + izquierda + derecha);
+}
+
+
+
+</script>

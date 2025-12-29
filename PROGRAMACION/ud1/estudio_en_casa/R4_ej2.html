@@ -1,0 +1,12 @@
+<script>
+//Escribe un programa que pida al usuario un número secreto (entre 1 y 10).
+//Después, el programa debe pedir al jugador que adivine el número hasta que lo consiga, mostrando un mensaje de “Intenta de nuevo” cuando falle.
+//Cuando acierte, debe mostrar:¡Correcto! Has adivinado el número.
+
+let numeroSecreto = parseInt(prompt("Introduce un número secreto entre 1 y 10"));
+let numeroAdivinado = parseInt(prompt("Adivina el número secreto entre 1 y 10"));
+while (numeroAdivinado !== numeroSecreto) {
+    numeroAdivinado = parseInt(prompt("Intenta de nuevo. Adivina el número secreto entre 1 y 10"));
+}
+console.log("¡Correcto! Has adivinado el número.");
+</script>

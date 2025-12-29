@@ -1,0 +1,8 @@
+
+<!ELEMENT clase (alumnos)>
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (nombre, edad, nota, dni)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>

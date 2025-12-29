@@ -1,0 +1,29 @@
+<script>
+
+    //Solicitar una palabra. 
+    //Solicitar otra palabra hasta que la segunda palabra coincida con la palabra inicial.
+
+    let palabraInicial =prompt("Dime una palabra").toLowerCase()
+    let palabra2 =prompt("Dime otra palabra").toLowerCase()
+
+while(palabraInicial !=palabra2){
+    alert("No coinciden. Vuelve a intentarlo")
+    palabra2 =prompt("Dime una nueva palabra").toLowerCase()
+}
+console.log("Acertaste")
+
+
+</script>
+
+let palabraInicial=prompt("Dime una palabra").toLocaleLowerCase()
+let palabra2=prompt("Dime otra palabra").toLocaleLowerCase()
+let intentos=3
+
+for(let i=1; i<intentos && palabraInicial != palabra2; i++){
+    palabra2=prompt("Dime una palabra nueva. Te quedan " + (intentos - i) + " intentos ").toLocaleLowerCase()
+}
+if (palabraInicial== palabra2){
+console.log("Acertaste")
+} else {
+    console.log("Fin de intentos. La palabra es " + palabraInicial)
+}

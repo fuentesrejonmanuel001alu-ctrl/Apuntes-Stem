@@ -1,0 +1,11 @@
+!DOCTYPE receta_cocina SYSTEM "cocina_externa.dtd">
+<receta>
+    <nombre>Paella</nombre>
+    <ingredientes>
+        <ingrediente>Arroz</ingrediente>
+        <ingrediente>Pollo</ingrediente>
+        <ingrediente>Mariscos</ingrediente>
+        <ingrediente>Azafrán</ingrediente>
+    </ingredientes>
+    <tiempo>60 minutos</tiempo>
+</receta>
