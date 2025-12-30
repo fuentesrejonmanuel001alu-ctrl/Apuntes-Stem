@@ -1,0 +1,32 @@
+<script>
+
+    //Calculadora de combustible. El programa debe pedir una cantidad de litros inicial,
+    //un precio por litro y un consumo e ir calculando el precio de cada viaje 
+    //(pidiendo los kilómetros) y el combustible restante
+
+    let litrosGastados = 0
+    let coste = 0
+    let precioPorLitro = parseFloat(prompt("¿A cuánto el litro?"))
+    let consumo = parseFloat(prompt("¿Consumo medio?"))
+    let litros = parseFloat(prompt("¿Cuántos litros has echado?"))
+    let km = parseFloat(prompt("¿Km del primer viaje? (0 para salir)"))
+
+    while (litros > 0 && km > 0) {
+        litrosGastados = (km * consumo) / 100
+
+        if (litrosGastados <= litros) {
+            coste = litrosGastados * precioPorLitro
+            litros -= litrosGastados
+
+            console.log("Viaje ok. Coste: " + coste.toFixed(2) + "€. Quedan: " + litros.toFixed(2) + "L")
+
+            // Pista: Pedimos los km del SIGUIENTE viaje para que el valor cambie
+            km = parseFloat(prompt("¿Km del siguiente viaje? (0 para salir)")) // <--- LÍNEA 1
+        } else {
+            alert("No tienes suficiente gasolina para esos km.")
+            km = 0 // <--- LÍNEA 2 (Para que el bucle se detenga al no haber gasolina)
+        }
+    }
+    console.log("Simulación terminada.")
+
+</script>

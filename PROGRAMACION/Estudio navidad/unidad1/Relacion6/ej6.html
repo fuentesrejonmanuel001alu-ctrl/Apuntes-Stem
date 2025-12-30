@@ -1,0 +1,28 @@
+<script>
+
+    //Crea una calculadora básica de dos números. El programa pide dos números y luego una operación (+, -, *, /). 
+    //El programa pide números hasta que el usuario indica "SALIR"
+
+    let resultado = 0
+    let entrada = prompt("Dime un número o escribe 'SALIR'")
+
+    while (entrada.toLocaleUpperCase() !="SALIR") {
+        let numero1 = parseFloat(entrada)
+        let operacionMatematica = prompt("Indica si quieres:\nmultiplicar(*)\ndividir(/)\nsumar(+)\nrestar(-)")
+        let numero2 = parseFloat(prompt("Dime otro número"))
+
+        if (operacionMatematica == "*") {
+            resultado = numero1 * numero2
+        } else if (operacionMatematica == "/") {
+            resultado = numero1 / numero2
+        } else if (operacionMatematica == "+") {
+            resultado = numero1 + numero2
+        } else if (operacionMatematica == "-") {
+            resultado = numero1 - numero2
+        } else {
+            alert("cometiste un error al introducir la operación matemática")
+        }
+        alert(resultado)
+        entrada = prompt("Dime un número o escribe 'SALIR'")
+    }
+</script>
