@@ -1,0 +1,30 @@
+<script>
+
+    //Simula el repostaje de varios coches. Cada coche tiene un tanque de 60 litros y reposta hasta llenarlo. 
+    //El programa debe preguntar cuántos litros echa cada vez y detenerse cuando el tanque está lleno.
+
+    let litrosEchados = 0
+    let vecesParadas = 0
+    const tanqueLleno = 60
+    let litrosAcumulados = 0
+    let precioPorLitro = 1.25
+    let costeLlenado = 0
+    let llenadoDeposito = parseFloat(prompt("¿Cuántos litros echamos al depósito?"))
+
+    while (litrosEchados < tanqueLleno) {
+        if (litrosEchados + llenadoDeposito <= tanqueLleno) {
+            litrosEchados += llenadoDeposito
+            vecesParadas++
+        } else {
+            alert("Si echas, el depósito lo desbordarías")
+        }
+        if (litrosEchados < tanqueLleno) {
+            llenadoDeposito = parseFloat(prompt("¿Cuántos litros echamos al depósito?"))
+        }
+    }
+    costeLlenado = precioPorLitro * litrosEchados
+    console.log("número total de repostajes: " + vecesParadas)
+    console.log("Total gastado: " + costeLlenado + " €")
+
+
+</script>

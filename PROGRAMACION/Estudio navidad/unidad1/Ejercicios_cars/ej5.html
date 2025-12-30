@@ -1,0 +1,25 @@
+<script>
+
+    let neumaticosVendidosEnTotal = 0
+    let condicionSalida = 0
+    let totalClientesAtendidos = 0
+    let cliente4Neumaticos = 0
+    let clienteCompraNeumaticos = parseInt(prompt("¿Cuántos neumáticos quieres?"))
+    while (clienteCompraNeumaticos != condicionSalida) {
+        neumaticosVendidosEnTotal += clienteCompraNeumaticos
+        totalClientesAtendidos++
+        if (clienteCompraNeumaticos == 4) {
+            cliente4Neumaticos++
+        }
+        console.log(`Cliente ${totalClientesAtendidos}: ${clienteCompraNeumaticos} neumáticos`);
+        clienteCompraNeumaticos = parseInt(prompt("¿Cuántos neumáticos quieres?"))
+        }
+       // 
+console.log(`Total de clientes: ${totalClientesAtendidos}
+Neumáticos vendidos: ${neumaticosVendidosEnTotal}
+Clientes con cambio completo: ${cliente4Neumaticos}`);
+
+
+
+
+</script>
