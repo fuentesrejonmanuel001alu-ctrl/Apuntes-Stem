@@ -1,0 +1,74 @@
+<script>
+
+    // --- VARIABLES INICIALES --- (Ya las tenías bien)
+const consumoArrozMaki = 120, consumoAguaMaki = 0.10, precioUnitarioMaki = 8;
+const consumoArrozNigiri = 50, consumoAguaNigiri = 0.05, precioUnitarioNigiri = 10;
+const consumoArrozSashimi = 0, consumoAguaSashimi = 0.02, precioUnitarioSashimi = 12;
+
+let totalMaki = 0, totalNigiri = 0, totalSashimi = 0, importeTotal = 0;
+let maki = "maki", nigiri = "nigiri", sashimi = "sashimi";
+let contadorPedidos = 0, arrozGastadoTotal = 0, aguaGastadaTotal = 0, hayStock = true;
+
+// --- ENTRADA DE DATOS ---
+let numeroPedidos = parseInt(prompt("Número de pedidos:"));
+let stockArroz = parseInt(prompt("Stock arroz (g):"));
+let stockAgua = parseFloat(prompt("Stock agua (L):"));
+
+// --- MOTOR PRINCIPAL --- 🔄
+while (contadorPedidos < numeroPedidos && hayStock === true) {
+    
+    // A. Selección de Plato 🍣
+    let tipoPlato = prompt("Pedido " + (contadorPedidos + 1) + ": ¿Qué plato quieres? (maki, nigiri, sashimi)");
+    while (tipoPlato !== maki && tipoPlato !== nigiri && tipoPlato !== sashimi) {
+        tipoPlato = prompt("Error. Introduce maki, nigiri o sashimi:");
+    }
+
+    // B. Selección de Unidades 🔢
+    let numeroUnidades = parseInt(prompt("¿Cuántas unidades quieres?"));
+    while (numeroUnidades < 0 || isNaN(numeroUnidades)) {
+        numeroUnidades = parseInt(prompt("Error. Introduce un número válido:"));
+    }
+
+    // C. Cálculo del pedido actual 🧮
+    let arrozPedido = 0, aguaPedido = 0, precioPedido = 0;
+
+    if (tipoPlato === maki) {
+        arrozPedido = numeroUnidades * consumoArrozMaki;
+        aguaPedido = numeroUnidades * consumoAguaMaki;
+        precioPedido = numeroUnidades * precioUnitarioMaki;
+    } else if (tipoPlato === nigiri) {
+        arrozPedido = numeroUnidades * consumoArrozNigiri;
+        aguaPedido = numeroUnidades * consumoAguaNigiri;
+        precioPedido = numeroUnidades * precioUnitarioNigiri;
+    } else if (tipoPlato === sashimi) {
+        arrozPedido = numeroUnidades * consumoArrozSashimi;
+        aguaPedido = numeroUnidades * consumoAguaSashimi;
+        precioPedido = numeroUnidades * precioUnitarioSashimi;
+    }
+
+    // D. Control de Stock 🚩
+    if ((arrozGastadoTotal + arrozPedido) > stockArroz || (aguaGastadaTotal + aguaPedido) > stockAgua) {
+        if ((arrozGastadoTotal + arrozPedido) > stockArroz) alert("¡Alerta! Has superado el stock de arroz.");
+        if ((aguaGastadaTotal + aguaPedido) > stockAgua) alert("¡Alerta! Has superado el stock de agua.");
+        hayStock = false; // Se rompe el bucle
+    } else {
+        // E. Si hay stock, acumulamos y mostramos 📈
+        arrozGastadoTotal += arrozPedido;
+        aguaGastadaTotal += aguaPedido;
+        importeTotal += precioPedido;
+
+        if (tipoPlato === maki) totalMaki += numeroUnidades;
+        else if (tipoPlato === nigiri) totalNigiri += numeroUnidades;
+        else if (tipoPlato === sashimi) totalSashimi += numeroUnidades;
+
+        console.log("Pedido " + (contadorPedidos + 1) + " registrado con éxito.");
+        contadorPedidos++; // Solo sumamos si el pedido fue válido y hubo stock
+    }
+}
+
+// --- PUNTO 4: INFORME FINAL (Aquí es donde debes imprimir los totales) ---
+console.log("--- CIERRE DE CAJA ---");
+console.log("Total ganado: " + importeTotal + "€");
+
+
+</script>
