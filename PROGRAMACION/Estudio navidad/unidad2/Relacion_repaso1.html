@@ -1,0 +1,61 @@
+<script>
+
+    let puntuacionesBolos = [];
+
+// 1. Entrada de datos (Simplificada) 🎳
+for (let i = 0; i < 10; i++) {
+    let dimePuntuaciones = parseFloat(prompt("Dime la puntuación " + (i + 1) + ":"));
+    puntuacionesBolos.push(dimePuntuaciones); // Guardamos directamente
+}
+
+let eligeMenu = Number(prompt(`Elige la opción:\n1. Mostrar la puntuación más alta\n2. Mostrar la puntuación más baja\n3. Calcular la puntuación total\n4. Calcular la media\n5. Salir`));
+
+// 2. Menú de opciones 📋
+while (eligeMenu !== 5) {
+    if (eligeMenu === 1) {
+        let puntuacionMasAlta = puntuacionesBolos[0];
+        for (let i = 0; i < puntuacionesBolos.length; i++) {
+            if (puntuacionesBolos[i] > puntuacionMasAlta) {
+                puntuacionMasAlta = puntuacionesBolos[i];
+            }
+        }
+        console.log("La puntuación más alta es: " + puntuacionMasAlta);
+
+    } else if (eligeMenu === 2) {
+        let puntuacionMasBaja = puntuacionesBolos[0];
+        for (let i = 0; i < puntuacionesBolos.length; i++) {
+            if (puntuacionesBolos[i] < puntuacionMasBaja) {
+                puntuacionMasBaja = puntuacionesBolos[i];
+            }
+        }
+        console.log("La puntuación más baja es: " + puntuacionMasBaja);
+
+    } else if (eligeMenu === 3) {
+        let puntuacionTotal = 0;
+        for (let i = 0; i < puntuacionesBolos.length; i++) {
+            puntuacionTotal += puntuacionesBolos[i];
+        }
+        console.log("La puntuación total es: " + puntuacionTotal);
+
+    } else if (eligeMenu === 4) {
+        let puntuacionTotal = 0;
+        for (let i = 0; i < puntuacionesBolos.length; i++) {
+            puntuacionTotal += puntuacionesBolos[i];
+        }
+        let promedio = puntuacionTotal / puntuacionesBolos.length;
+        console.log("Tu puntuación media es: " + promedio);
+
+    } else {
+        console.log("Opción no válida.");
+    }
+
+    // Volver a preguntar dentro del bucle
+    eligeMenu = Number(prompt(`Elige la opción:\n1. Mostrar la puntuación más alta\n2. Mostrar la puntuación más baja\n3. Calcular la puntuación total\n4. Calcular la media\n5. Salir`));
+}
+
+console.log("¡Hasta la próxima! 🎳");
+
+
+
+
+</script>

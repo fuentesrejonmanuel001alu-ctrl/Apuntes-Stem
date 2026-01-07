@@ -1,0 +1,46 @@
+<script>
+
+    let jugadorNuevo = []
+    let puntosCadaJugador = []
+    let promedio = 0
+    let sumaTotal = 0
+
+    let eligeMenu = Number(prompt((`1.Añadir jugador\n2.Registrar ronda\n3.Mostrar clasificación\n4.Mostrar jugadores por encima de la media\n5.Reiniciar puntuaciones\n6.Salir`)))
+
+    while (eligeMenu !== 6) {
+
+        if (eligeMenu === 1) {
+            let nombreNuevoJugador = prompt("Dime el nombre del nuevo jugador")
+            jugadorNuevo.push(nombreNuevoJugador)
+            puntosCadaJugador.push(0)
+        } else if (eligeMenu === 2) {
+            for (let i = 0; i < jugadorNuevo.length; i++) {
+                let sumaPuntos = parseFloat(prompt("Dime los puntos de: " + jugadorNuevo[i]))
+                puntosCadaJugador[i] += sumaPuntos
+            }
+        } else if (eligeMenu === 3) {
+            console.log("La clasificación es: " + jugadorNuevo + " - " + puntosCadaJugador + " puntos ")
+        } else if (eligeMenu === 4) {
+            sumaTotal = 0
+            for (let i = 0; i < puntosCadaJugador.length; i++) {
+                sumaTotal += puntosCadaJugador[i]
+            }
+            promedio = sumaTotal / jugadorNuevo.length
+            for (let i = 0; i < puntosCadaJugador.length; i++) {
+                if (puntosCadaJugador[i] > promedio) {
+                    console.log("- " + jugadorNuevo[i] + " (" + puntosCadaJugador[i] + " puntos)");
+                }
+            }
+        } else if (eligeMenu === 5) {
+            for (let i=0; i<puntosCadaJugador.length;i++){
+                puntosCadaJugador[i] = 0
+            }
+        } else {
+        }
+
+        eligeMenu = Number(prompt((`1.Añadir jugador\n2.Registrar ronda\n3.Mostrar clasificación\n4.Mostrar jugadores por encima de la media\n5.Reiniciar puntuaciones\n6.Salir`)))
+    }
+
+
+
+</script>

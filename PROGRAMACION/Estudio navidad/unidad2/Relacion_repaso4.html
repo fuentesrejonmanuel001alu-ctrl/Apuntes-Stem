@@ -1,0 +1,58 @@
+<script>
+
+let minas = [];
+let descubierto = [];
+let numeroPosiciones = 10;
+
+// 1. Preparamos el tablero 💣
+for (let i = 0; i < numeroPosiciones; i++) {
+    minas.push(Math.random() < 0.2); // 20% de probabilidad de mina
+    descubierto.push(false); // Todo empieza oculto
+}
+
+let juegoTerminado = false;
+let casillasSegurasRestantes = 0;
+
+// Contamos cuántas casillas NO tienen mina para saber cuándo ganar
+for (let i = 0; i < numeroPosiciones; i++) {
+    if (minas[i] === false) {
+        casillasSegurasRestantes++;
+    }
+}
+
+// 2. Bucle principal del juego 🔄
+while (!juegoTerminado && casillasSegurasRestantes > 0) {
+    let eleccion = parseInt(prompt("Elige una posición (del 0 al 9):"));
+
+    if (minas[eleccion] === true) {
+        console.log("¡BUM! Había una mina. Juego terminado. 💣");
+        juegoTerminado = true;
+    } else if (descubierto[eleccion] === true) {
+        console.log("Ya habías elegido esa casilla. Prueba otra.");
+    } else {
+        // Casilla segura
+        descubierto[eleccion] = true;
+        casillasSegurasRestantes--;
+
+        // 3. Contamos minas vecinas directamente aquí 🔢
+        let contadorVecinas = 0;
+
+        // Comprobamos la casilla de la izquierda (i-1)
+        if (eleccion > 0 && minas[eleccion - 1] === true) {
+            contadorVecinas++;
+        }
+        // Comprobamos la casilla de la derecha (i+1)
+        if (eleccion < 9 && minas[eleccion + 1] === true) {
+            contadorVecinas++;
+        }
+
+        console.log("Casilla segura. Minas vecinas: " + contadorVecinas + " ✅");
+
+        if (casillasSegurasRestantes === 0) {
+            console.log("¡Has ganado! No quedan más casillas seguras. 🏆");
+        }
+    }
+}
+
+
+</script>
