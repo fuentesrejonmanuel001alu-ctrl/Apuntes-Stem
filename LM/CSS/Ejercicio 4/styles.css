@@ -1,0 +1,18 @@
+/* 1. Color diferente para el título */
+h2 {
+    color: #e74c3c;
+}
+
+/* 2. Imagen de fondo que ocupa todo el espacio */
+section {
+    background-image: url('original.png'); /* Sustituye por tu imagen */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Para que se vea bien el fondo */
+    padding: 20px;
+}
+
+/* 3. Cambio de color al pasar el ratón por el párrafo */
+p:hover {
+    color: blue;
+}

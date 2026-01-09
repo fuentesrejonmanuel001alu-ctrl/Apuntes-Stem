@@ -1,0 +1,25 @@
+/* Seleccionamos el contenedor por su clase */
+.contenedor {
+    /* 1. Ancho fijo */
+    width: 500px; 
+
+    /* 2. Relleno interno (espacio entre el borde y el texto) */
+    padding: 30px; 
+
+    /* 3. Margen exterior (espacio fuera del contenedor) */
+    margin: 40px auto; /* 'auto' lo centra horizontalmente */
+
+    /* 4. Borde de color con grosor específico */
+    border: 5px solid #2ecc71; /* Grosor, estilo (sólido) y color (verde) */
+
+    /* Estilo extra para que se vea mejor */
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+}
+
+/* Estilo para la imagen dentro del contenedor */
+.contenedor img {
+    width: 100%; /* Para que no se salga del contenedor */
+    height: auto;
+    margin-top: 15px;
+}
