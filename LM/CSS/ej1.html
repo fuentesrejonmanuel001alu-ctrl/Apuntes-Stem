@@ -11,3 +11,28 @@
     <p>Este es un ejemplo de página con estilos externos aplicados.</p>
 </body>
 </html>
+
+/* 1. Aplicar márgenes y espaciado uniformes a TODOS los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto ayuda a que el espaciado no rompa el diseño */
+}
+
+/* 2. Fondo degradado y color de texto global */
+body {
+    /* Color de texto (un gris oscuro azulado) */
+    color: #2c3e50;
+    
+    /* Fondo degradado (de azul claro a blanco) */
+    background: linear-gradient(135deg, #dceeff 0%, #ffffff 100%);
+    
+    /* Para que el degradado ocupe toda la pantalla */
+    min-height: 100vh;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
