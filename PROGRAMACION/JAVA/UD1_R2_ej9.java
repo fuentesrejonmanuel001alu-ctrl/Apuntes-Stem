@@ -1,6 +1,6 @@
 import java.util.Scanner; //Dato estándar
 
-public class CaramelosNinios { // Dato estándar, debe coincidir con nombre archivo
+public class UD1_R2_ej9 { // Dato estándar, debe coincidir con nombre archivo
     public static void main(String[] args) { //Dato estándar
         int repartoCaramelos=0;
         int numeroNinios=0;

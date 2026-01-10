@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NotasAlumnos {
+public class UD1_R6_ej1 {
     public static void main(String[] args) {
         double sumaNotas = 0;
         double promedio = 0;

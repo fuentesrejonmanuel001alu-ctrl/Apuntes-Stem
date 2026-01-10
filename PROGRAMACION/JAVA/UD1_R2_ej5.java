@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PesoLuna {
+public class UD1_R2_ej5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese su peso: ");

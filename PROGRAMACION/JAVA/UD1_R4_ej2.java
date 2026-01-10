@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class numeroSecreto {
+public class UD1_R4_ej2 {
     public static void main(String[] args) {
         int numeroSecreto = 8;
         int adivinaNumero;
