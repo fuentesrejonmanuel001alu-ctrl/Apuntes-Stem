@@ -1,4 +1,4 @@
-!DOCTYPE receta_cocina SYSTEM "cocina_externa.dtd">
+<!DOCTYPE receta_cocina SYSTEM "cocina_externa.dtd">
 <receta>
     <nombre>Paella</nombre>
     <ingredientes>

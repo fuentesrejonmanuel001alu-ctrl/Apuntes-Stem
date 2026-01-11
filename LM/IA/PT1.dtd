@@ -1,0 +1,23 @@
+<!ELEMENT entrenamientos (sesion+)> 
+
+<!ELEMENT sesion (fecha, horax, tipo, duracionrv, ubicacion, coach, participantes, ejercicios?, notas?)>
+<!ATTLIST sesion 
+          codigo CDATA #REQUIRED
+          intensidad (baja | media | alta) #IMPLIED>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT horax (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT duracionrv (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT coach (#PCDATA)>
+<!ELEMENT participantes (boxeador+)>
+<!ELEMENT boxeador (nombre, alias?, pais)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT alias (#PCDATA)>
+<!ELEMENT ejercicios (ejercicio+)>
+<!ELEMENT ejercicio (nombre, (repeticiones | duracionbloque))>
+<!ELEMENT repeticiones (#PCDATA)>
+<!ELEMENT duracionbloque (#PCDATA)>
+<!ELEMENT notas (#PCDATA)>
+

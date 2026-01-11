@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+// Orden Lógico: He seguido el flujo de un documento real: primero los datos del navegador (head), 
+// luego la cabecera (header), navegación (nav), contenido (main) y el cierre (footer)
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Master Template - Aprendizaje Guiado</title> 
+    </head>
+
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="Descripción de la imagen"> 
+        <h1>Título Principal del Sitio</h1> 
+        </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li> 
+            <li><a href="docs/guia.pdf" download>Descargar Guía</a></li> 
+            </ul>
+    </nav>
+
+    
+
+    <main>
+        <section id="multimedia">
+            <h2>Sección Multimedia</h2> 
+            <video src="media/video.mp4" controls width="320"></video>
+            <iframe src="https://www.youtube.com/embed/ejemplo" width="560" height="315"></iframe>
+            </section>
+
+        <section id="listas-avanzadas">
+            <h2>Listas de la PT3 (Mario Kart)</h2>
+            
+            <ol type="i" start="33"> 
+            <li>Encender consola</li>
+                <li>Elegir personaje</li>
+            </ol>
+
+            <ul style="list-style-type: square;"> 
+            <li>Caparazón Rojo</li>
+                <li>Champiñón Turbo</li>
+            </ul>
+        </section>
+
+        <section id="tablas-datos">
+            <h2>Tablas de Datos [cite: 196]</h2>
+            <table border="1"> 
+            <tr> <th>Nombre</th> <th>Puntuación</th>
+                </tr>
+                <tr>
+                    <td>Mario</td> <td>100 pts</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="formularios-registro">
+            <h2>Formulario de Inscripción [cite: 204, 205]</h2>
+            <form action="#" method="POST"> 
+            <label for="nombre">Nombre Piloto:</label> 
+                <input type="text" id="nombre" required minlength="5" maxlength="20"> 
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" min="8" max="99"> 
+                <label>Preferencias:</label>
+                <input type="checkbox" name="item" value="platano"> Plátano 
+                <label>Nivel:</label>
+                <input type="radio" name="nivel" value="pro"> Experto 
+                <select name="copa"> 
+                <option value="champi">Copa Champiñón</option>
+                </select>
+
+                <textarea rows="4" cols="50" placeholder="Escribe aquí..."></textarea> 
+                <button type="submit">Enviar</button> <button type="reset">Borrar todo</button> </form>
+        </section>
+
+        <section id="interactivo">
+            <h2>Elementos Desplegables [cite: 102]</h2>
+            <details> 
+            <summary>¿Cómo funciona esto?</summary> 
+                <p>Aquí dentro puedes meter cualquier otra etiqueta.</p> [cite: 109]
+            </details>
+        </section>
+    </main>
+
+    
+
+    <footer>
+        <p>&copy; 2026 Academia Informática Infantil</p>
+        <p>Contacto: <a href="mailto:profe@ejemplo.com">Enviar email</a></p> 
+        <a href="#top">Volver arriba</a> 
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Mario Kart</title>
+</head>
+<body>
+    <h1>FORMULARIO DE INSCRIPCIÓN</h1>
+    <form action="#" method="post">
+        
+        <label for="piloto">Nombre del piloto:</label>
+        <input type="text" id="piloto" name="piloto" required minlength="3" maxlength="20">
+        <br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="edad">Edad del piloto:</label>
+        <input type="number" id="edad" name="edad" required min="8" max="99">
+        <br><br>
+
+        <p>Ítems preferidos:</p>
+        <input type="checkbox" id="rojo" name="items" value="rojo"> <label for="rojo">Caparazón rojo</label><br>
+        <input type="checkbox" id="platano" name="items" value="platano"> <label for="platano">Plátano</label><br>
+        
+        <label for="copa">Selecciona la copa:</label>
+        <select id="copa" name="copa">
+            <option value="champi">Copa Champiñón</option>
+            <option value="flor">Copa Flor</option>
+            <option value="estrella">Copa Estrella</option>
+        </select>
+        <br><br>
+
+        <label for="coments">Comentarios:</label><br>
+        <textarea id="coments" name="coments" rows="5" cols="40" placeholder="Ej: Soy experto en derrapes"></textarea>
+        <br><br>
+
+        <p>Tipo de piloto:</p>
+        <input type="radio" id="princ" name="nivel" value="principiante"> <label for="princ">Principiante</label><br>
+        <input type="radio" id="experto" name="nivel" value="experto"> <label for="experto">Experto</label>
+        <br><br>
+
+        <button type="submit">Enviar el formulario</button>
+        <button type="reset">Reiniciar el formulario</button>
+
+    </form>
+</body>
+</html>
