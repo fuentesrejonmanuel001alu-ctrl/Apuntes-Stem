@@ -10,7 +10,7 @@ public class UD1_R4_ej1 {
     scanner.close();
     for (int i=1; i<=10; i++){
     resultado= numeroUsuario* i;
-    System.out.println("El resultado de multiplicar es : " + resultado);
+    System.out.println("El resultado de multiplicar por " + i + " es : " + resultado);
 
     }
     }
