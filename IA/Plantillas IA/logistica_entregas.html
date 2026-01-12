@@ -1,0 +1,45 @@
+<script>
+
+    const productos = ["Televisor", "Móvil", "Cafetera", "Cascos", "Tablet"];
+    const precios = [800, 500, 120, 80, 350]; // Ya está limpio el dato de la cafetera ☕
+    const diasRetraso = [0, 2, 5, 1, 4];
+    let estado = []
+    const descuentoPorRetraso = 0.2
+    let precioDescontado = 0
+    let precioConDescuentoAplicado = 0
+    let sumaTodosLosEnvios = 0
+    let listadoEstadoGrave = []
+    let porcentajeIVAQueAplicamos = 0
+    let precioTotalAPagar = 0
+
+    for (let i = 0; i < diasRetraso.length; i++) {
+        if (diasRetraso[i] == 0) {
+            estado.push("A tiempo")
+        } else if (diasRetraso[i] >= 1 && diasRetraso[i] <= 3) {
+            estado.push("Retraso leve")
+            precios[i] += 10
+        } else if (diasRetraso[i] > 3) {
+            estado.push("Retraso grave")
+
+            precioDescontado = precios[i] * descuentoPorRetraso
+            precios[i] = (precios[i] - precioDescontado) + 15
+            listadoEstadoGrave.push(productos[i])
+
+            if (precios[i] > 400) {
+                alert("Alerta VIP en " + productos[i])
+            }
+        } else {
+
+        }
+        sumaTodosLosEnvios += precios[i]
+    }
+    let porcentajeIVA = parseFloat(prompt("¿Qué porcentaje de IVA quieres aplicar? (ej: 21)"));
+    // Calculamos cuánto dinero es el IVA: (Total * porcentaje / 100)
+    let dineroIVA = sumaTodosLosEnvios * (porcentajeIVA / 100);
+    precioTotalAPagar = sumaTodosLosEnvios + dineroIVA;
+
+    console.log(`La suma total a cobrar por los envíos es: ${precioTotalAPagar.toFixed(2)}
+    Productos con retraso grave: ${listadoEstadoGrave.length > 0 ? listadoEstadoGrave.join(", ") : "Ninguno"}`)
+
+
+</script>
