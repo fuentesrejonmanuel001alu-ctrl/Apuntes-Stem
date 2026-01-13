@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class pt_sushi {
+    public static void main(String[] args) { 
     double consumoArrozMaki = 120, consumoAguaMaki = 0.10, precioUnitarioMaki = 8;
     double consumoArrozNigiri = 50, consumoAguaNigiri = 0.05, precioUnitarioNigiri = 10;
     double consumoArrozSashimi = 0, consumoAguaSashimi = 0.02, precioUnitarioSashimi = 12;
@@ -28,7 +29,7 @@ public class pt_sushi {
     String tipoPlato = System.out.print("Pedido " + (contadorPedidos + 1) + ": ¿Qué plato quieres? (maki, nigiri, sashimi)");
 
     while (tipoPlato != maki && tipoPlato != nigiri && tipoPlato != sashimi) {
-        tipoPlato = prompt("Error. Introduce maki, nigiri o sashimi:");
+        System.out.print("Error. Introduce maki, nigiri o sashimi:");
     }
 
 }
@@ -36,3 +37,5 @@ public class pt_sushi {
     scanner.close()
 
 }
+}
+

@@ -1,0 +1,32 @@
+<script>
+
+    const medicamentos = ["Insulina", "Aspirina", "Vacuna Gripe", "Jarabe", "Antibiótico"];
+    const precios = [45.00, 5.50, 80.00, 12.00, 65.00];
+    const estados = ["Frío OK", "Frío OK", "Error Térmico", "Frío OK", "Error Térmico"];
+
+    let productosRetirados = []
+    let sumaMedicamentos = 0
+    let medicamentoMasCaro = 0
+    let nombreMedicamentoMasCaro=""
+
+
+    for (let i = 0; i < estados.length; i++) {
+        if (estados[i] == "Error Térmico") {
+            productosRetirados.push(medicamentos[i])
+            sumaMedicamentos += precios[i]
+            if (precios[i] > medicamentoMasCaro) {
+                medicamentoMasCaro = precios[i]
+                nombreMedicamentoMasCaro= medicamentos[i]
+            }
+          
+        }
+    }
+ // Cambia tu última línea por esta:
+alert(`
+📋 RESULTADOS DE LA FARMACIA:
+-----------------------------
+🚫 Retirados: ${productosRetirados.join(", ")}
+💰 Total a tirar: ${sumaMedicamentos.toFixed(2)} €
+🏆 El más caro de los errores: ${nombreMedicamentoMasCaro} (${medicamentoMasCaro} €)
+`);
+</script>
