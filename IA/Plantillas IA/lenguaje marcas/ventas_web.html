@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AquaExpress - Registro de Ventas 💧</title>
+    <style>
+        /* Estilo simple: Fondo azul y una tarjeta blanca al centro */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd; /* Azul agua */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .tarjeta {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 10px solid #0288d1;
+        }
+        h1 { color: #0288d1; }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta">
+        <h1>AquaExpress 🌊</h1>
+        <p>Tu programa se está ejecutando...</p>
+        <p>Recuerda abrir la <strong>consola (F12)</strong> para ver los resultados finales.</p>
+    </div>
+
+    <script>
+        // Aquí empieza tu código. Se ejecutará nada más abrir la página.
+
+        // === PEGA TU CÓDIGO DE JAVASCRIPT AQUÍ ABAJO SIN TOCAR NADA ===
+        let nombreProducto = prompt("🎁 Dime el nombre del producto o escribe 'FINALIZAR' 🏃‍♂️")
+
+    let almacenProductos = []
+    let almacenPrecios = []
+    let bandera = false
+    let ventaMayorista = false
+    let mensaje = ""
+    let importeTotalVentas = 0
+    let precioMedioProductosVendidos = 0
+
+    while (nombreProducto.toLocaleUpperCase() != "FINALIZAR") {
+        if (nombreProducto == "FINALIZAR") {
+            bandera = true
+        } else {
+            almacenProductos.push(nombreProducto)
+            let precioProducto = parseFloat(prompt("💶 Dime el precio del producto"))
+            almacenPrecios.push(precioProducto)
+            nombreProducto = prompt("🎁 Dime el nombre del producto o escribe 'FINALIZAR' 🏃‍♂️")
+        }
+    }
+    for (let i = 0; i < almacenPrecios.length; i++) {
+        importeTotalVentas += almacenPrecios[i]
+        precioMedioProductosVendidos = (importeTotalVentas / almacenPrecios.length)
+
+        if (almacenPrecios[i] > 1000) {
+            ventaMayorista = true
+            mensaje = "🔔 Venta mayorista"
+        } else {
+
+        }
+    }
+
+    console.log(`Los productos que han entrado en el almacén son: ${almacenProductos.join(", ")}
+    🏭 Los precios son: ${almacenPrecios.join(", ")} €
+    💰 El importe total de las ventas asciende a: ${importeTotalVentas.toFixed(2)} €
+    🧱 El precio medio de los productos vendidos es: ${precioMedioProductosVendidos.toFixed(2)} €
+    ${mensaje}`)
+
+        
+        // === FINAL DE TU CÓDIGO ===
+    </script>
+
+</body>
+</html>
