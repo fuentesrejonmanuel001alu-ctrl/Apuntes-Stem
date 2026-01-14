@@ -4,27 +4,77 @@
 
 <head><!--"Contiene la configuración ""invisible"", como el título de la pestaña."-->
     <meta charset="UTF-8" /> <!--"Soporta todos los caracteres"-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--"Crucial para las páginas y ocupar el ancho"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--"Crucial para las páginas y ocupar el ancho"-->
     <title>Ford Mustang GT Convertible</title><!--Esta es la pestaña-->
 </head>
 
 <body><!--"Aquí irá todo lo que el usuario verá: fotos, motores y precios."-->
 
-    <header><!--Contiene elementos que generalmente aparecen al inicio de una página web, como logotipos, títulos y menús de navegación.-->
+    <header>
+        <!--Contiene elementos que generalmente aparecen al inicio de una página web, como logotipos, títulos y menús de navegación.-->
         <h1>Ford Mustang: El Rey de los Muscle Cars</h1><!--Etiqueta de encabezado principal-->
-        <nav id="menu-mustang"> <!--Etiqueta fundamental porque ayuda a lectores con discapacidad y secciones importantes web-->
+        <nav id="menu-mustang">
+            <!--Etiqueta fundamental porque ayuda a lectores con discapacidad y secciones importantes web-->
             <!--ID es el DNI, enlaza menús web y permite a CSS y JS encontrar el elemento para cambiarlo-->
-            <ul> 
+            <ul> <!--Es el contenedor de las listas desordenadas-->
                 <li><a href="#historia">Historia</a></li>
+                <!--El li: es el elemento de la lista y a: es la etiqueta de ancla o enlace (Anchor). Su función es conectar con otra página o sección, de un sitio a otro.-->
                 <li><a href="#modelos">Modelos</a></li>
             </ul>
         </nav>
 
-    <main> <section id="info"> <h2>El Legado del Ford Mustang</h2> <p>Un icono de potencia y diseño desde 1964.</p> </section>
-    </main>
     </header>
-    
+
+    <main>
+        <!--Envuelve el contenido central y único de la página. Solo debe ir lo que no se repite en otras páginas (por ejemplo, la historia específica del Mustang), 
+        dejando fuera el menú o el pie de página. Uno por página: Solo puede haber un elemento <main> visible en cada documento HTML. Jerarquía: Se coloca justo después del <header> y antes del <footer>.-->
+        <section id="info">
+            <!--sirve para agrupar contenido que tiene un tema común, como si fuera un capítulo de un libro o un bloque lógico de tu web. 
+        Ayuda a organizar el <main> en partes diferenciadas (por ejemplo: una sección para "Historia", otra para "Motores", etc.).-->
+            <h2>El Legado del Ford Mustang</h2> <!--Etiqueta secundaria-->
+            <p>Un icono de potencia y diseño desde 1964.</p>
+            <!--es la abreviatura de párrafo (paragraph). Se utiliza para agrupar bloques de texto dentro de tu página web.-->
+            <p>El Ford Mustang fue presentado oficialmente en la Feria Mundial de Nueva York el 17 de abril de 1964.</p>
+            <p>Se convirtió en el lanzamiento más exitoso de la marca desde el Modelo A.</p>
+        </section>
+        <section id="galeria">
+            <h2>Fotos del Modelo GT</h2>
+            <img src="Multimedia Mustang/mustang1.jpg" alt="Ford Mustang GT con fondo nevado"><!--Si está guardado en mi PC, uso src-->
+            <p>El modelo más bonito de la historia</p>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMGo79XTWEQLGUxHJgWywVuLK1J4icrUj2Qi6YngrjEK2k9iYA638J7bfWa73_mDzm9wiRqubmCUXO75Ii_Hjwc6OtetA20SRPOBD3ks7is8xXwTE4a59kxEbEbHYkAQu0di4zNEuxXRQ/s1600/Ford+Mustang+Convertible.jpg" 
+            alt="Ford Mustang rojo de exposición"><!--Si la imagen es externa (de google, p.ej), usamos href para ir a esa foto-->
+            <p>En cualquier color enamora</p>
+            <img src="Multimedia Mustang/mustang3.jpg" alt="Ford Mustang de culo">
+            <p>Esa trasera recuerda al modelo clásico</p>
+            <img src="Multimedia Mustang/mustang4.jpg" alt="Ford Mustang con raya">
+            <p>Algunos nostálgicos prefieren sus rayas</p>
+            <source src="https://youtu.be/et3hzbSpd-A?si=VH1ht38oknPxCR31" type="video/mp4">
+            <a href="https://youtu.be/et3hzbSpd-A">Escuchar el rugido de su V8 mientras se conduce</a><br> <iframe src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+         </video>
+        </section>
+        <section id="especificaciones">
+            <h2>Potencia V8</h2>
+            <p>500 caballos de puro músculo americano.</p>
+
+        </section>
+    </main>
+
 </body>
 
 </html>
 
+
+vídeo
+<iframe src="" frameborder="0"></iframe>
+enlace ref historia: misma página, pestaña, otra web
+correo, maps,
+width, frameborder
+<video src></video> se utiliza cuando el vídeo ya está descargado
+
+Siempre usa el atributo href para saber a dónde ir
+iframe> (Marco en línea): Se usa para incrustar contenido de otra web dentro de la tuya (como un mapa o un vídeo de YouTube). Usa src porque está "trayendo" ese contenido a tu página.
+<br> (Salto de línea): Simplemente rompe la línea y salta a la de abajo. Es útil si quieres que el enlace y el vídeo no aparezcan pegados en la misma fila.
+ <br> <iframe src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe> ```
+Si quieres que el vídeo se abra en una pestaña nueva y que se lea tu texto ("Escuchar el rugido..."), te falta un atributo clave: target="_blank".
