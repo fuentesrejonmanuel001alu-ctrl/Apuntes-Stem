@@ -40,19 +40,31 @@
         </section>
         <section id="galeria">
             <h2>Fotos del Modelo GT</h2>
-            <img src="Multimedia Mustang/mustang1.jpg" alt="Ford Mustang GT con fondo nevado"><!--Si está guardado en mi PC, uso src-->
+            <img src="Multimedia Mustang/mustang1.jpg"
+                alt="Ford Mustang GT con fondo nevado"><!--Si está guardado en mi PC, uso src-->
             <p>El modelo más bonito de la historia</p>
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMGo79XTWEQLGUxHJgWywVuLK1J4icrUj2Qi6YngrjEK2k9iYA638J7bfWa73_mDzm9wiRqubmCUXO75Ii_Hjwc6OtetA20SRPOBD3ks7is8xXwTE4a59kxEbEbHYkAQu0di4zNEuxXRQ/s1600/Ford+Mustang+Convertible.jpg" 
-            alt="Ford Mustang rojo de exposición"><!--Si la imagen es externa (de google, p.ej), usamos href para ir a esa foto-->
+            <img width="500" height="315" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMGo79XTWEQLGUxHJgWywVuLK1J4icrUj2Qi6YngrjEK2k9iYA638J7bfWa73_mDzm9wiRqubmCUXO75Ii_Hjwc6OtetA20SRPOBD3ks7is8xXwTE4a59kxEbEbHYkAQu0di4zNEuxXRQ/s1600/Ford+Mustang+Convertible.jpg"
+                alt="Ford Mustang rojo de exposición"><!--Si la imagen es externa (de google, p.ej), usamos href para ir a esa foto-->
             <p>En cualquier color enamora</p>
-            <img src="Multimedia Mustang/mustang3.jpg" alt="Ford Mustang de culo">
+            <img width="500" height="315" src="Multimedia Mustang/mustang3.jpg" alt="Ford Mustang de culo"><!--width: ancho, height: alto, para fotos y vídeo-->
             <p>Esa trasera recuerda al modelo clásico</p>
-            <img src="Multimedia Mustang/mustang4.jpg" alt="Ford Mustang con raya">
+            <img width="500" height="405" src="Multimedia Mustang/mustang4.jpg" alt="Ford Mustang con raya">
             <p>Algunos nostálgicos prefieren sus rayas</p>
-            <source src="https://youtu.be/et3hzbSpd-A?si=VH1ht38oknPxCR31" type="video/mp4">
-            <a href="https://youtu.be/et3hzbSpd-A">Escuchar el rugido de su V8 mientras se conduce</a><br> <iframe src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <video width="500 height=405" controls autoplay muted loop><!--controls te muestra la barra de controles: play, pausa, volumen, etc, autoplay hace que funcione solo, muted esto no funciona autoplay, loop se reproduce automáticamente al acabar-->
+                <source src="Multimedia Mustang/videoMustang.mp4" type="video/mp4">
+                <!--No es obligatorio poner type, pero es recomendable. Este vídeo está descargado en PC-->
+            </video><!--Dato importante: si el siguiente vídeo es enlace externo (como es el caso), hay que cerrar la etiqueta de vídeo-->
+                <div>    
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/dkyIkOQAR2w" title="Reproductor de vídeo Mustang" frameborder="1"></iframe>
+                <!--los iframe se identifican como texto y se pegan al lado de la anterior foto, para evitar esto, o ponemos <div>ETIQUETA</div> 
+                que ocupa todo el ancho y obligamos a dar salto o ponemos <br>. Tittle es invisible, como alt en imágenes y framborder para bordes-->
+                    
+            </div>
+                
+                <a href="https://youtu.be/et3hzbSpd-A">Escuchar el rugido de su V8 mientras se conduce</a><br> <iframe
+                src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-         </video>
         </section>
         <section id="especificaciones">
             <h2>Potencia V8</h2>
@@ -66,15 +78,28 @@
 </html>
 
 
-vídeo
-<iframe src="" frameborder="0"></iframe>
+
 enlace ref historia: misma página, pestaña, otra web
 correo, maps,
-width, frameborder
+allow:Es el atributo más importante hoy en día. Es una lista de "permisos" que tú le das al vídeo externo para que pueda usar funciones del navegador del usuario.
+accelerometer y gyroscope: Permite que el vídeo detecte si el usuario mueve el móvil (por ejemplo, para vídeos en 360°).
+clipboard-write: Permite que puedas darle a un botón dentro del vídeo para "Copiar enlace" al portapapeles.
+
+allowfullscreen (Pantalla completa)
+
+    Qué es: Es un interruptor de seguridad. Si lo pones, permites que aparezca el botón de "Pantalla completa" en el reproductor.
+
+    Si lo quitas: El usuario no podrá agrandar el vídeo a toda la pantalla; se verá obligado a verlo siempre en el tamaño pequeño que hayas definido en tu web.
+
 <video src></video> se utiliza cuando el vídeo ya está descargado
+loop: el vídeo se reproduce automáticamente cuando acabe
 
 Siempre usa el atributo href para saber a dónde ir
-iframe> (Marco en línea): Se usa para incrustar contenido de otra web dentro de la tuya (como un mapa o un vídeo de YouTube). Usa src porque está "trayendo" ese contenido a tu página.
-<br> (Salto de línea): Simplemente rompe la línea y salta a la de abajo. Es útil si quieres que el enlace y el vídeo no aparezcan pegados en la misma fila.
- <br> <iframe src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe> ```
-Si quieres que el vídeo se abra en una pestaña nueva y que se lea tu texto ("Escuchar el rugido..."), te falta un atributo clave: target="_blank".
+iframe> (Marco en línea): Se usa para incrustar contenido de otra web dentro de la tuya (como un mapa o un vídeo de
+YouTube). Usa src porque está "trayendo" ese contenido a tu página.
+<br> (Salto de línea): Simplemente rompe la línea y salta a la de abajo. Es útil si quieres que el enlace y el vídeo no
+aparezcan pegados en la misma fila.
+<br> <iframe src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video"
+    allow="autoplay; fullscreen" allowfullscreen></iframe> ```
+Si quieres que el vídeo se abra en una pestaña nueva y que se lea tu texto ("Escuchar el rugido..."), te falta un
+atributo clave: target="_blank".
