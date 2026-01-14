@@ -14,13 +14,15 @@
     <header>
         <!--Contiene elementos que generalmente aparecen al inicio de una página web, como logotipos, títulos y menús de navegación.-->
         <h1>Ford Mustang: El Rey de los Muscle Cars</h1><!--Etiqueta de encabezado principal-->
-        <nav id="menu-mustang">
+        <nav id="menu-mustang"><!--nav identifica moverte por la página principal, un menú-->
             <!--Etiqueta fundamental porque ayuda a lectores con discapacidad y secciones importantes web-->
             <!--ID es el DNI, enlaza menús web y permite a CSS y JS encontrar el elemento para cambiarlo-->
             <ul> <!--Es el contenedor de las listas desordenadas-->
                 <li><a href="#historia">Historia</a></li>
-                <!--El li: es el elemento de la lista y a: es la etiqueta de ancla o enlace (Anchor). Su función es conectar con otra página o sección, de un sitio a otro.-->
+                <!--El li: es el elemento de la lista y a: es la etiqueta de ancla o enlace (Anchor). Su función es conectar con otra página o sección, de un sitio a otro.
+                Externo: <a href="http://google.com"> (Te vas a otra web). Interno (Ancla): <a href="#historia"> (Saltas a un id de tu propia página)-->
                 <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#galeria">Galería multimedia</a></li>
             </ul>
         </nav>
 
@@ -29,7 +31,7 @@
     <main>
         <!--Envuelve el contenido central y único de la página. Solo debe ir lo que no se repite en otras páginas (por ejemplo, la historia específica del Mustang), 
         dejando fuera el menú o el pie de página. Uno por página: Solo puede haber un elemento <main> visible en cada documento HTML. Jerarquía: Se coloca justo después del <header> y antes del <footer>.-->
-        <section id="info">
+        <section id="historia">
             <!--sirve para agrupar contenido que tiene un tema común, como si fuera un capítulo de un libro o un bloque lógico de tu web. 
         Ayuda a organizar el <main> en partes diferenciadas (por ejemplo: una sección para "Historia", otra para "Motores", etc.).-->
             <h2>El Legado del Ford Mustang</h2> <!--Etiqueta secundaria-->
@@ -38,68 +40,87 @@
             <p>El Ford Mustang fue presentado oficialmente en la Feria Mundial de Nueva York el 17 de abril de 1964.</p>
             <p>Se convirtió en el lanzamiento más exitoso de la marca desde el Modelo A.</p>
         </section>
+        <section id="modelos">
+        <h2>Catálogo de Leyendas</h2>
+        <p>Estos son los modelos que definieron cada época del Mustang:</p>
+
+    <ul>
+        <li><strong>Mustang 1964 ½:</strong> El que lo empezó todo. El primer "Pony Car".</li>
+        <li><strong>Shelby GT500 "Eleanor":</strong> Famoso por su potencia y su diseño agresivo.</li>
+        <li><strong>Mustang Mach 1:</strong> El rey de las pistas en los años 70.</li>
+        <li><strong>Mustang Dark Horse 2024:</strong> La bestia moderna con 500 CV de potencia.</li>
+    </ul>
+        </section>
         <section id="galeria">
             <h2>Fotos del Modelo GT</h2>
-            <img src="Multimedia Mustang/mustang1.jpg"
-                alt="Ford Mustang GT con fondo nevado"><!--Si está guardado en mi PC, uso src-->
-            <p>El modelo más bonito de la historia</p>
-            <img width="500" height="315" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMGo79XTWEQLGUxHJgWywVuLK1J4icrUj2Qi6YngrjEK2k9iYA638J7bfWa73_mDzm9wiRqubmCUXO75Ii_Hjwc6OtetA20SRPOBD3ks7is8xXwTE4a59kxEbEbHYkAQu0di4zNEuxXRQ/s1600/Ford+Mustang+Convertible.jpg"
-                alt="Ford Mustang rojo de exposición"><!--Si la imagen es externa (de google, p.ej), usamos href para ir a esa foto-->
-            <p>En cualquier color enamora</p>
-            <img width="500" height="315" src="Multimedia Mustang/mustang3.jpg" alt="Ford Mustang de culo"><!--width: ancho, height: alto, para fotos y vídeo-->
-            <p>Esa trasera recuerda al modelo clásico</p>
+
+            <figure><!--Con esta etiqueta en cada foto, evitamos que las fotos estén pegadas y ponemos pie de foto o vídeo-->
+            <img src="Multimedia Mustang/mustang1.jpg" alt="Ford Mustang GT con fondo nevado">
+            <figcaption>El modelo más bonito de la historia</figcaption><!--Es la información que acompaña a la foto-->
+            </figure>
+            <figure>
+                <img width="500" height="315"
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMGo79XTWEQLGUxHJgWywVuLK1J4icrUj2Qi6YngrjEK2k9iYA638J7bfWa73_mDzm9wiRqubmCUXO75Ii_Hjwc6OtetA20SRPOBD3ks7is8xXwTE4a59kxEbEbHYkAQu0di4zNEuxXRQ/s1600/Ford+Mustang+Convertible.jpg"
+                    alt="Ford Mustang rojo de exposición"><!--Si la imagen es externa (de google, p.ej), usamos href para ir a esa foto-->
+                <figcaption>En cualquier color enamora</figcaption>
+            </figure>
+            <figure>
+                <img width="500" height="315" src="Multimedia Mustang/mustang3.jpg"
+                    alt="Ford Mustang de culo"><!--width: ancho, height: alto, para fotos y vídeo-->
+                <figcaption>Esa trasera recuerda al modelo clásico</figcaption>
+            </figure>
+            <figure>
             <img width="500" height="405" src="Multimedia Mustang/mustang4.jpg" alt="Ford Mustang con raya">
-            <p>Algunos nostálgicos prefieren sus rayas</p>
-            <video width="500 height=405" controls autoplay muted loop><!--controls te muestra la barra de controles: play, pausa, volumen, etc, autoplay hace que funcione solo, muted esto no funciona autoplay, loop se reproduce automáticamente al acabar-->
-                <source src="Multimedia Mustang/videoMustang.mp4" type="video/mp4">
+            <figcaption>Algunos nostálgicos prefieren sus rayas</figcaption>
+            </figure>
+            <figure>
+            <video width="500" height="405" controls autoplay muted
+                loop><!--controls te muestra la barra de controles: play, pausa, volumen, etc, autoplay hace que funcione solo, muted esto no funciona autoplay, loop se reproduce automáticamente al acabar-->
+                <source src="Multimedia Mustang/mustangclasico.mp4" type="video/mp4">
                 <!--No es obligatorio poner type, pero es recomendable. Este vídeo está descargado en PC-->
-            </video><!--Dato importante: si el siguiente vídeo es enlace externo (como es el caso), hay que cerrar la etiqueta de vídeo-->
-                <div>    
-            <iframe width="500" height="315" src="https://www.youtube.com/embed/dkyIkOQAR2w" title="Reproductor de vídeo Mustang" frameborder="1"></iframe>
+                <a>Coche clásico negro circulando</a>
+            </video>
+            <figcaption>Desde el primer modelo ya enamoraba</figcaption><!--Si queremos que se lea, tiene que ir fuera de la etiqueta vídeo-->
+            </figure>
+            <br><a href="https://youtu.be/et3hzbSpd-A">Ver vídeo de conducción</a><!--Esto se abre en el mismo navegador-->
+            <!--Si no hubiésemos puesto br, los enlaces salen pegados. IMPORTANTE: BR, ¡NO TIENE ETIQUETA DE CIERRE /BR!-->
+            <br><a href="https://youtu.be/et3hzbSpd-A" target="_blank">Ver este vídeo del Mustang</a><!--Abre una pestaña nueva-->
+            <a href="https://youtube.com/shorts/dvRzgaTGE-k?si=CQxOhtkJJBPiihOH">
+            <br>Escuchar el rugido de su V8 mientras se conduce</a>
+            <div><!--se aconseja meter cada iframe dentro del div-->    
+            <br><iframe width="500" height="405" src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1"
+                title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <!--allow:Es el atributo más importante hoy en día. Es una lista de "permisos" que tú le das al vídeo externo para que pueda
+                usar funciones del navegador del usuario y con allowfullscreen permites la Pantalla completa-->
+                </div>
+                <div>
+                <!--Dato importante: si el siguiente vídeo es enlace externo (como es el caso), hay que abrir la etiqueta de div-->
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/dkyIkOQAR2w"
+                title="Reproductor de vídeo Mustang" frameborder="1"></iframe>
                 <!--los iframe se identifican como texto y se pegan al lado de la anterior foto, para evitar esto, o ponemos <div>ETIQUETA</div> 
                 que ocupa todo el ancho y obligamos a dar salto o ponemos <br>. Tittle es invisible, como alt en imágenes y framborder para bordes-->
-                    
-            </div>
                 
-                <a href="https://youtu.be/et3hzbSpd-A">Escuchar el rugido de su V8 mientras se conduce</a><br> <iframe
-                src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video"
-                allow="autoplay; fullscreen" allowfullscreen></iframe>
-
+                <!--Si hiciéramos uso de accelerometer y gyroscope: Permite que el vídeo detecte 
+                si el usuario mueve el móvil (por ejemplo, para vídeos en 360°) y clipboard-write: Permite que puedas darle a 
+                un botón dentro del vídeo para "Copiar enlace" al portapapeles.-->
+            </div>
         </section>
         <section id="especificaciones">
             <h2>Potencia V8</h2>
             <p>500 caballos de puro músculo americano.</p>
-
         </section>
     </main>
+    <footer>
+        <hr><!--no tiene etiqueta de cierre, dibuja una línea horizontal-->
+        <section>
+            <h4>Nuestra Sede</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d2950.446337831002!2d-83.2104576!3d42.311681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b33608332152d%3A0x63346944e43f5f3e!2sFord%20Motor%20Company%20World%20Headquarters!5e0!3m2!1ses!2ses!4v1705260000000!5m2!1ses!2ses" 
+            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
+        <p>Mustang Fan Page - Tu rincón de Muscle Cars</p>
+        <p>Contacto: <a href="mailto:tu-correo@ejemplo.com">Enviar Email</a></p>
+        </section>
+        <p>&copy; 2026 <strong>Mustang Fan Club</strong>. Todos los derechos reservados.</p>
+    </footer>
 </body>
-
 </html>
-
-
-
-enlace ref historia: misma página, pestaña, otra web
-correo, maps,
-allow:Es el atributo más importante hoy en día. Es una lista de "permisos" que tú le das al vídeo externo para que pueda usar funciones del navegador del usuario.
-accelerometer y gyroscope: Permite que el vídeo detecte si el usuario mueve el móvil (por ejemplo, para vídeos en 360°).
-clipboard-write: Permite que puedas darle a un botón dentro del vídeo para "Copiar enlace" al portapapeles.
-
-allowfullscreen (Pantalla completa)
-
-    Qué es: Es un interruptor de seguridad. Si lo pones, permites que aparezca el botón de "Pantalla completa" en el reproductor.
-
-    Si lo quitas: El usuario no podrá agrandar el vídeo a toda la pantalla; se verá obligado a verlo siempre en el tamaño pequeño que hayas definido en tu web.
-
-<video src></video> se utiliza cuando el vídeo ya está descargado
-loop: el vídeo se reproduce automáticamente cuando acabe
-
-Siempre usa el atributo href para saber a dónde ir
-iframe> (Marco en línea): Se usa para incrustar contenido de otra web dentro de la tuya (como un mapa o un vídeo de
-YouTube). Usa src porque está "trayendo" ese contenido a tu página.
-<br> (Salto de línea): Simplemente rompe la línea y salta a la de abajo. Es útil si quieres que el enlace y el vídeo no
-aparezcan pegados en la misma fila.
-<br> <iframe src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1" title="Ford Mustang Video"
-    allow="autoplay; fullscreen" allowfullscreen></iframe> ```
-Si quieres que el vídeo se abra en una pestaña nueva y que se lea tu texto ("Escuchar el rugido..."), te falta un
-atributo clave: target="_blank".
