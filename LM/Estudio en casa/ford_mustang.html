@@ -75,35 +75,35 @@
             </figure>
             <figure>
             <video width="500" height="405" controls autoplay muted
-                loop><!--controls te muestra la barra de controles: play, pausa, volumen, etc, autoplay hace que funcione solo, muted esto no funciona autoplay, loop se reproduce automáticamente al acabar-->
+                loop><!--controls te muestra la barra de controles: play, pausa, volumen, etc, autoplay hace que funcione solo, sin muted no funciona autoplay, loop se reproduce automáticamente al acabar-->
                 <source src="Multimedia Mustang/mustangclasico.mp4" type="video/mp4">
                 <!--No es obligatorio poner type, pero es recomendable. Este vídeo está descargado en PC-->
-                <a>Coche clásico negro circulando</a>
-            </video>
-            <figcaption>Desde el primer modelo ya enamoraba</figcaption><!--Si queremos que se lea, tiene que ir fuera de la etiqueta vídeo-->
+            </video>    
+            <title>vídeo short de clásico negro circulando</title>
+                <figcaption>Desde el primer modelo ya enamoraba</figcaption><!--Si queremos que se lea, tiene que ir fuera de la etiqueta vídeo-->
             </figure>
-            <br><a href="https://youtu.be/et3hzbSpd-A">Ver vídeo de conducción</a><!--Esto se abre en el mismo navegador-->
+            <figure>
+            <a href="https://youtu.be/et3hzbSpd-A">Ver vídeo de conducción</a><!--Esto se abre en el mismo navegador-->
             <!--Si no hubiésemos puesto br, los enlaces salen pegados. IMPORTANTE: BR, ¡NO TIENE ETIQUETA DE CIERRE /BR!-->
             <br><a href="https://youtu.be/et3hzbSpd-A" target="_blank">Ver este vídeo del Mustang</a><!--Abre una pestaña nueva-->
-            <a href="https://youtube.com/shorts/dvRzgaTGE-k?si=CQxOhtkJJBPiihOH">
-            <br>Escuchar el rugido de su V8 mientras se conduce</a>
-            <div><!--se aconseja meter cada iframe dentro del div-->    
-            <br><iframe width="500" height="405" src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1"
-                title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                <!--allow:Es el atributo más importante hoy en día. Es una lista de "permisos" que tú le das al vídeo externo para que pueda
-                usar funciones del navegador del usuario y con allowfullscreen permites la Pantalla completa-->
-                </div>
-                <div>
-                <!--Dato importante: si el siguiente vídeo es enlace externo (como es el caso), hay que abrir la etiqueta de div-->
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/dkyIkOQAR2w"
-                title="Reproductor de vídeo Mustang" frameborder="1"></iframe>
+            <br><a href="https://youtube.com/shorts/dvRzgaTGE-k?si=CQxOhtkJJBPiihOH">Escuchar el rugido de su V8 mientras se conduce</a>   
+            </figure>
+                    <br><iframe width="500" height="405" src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1"
+                    title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <title>Es un vídeo de 5 minutos</title>
+                    <!--allow:Es el atributo más importante hoy en día. Es una lista de "permisos" que tú le das al vídeo externo para que pueda
+                    usar funciones del navegador del usuario y con allowfullscreen permites la Pantalla completa-->
+                    <!--Dato importante: si el siguiente vídeo es enlace externo (como es el caso), hay que abrir la etiqueta de div-->
+                    <br><iframe width="500" height="315" src="https://www.youtube.com/embed/dkyIkOQAR2w"
+                    title="Reproductor de vídeo Mustang" frameborder="1"></iframe>
+                    <title>Es un Mustang clásico blanco</title>
+            
                 <!--los iframe se identifican como texto y se pegan al lado de la anterior foto, para evitar esto, o ponemos <div>ETIQUETA</div> 
-                que ocupa todo el ancho y obligamos a dar salto o ponemos <br>. Tittle es invisible, como alt en imágenes y framborder para bordes-->
+                que ocupa todo el ancho y obligamos a dar salto o ponemos <br>. Title es invisible, como alt en imágenes y framborder para bordes-->
                 
                 <!--Si hiciéramos uso de accelerometer y gyroscope: Permite que el vídeo detecte 
                 si el usuario mueve el móvil (por ejemplo, para vídeos en 360°) y clipboard-write: Permite que puedas darle a 
-                un botón dentro del vídeo para "Copiar enlace" al portapapeles.-->
-            </div>
+                un botón dentro del vídeo para "Copiar enlace" al portapapeles.-->  
         </section>
         <section id="especificaciones">
             <h2>Potencia V8</h2>
