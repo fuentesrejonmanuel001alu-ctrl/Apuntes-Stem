@@ -1,0 +1,50 @@
+<script>
+
+    let higieneBidones = [];
+    let registroCalidad = [];
+    let alertaSanitaria = false;
+    let numeroAleatorio = 0;
+    let mensaje = "";
+    let sumaNumeros = 0;
+    let promedio = 0;
+
+    let numeroUsuario = prompt("Dime el nivel de higiene");
+
+    while (numeroUsuario != "FIN".toLowerCase()) {
+        let convertidoNumero = Number(numeroUsuario)
+
+        if (convertidoNumero >= 1 && convertidoNumero <= 100) {
+            registroCalidad.push(convertidoNumero)
+
+            if (convertidoNumero < 40) {
+                alertaSanitaria = true;
+            } else {
+                alert("⚠️ Error: El valor debe ser de 1 a 100.");
+                numeroUsuario = prompt("Dime el nivel de higiene");
+            }
+        }
+        for (let i = 0; i < registroCalidad.length; i++) {
+            sumaNumeros += registroCalidad[i];
+        }
+        promedio = sumaNumeros / registroCalidad.length
+
+
+
+        numeroAleatorio = Math.floor(Math.random() * 10) + 1
+        if (numeroAleatorio == 7) {
+            mensaje = "Inspección sorpresa superada con éxito"
+        }
+    }
+
+
+    console.log("La lista de todos los niveles es: " + registroCalidad.join(", ") + "\n" +
+        "El promedio final es: " + promedio + "\n" + alertaSanitaria)
+
+
+
+</script>
+
+
+
+
+
