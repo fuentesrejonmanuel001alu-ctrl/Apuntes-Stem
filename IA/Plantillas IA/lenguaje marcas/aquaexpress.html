@@ -1,0 +1,35 @@
+<script>
+
+    let nivelHigieneBidon = prompt("¿qué nivel de higiene tiene el bidón?")
+    let registroCalidad = []
+    let alertaSanitaria = false
+    let promedio = 0
+    let sumaRegistroCalidad = 0
+
+
+
+    while (nivelHigieneBidon >= 1 && nivelHigieneBidon <= 100 || nivelHigieneBidon != "FIN".toLowerCase()) {
+        if (nivelHigieneBidon >= 1 && nivelHigieneBidon <= 100) {
+            let higieneBidon = parseInt(nivelHigieneBidon)
+            nivelHigieneBidon = prompt("¿qué nivel de higiene tiene el bidón?")
+            registroCalidad.push(higieneBidon)
+
+            if (higieneBidon < 40) {
+                alertaSanitaria = true
+            }
+        } else {
+            alert("Error al introducir el valor")
+            nivelHigieneBidon = prompt("¿qué nivel de higiene tiene el bidón?")
+
+        }
+    }
+    for (let i = 0; i < registroCalidad.length; i++) {
+        sumaRegistroCalidad += registroCalidad[i]
+        promedio = sumaRegistroCalidad / registroCalidad.length
+    }
+    alert("la lista completa de los niveles registrados es: " + registroCalidad.join(", ") + "\n" +
+        "El promedio de higiene de los bidones es: " + promedio + "\n" +
+        "Alerta sanitaria: " + alertaSanitaria)
+
+
+</script>

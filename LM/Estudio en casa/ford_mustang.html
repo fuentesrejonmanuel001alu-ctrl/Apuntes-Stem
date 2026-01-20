@@ -7,6 +7,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--"Crucial para las páginas y ocupar el ancho"-->
     <title>Ford Mustang GT Convertible</title><!--Esta es la pestaña-->
+    <style>/* ESTO ES EL CSS, TAMBIÉN PODEMOS HACER UN ARCHIVO LLAMADO ESTILOS.CSS Y HACEMOS UN ENLACE EXTERNO ASÍ:
+    <link rel="stylesheet" href="estilos.css">
+    Selectores: Universal (*), de etiqueta (body, h1), de ID (#) y de clase.
+
+Modelo de Caja: margin, padding, border y box-sizing.
+
+Colores y Texto: color, background-color, font-family y text-align.
+
+Flexbox: display: flex y justify-content.
+
+No he añadido nada de "mi cosecha" que no esté en tu temario para que no te líes en el examen.
+
+2. ¿Qué es Flexbox y qué es el Modelo de Caja (Box Model)?
+Aquí es donde hay una pequeña confusión de nombres. En tu temario no existe el "Flex Model", lo que existe es el Modelo de Caja y el sistema Flexbox.
+
+Modelo de Caja (Box Model): Es la base de todo en CSS. Dice que cada elemento HTML es una caja. Esta caja tiene:
+
+Contenido: El texto o imagen.
+
+Padding (Relleno): El espacio entre el texto y el borde.
+
+Border (Borde): La línea que rodea al padding.
+
+Margin (Margen): El espacio por fuera del borde para separarse de otras cajas.
+
+Flexbox: Es un sistema de diseño para organizar esas cajas. Se usa para que los elementos dentro de un contenedor se alineen automáticamente (por ejemplo, poner los botones del menú uno al lado del otro en fila sin que se amontonen).
+
+Resumen: El Modelo de Caja es cómo es una caja por dentro; Flexbox es cómo colocas varias cajas en la habitación.
+     1. SELECTOR UNIVERSAL: Limpieza y Box Model */
+* {
+    margin: 0;           /* Elimina el margen por defecto del navegador */
+    padding: 0;          /* Elimina el relleno por defecto */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+/* 2. SELECTOR POR ELEMENTO: Tipografía y Colores Globales */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente principal */
+    line-height: 1.6;               /* Mejora la legibilidad del texto */
+    background-color: #f4f4f4;      /* Color de fondo gris claro para la web */
+    color: #333;                    /* Color de texto gris oscuro */
+}
+
+/* 3. DISEÑO CON FLEXBOX: El Menú de Navegación */
+nav ul {
+    display: flex;                /* Convierte la lista en un contenedor flexible */
+    justify-content: space-around; /* Distribuye los enlaces con espacio uniforme */
+    background-color: #222;       /* Fondo oscuro para el menú */
+    padding: 15px;                /* Espacio interno del menú */
+    list-style-type: none;        /* Quita las bolitas de la lista */
+}
+
+nav a {
+    color: white;                 /* Texto de enlaces en blanco */
+    text-decoration: none;        /* Quita el subrayado de los enlaces */
+    font-weight: bold;            /* Pone el texto en negrita */
+}
+
+/* 4. EL MODELO DE CAJA: Secciones y Contenedores */
+main {
+    max-width: 1000px;    /* El contenido no se estira más de 1000px */
+    margin: 20px auto;    /* 20px arriba/abajo y centrado horizontalmente */
+    padding: 20px;        /* Espacio entre el borde y el contenido */
+    background-color: white; /* Fondo blanco para el contenido principal */
+    border: 1px solid #ddd;  /* Borde fino alrededor del contenido */
+}
+
+section {
+    margin-bottom: 40px;  /* Separa las secciones (Historia, Modelos, etc.) */
+}
+
+/* 5. SELECTOR POR CLASE E ID: Títulos y Botones */
+h1, h2 {
+    color: #b22222;       /* Color rojo "Mustang" para títulos */
+    text-align: center;   /* Centra los encabezados */
+    margin-bottom: 15px;  /* Espacio debajo del título */
+}
+
+#contacto {
+    background-color: #eee; /* Fondo gris suave para el formulario */
+    padding: 20px;          /* Espacio interno para que no pegue al borde */
+    border-radius: 8px;     /* Bordes redondeados (estética) */
+}
+
+/* 6. ESTILOS DE TABLAS: Datos Técnicos */
+table {
+    width: 100%;            /* La tabla ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Une los bordes de las celdas */
+    margin-top: 15px;       /* Espacio sobre la tabla */
+}
+
+th, td {
+    border: 1px solid #999; /* Borde para ver las celdas */
+    padding: 10px;          /* Espacio interno en cada celda */
+    text-align: left;       /* Alinea el texto a la izquierda */
+}
+
+th {
+    background-color: #222; /* Fondo oscuro para los títulos de la tabla */
+    color: white;           /* Texto blanco para los títulos */
+}
+
+/* 7. ESTILOS DE FORMULARIO: Botón dinámico */
+button[type="submit"] {
+    background-color: #b22222; /* Fondo rojo */
+    color: white;              /* Texto blanco */
+    padding: 10px 20px;        /* Botón más grande y fácil de pulsar */
+    border: none;              /* Quita el borde por defecto */
+    cursor: pointer;           /* Cambia el cursor al pasar por encima */
+    width: 100%;               /* El botón ocupa todo el ancho en móviles */
+}</style>
 </head>
 
 <body><!--"Aquí irá todo lo que el usuario verá: fotos, motores y precios."-->
