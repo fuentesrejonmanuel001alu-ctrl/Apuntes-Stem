@@ -1,3 +1,5 @@
+package PROGRAMACION.JAVA;
+
 import java.util.Scanner; //Dato estándar
 
 public class UD1_R2_ej9 { // Dato estándar, debe coincidir con nombre archivo
