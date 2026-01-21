@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class UD1_R2_ej5 {
+    /**
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese su peso: ");
@@ -9,8 +13,9 @@ public class UD1_R2_ej5 {
         double pesoEnLaLuna = pesoTierra * gravedadLuna;
 
         System.out.println("Tu peso en la luna es " + pesoEnLaLuna + " kg ");
-        System.out.printf("Tu peso en la luna es %.2f " + pesoEnLaLuna + " kg "); //%2.f (estoy diciendo que quiero dos decimales) equivalente a foTixed
-        
+        System.out.printf("Tu peso en la luna es %.2f " + pesoEnLaLuna + " kg "); // %2.f (estoy diciendo que quiero dos
+                                                                                  // decimales) equivalente a foTixed
+
         scanner.close();
     }
 }

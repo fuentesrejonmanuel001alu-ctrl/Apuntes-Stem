@@ -111,9 +111,7 @@ VALUES
 
 
 
--- 14. Obtener los equipos con el total de goles anotados en sus partidos como local, usando alias "total_goles",ordenado por total de goles descendente.
 
--- 15. Contar la cantidad de partidos jugados por cada equipo local, con alias "partidos_local", cantidad de partidos descendente.
 
 
 

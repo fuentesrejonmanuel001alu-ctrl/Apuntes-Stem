@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class UD1_R3_ej9 {
+    /**
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
         int numeroUsuario = 0;
         int digito = 0;
