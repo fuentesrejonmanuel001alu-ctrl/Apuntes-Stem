@@ -1,3 +1,5 @@
+package PROGRAMACION.JAVA;
+
 import java.util.Scanner; // Importamos la herramienta para leer el teclado
 
 public class UD1_R6_ej4 {

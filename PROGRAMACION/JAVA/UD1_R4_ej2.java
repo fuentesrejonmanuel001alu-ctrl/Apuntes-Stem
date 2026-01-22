@@ -1,3 +1,5 @@
+package PROGRAMACION.JAVA;
+
 import java.util.Scanner;
 
 public class UD1_R4_ej2 {
