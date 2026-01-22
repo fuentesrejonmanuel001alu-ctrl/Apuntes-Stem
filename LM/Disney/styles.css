@@ -1,22 +1,42 @@
-* {
+/*1. Estilos Globales*/
+
+* { /* Es el selector universal y afecta a todas las etiquetas sin excepción.
+    En el *: Solo ponemos el "reset" (margin, padding, box-sizing) para limpiar la web*/
     margin: 0;
-    /* Elimina el margen por defecto del navegador */
+    /* Elimina el margen por defecto del navegador*/
     padding: 0;
     /* Elimina el relleno por defecto */
     box-sizing: border-box;
-    /* Incluye padding y borde en el ancho total */
-    font-family: Arial, sans-serif;
-    background-color: #5770b6;
+    /* Incluye padding y borde en el ancho total.Es vital. Hace que si una caja mide 300px, el padding y el borde 
+    se queden dentro, evitando que la caja se ensanche y rompa el diseño*/
+    
+}
+body{ /*En el body: Ponemos la fuente y el fondo, porque son estilos 
+    que deben heredarse a todo el documento de forma organizada, no forzada.*/
+
+    background-color: #e0f7fa; /* Azul cielo suave */
+    font-family: 'Verdana', sans-serif; /* Fuente legible para párrafos */
+}
+h1, h2, h3 {
+  font-family: 'Georgia', serif; /* Fuente decorativa para encabezados */
 
 }
 
-.título {
-    display: flex;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/*2. Encabezado de Bienvenida*/
+header {
+    display: flex;                  /* Activa Flexbox */
+    justify-content: space-between; /* Título a la izquierda y menú a la derecha para que quede horizontal */
+    align-items: center;            /* Centra verticalmente */
+    padding: 15px 5%;
+    background-color: white;
+    border-bottom: 3px solid #ff4081; /* Borde decorativo solicitado */
 }
 
-.contenedor {
-    justify-content: space-between;
-    display: flex;
+nav ul {
+    display: flex;        /* Pone los enlaces en fila */
+    list-style: none;     /* Quita los puntos de la lista */
+}
 
+nav ul li {
+    margin-left: 20px;    /* Separa los enlaces entre sí */
 }
