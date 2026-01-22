@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    /* Elimina el margen por defecto del navegador */
+    padding: 0;
+    /* Elimina el relleno por defecto */
+    box-sizing: border-box;
+    /* Incluye padding y borde en el ancho total */
+    font-family: Arial, sans-serif;
+    background-color: #5770b6;
+
+}
+
+.título {
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contenedor {
+    justify-content: space-between;
+    display: flex;
+
+}
