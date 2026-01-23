@@ -1,0 +1,25 @@
+* {
+   
+    margin: 0;
+ 
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background-color: #e0f7fa;
+
+    font-family: 'Verdana', sans-serif;
+
+}
+.header{
+
+    display: flex;
+
+    background-color: aquamarine;
+
+    
+}
