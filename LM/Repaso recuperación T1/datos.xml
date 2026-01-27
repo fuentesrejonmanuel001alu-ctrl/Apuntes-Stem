@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="estilo.xsl"?>
+<!DOCTYPE concesionario SYSTEM "mustang.dtd">
+<concesionario>
+    <coche>
+        <modelo>Mustang Dark Horse</modelo>
+        <potencia unidad="CV">500</potencia>
+        <precio>80000</precio>
+    </coche>
+</concesionario>
+`` (XML): Escribir la información (como los instrumentos 🎸 o los coches 🏎️).``
+
+``Validación (DTD/XSD): Crear las reglas para que los datos sean correctos.``
+
+``Transformación (XSL): El "puente" que convierte el XML en una página web.``
+
+``Resultado (HTML/CSS): El diseño final que el usuario ve en el navegador.``
+

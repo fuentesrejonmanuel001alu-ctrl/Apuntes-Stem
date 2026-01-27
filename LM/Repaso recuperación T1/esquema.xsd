@@ -1,0 +1,43 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="concesionario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="coche" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="modelo" type="xs:string"/>
+              
+              <xs:element name="potencia">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:integer">
+                      <xs:attribute name="unidad" type="xs:string" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              
+              <xs:element name="precio" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+Ejemplo para simpleType si solo se pueden elegir estos colores y les acompaña restriction y enumeration 
+
+<xs:element name="color">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rojo"/>
+      <xs:enumeration value="Negro"/>
+      <xs:enumeration value="Azul"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
