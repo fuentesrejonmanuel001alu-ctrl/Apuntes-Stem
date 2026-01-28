@@ -1,0 +1,36 @@
+<script>
+
+    let almacenNombreProducto = [];
+    let almacenPesoProducto = [];
+    let pesoProducto = 0;
+    let inspeccionAduanas = []
+    let aleatorio = 0;
+    let pesoTotal = 0;
+
+    let nombreProducto = prompt("Dime el nombre del producto");
+    while (nombreProducto.toUpperCase() != "DESPACHAR") {
+        pesoProducto = parseInt(prompt("Dime cuánto pesa el producto"))
+
+        while (isNaN(pesoProducto) || pesoProducto <= 0) {
+            alert("Error en la numeración. Debe ser entero positivo")
+            pesoProducto = parseInt(prompt("Dime cuánto pesa el producto"))
+        }
+        almacenNombreProducto.push(nombreProducto)
+        almacenPesoProducto.push(pesoProducto)
+        nombreProducto = prompt("Dime el nombre del producto");
+    }
+
+    for (let i = 0; i < almacenNombreProducto.length; i++) {
+        aleatorio = Math.floor(Math.random() * 100) + 1
+        if (aleatorio <= 15) {
+            inspeccionAduanas.push(almacenNombreProducto[i])
+        }
+        pesoTotal += almacenPesoProducto[i]
+    }
+
+    console.log(`Los productos totales son: ${almacenNombreProducto.join(", ")}
+     El peso total de los productos es: ${almacenPesoProducto.join(", ")}
+     Toca inspección Retenidos en Aduanas: ${inspeccionAduanas.length > 0 ? inspeccionAduanas.join(", ") : "Ninguno"}
+     El peso total es: ${pesoTotal}`)
+
+</script>
