@@ -1,0 +1,19 @@
+<!ELEMENT arena (edicion, fecha, sede, torneo)>
+<!ELEMENT edicion (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT sede (#PCDATA)>
+
+<!ELEMENT torneo (nombre, categoria, plazas, equipos, resultado)>
+<!ATTLIST torneo id CDATA #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT plazas (#PCDATA)>
+
+<!ELEMENT equipos (equipo, equipo)>
+<!ELEMENT equipo (nombre, pais)>
+<!ATTLIST equipo color CDATA #REQUIRED>
+<!ELEMENT pais (#PCDATA)>
+
+<!ELEMENT resultado (#PCDATA)>
+<!ATTLIST resultado ganador CDATA #REQUIRED>
