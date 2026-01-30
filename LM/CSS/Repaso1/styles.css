@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto hace que el padding no "infle" el tamaño de tus cajas */
+}
+.campaña-total{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #3c8846;
+}

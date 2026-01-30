@@ -1,0 +1,171 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.caja {
+    width: 250px;      /* Ancho del contenido */
+    height: 150px;     /* Alto del contenido */
+    padding: 15px;     /* Espacio interno (entre texto y borde) */
+    border: 5px solid red; /* El borde rojo */
+    margin: 20px;      /* Espacio externo (separación con otros elementos) */
+    background-color: lightblue; /* (Opcional) Para que veas mejor el área */
+}
+/* Ejercicio 2: Diferencia entre padding y margin */
+
+.caja-1 {
+    padding: 30px;
+    background-color: lightblue;
+    border: 1px solid blue; /* Le pongo un borde para que veas dónde termina la caja */
+}
+
+.caja-2 {
+    margin: 30px;
+    background-color: lightgreen;
+    border: 1px solid green; /* Le pongo un borde para que veas dónde termina la caja */
+}
+
+/* Ejercicio 3: Bordes individuales */
+
+.borde-personalizado {
+    padding: 20px;
+    border-top: 10px solid blue;      /* Arriba: Grueso y continuo */
+    border-right: 5px dashed red;     /* Derecha: Guiones rojos */
+    border-bottom: 8px dotted green;  /* Abajo: Puntos verdes */
+    border-left: 3px double black;    /* Izquierda: Línea doble negra */
+    
+    background-color: white; /* Para que resalten más los colores */
+}
+
+/* Ejercicio 4: Tamaños relativos em y rem */
+
+.caja-em-rem {
+    font-size: 16px; /* Este es el "tamaño base" de este contenedor */
+    padding: 2em;    /* El padding será 2 veces el font-size (16 * 2 = 32px) */
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.caja-em-rem h1 {
+    font-size: 2rem; /* Mira la raíz (HTML), suele ser 16px. 16 * 2 = 32px */
+}
+
+.caja-em-rem p {
+    font-size: 1.5em; /* Mira a su padre (.caja-em-rem). 16 * 1.5 = 24px */
+}
+
+/* Ejercicio 5: Diseño fluido y Flexbox */
+
+.caja-fluid {
+    /* --- BOX MODEL CON UNIDADES FLUIDAS --- */
+    width: 50vw;          /* 50% del ancho de la pantalla */
+    height: 30vh;         /* 30% del alto de la pantalla */
+    background-color: lightcoral;
+    
+    /* Centrar la caja misma en la página usando márgenes */
+    margin: 20px auto;    /* 20px arriba/abajo y centrado lateral */
+
+    /* --- FLEXBOX (Para centrar el contenido de dentro) --- */
+    display: flex;             /* Activamos el modo "Organizador" */
+    justify-content: center;   /* Centra el texto horizontalmente */
+    align-items: center;       /* Centra el texto verticalmente */
+    
+    text-align: center;
+}
+.contenedor-flex {
+    display: flex; /* ¡El interruptor de Flexbox! */
+    background-color: #ddd;
+    padding: 10px;
+    border: 2px solid #333;
+    
+    /* CAMBIA ESTA LÍNEA según lo que te pide el profe: */
+    justify-content: flex-start; 
+}
+
+.hijo {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    color: white;
+    display: flex; /* Esto es para centrar el número dentro del hijo */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+}
+
+.contenedor-direccion {
+    display: flex;
+    border: 2px dashed #666;
+    padding: 10px;
+    gap: 10px; /* Esto deja un huequito entre hijos */
+    
+    /* PRUEBA AQUÍ LOS VALORES: */
+    flex-direction: row; 
+}
+
+/* Colores para distinguir los hijos */
+.rojo { background-color: #e74c3c; width: 60px; height: 60px; color: white;}
+.azul { background-color: #3498db; width: 60px; height: 60px; color: white;}
+.verde { background-color: #2ecc71; width: 60px; height: 60px; color: white;}
+
+.contenedor-crecimiento {
+    display: flex;
+    background-color: #eee;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.item1 {
+    flex-grow: 1;
+    background-color: #f1c40f; /* Amarillo */
+}
+
+.item2 {
+    flex-grow: 2; /* Este crecerá el doble que sus hermanos */
+    background-color: #e67e22; /* Naranja */
+}
+
+.item3 {
+    flex-grow: 1;
+    background-color: #e74c3c; /* Rojo */
+}
+
+/* Estilo común para que se vean las letras */
+.contenedor-crecimiento div {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.contenedor-combinado {
+    display: flex;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Hijo 1: Crece y encoge normal. Su base es el contenido. */
+.f1 { flex: 1 1 auto; background-color: #9b59b6; } 
+
+/* Hijo 2: Crece el doble, encoge normal, base de 150px. */
+.f2 { flex: 2 1 150px; background-color: #3498db; }
+
+/* Hijo 3: Crece normal, NO encoge, base de 100px. */
+.f3 { flex: 1 0 100px; background-color: #2ecc71; }
+
+/* Hijo 4: NO crece, encoge normal, base de 200px. */
+.f4 { flex: 0 1 200px; background-color: #e67e22; }
+
+.hijo { color: white; padding: 15px; text-align: center; }
