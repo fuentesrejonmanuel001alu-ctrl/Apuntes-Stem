@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="arena">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <xs:element name="edicion">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="2000"/>
+              <xs:maxInclusive value="2100"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="fecha" type="xs:date"/>
+
+        <xs:element name="sede" type="xs:string"/>
+
+        <xs:element name="torneo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              
+              <xs:element name="categoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="MOBA"/>
+                    <xs:enumeration value="FPS"/>
+                    <xs:enumeration value="Estrategia"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="plazas">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="2"/>
+                    <xs:maxInclusive value="64"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="equipos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="equipo" minOccurs="2" maxOccurs="2">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nombre" type="xs:string"/>
+                          <xs:element name="pais" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="color" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="resultado">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="tipoMarcador">
+                      <xs:attribute name="ganador" type="xs:string" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+
+            <xs:attribute name="id" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="SA-\d{3}"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="tipoMarcador">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{1,2}-\d{1,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
