@@ -1,4 +1,4 @@
-package PROGRAMACION.JAVA.Objetos;
+package Objetos;
 
 public class Ejercicio1_clase_circulo {
 
