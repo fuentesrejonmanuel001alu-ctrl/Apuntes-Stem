@@ -2,9 +2,9 @@
 
 2. Techo salarial con estudios primarios: SELECT MAX(ingresos_anuales) FROM personas WHERE estudios = 'primarios';
 
-3. Edad media de ocupaciones que empiezan por 'A': SELECT AVG(edad) FROM personas WHERE ocupacion LIKE 'A%';
+3. Edad media de ocupaciones que empiezan por 'A': SELECT AVG(floor(datediff(now(),fecha_nacimiento)/365.25)) FROM personas WHERE ocupacion LIKE 'A%';
 
-4. Estado civil (3 letras) en Dos Hermanas: SELECT LEFT(estado_civil, 3) FROM personas WHERE municipio = 'Dos Hermanas';
+4. Estado civil (3 letras) en Dos Hermanas: SELECT substring(estado_civil, 1, 3) FROM personas WHERE municipio = 'Dos Hermanas';
 
 5. Padre siendo madre y viceversa SELECT COUNT(*) FROM personas 
 WHERE id_padre IN (SELECT id FROM personas WHERE sexo = 'M') 
