@@ -9,5 +9,10 @@ public class Ejercicio_clase_get_set {
     
 }
 class Estudiante{
+
+    public String nombre;
     private 
+
+    public Estudiante() {
+    }
 }
