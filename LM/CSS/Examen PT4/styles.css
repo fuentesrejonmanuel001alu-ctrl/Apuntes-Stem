@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+}
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+a {
+    text-decoration: none;
+}
+.nav__link:hover {
+    color:#ff0000;
+    text-decoration: underline;
+}
+.nav__link--active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+.hero {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tu-imagen.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.hero__cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.hero__cta:hover {
+    background-color: #0056b3; /* Un azul más oscuro */
+    transform: translateY(-3px); /* El botón sube ligeramente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+    transform: scale(1.1);
+}
+.cards-container {
+    display: flex;
+    flex-direction: row; /* Esta es la opción por defecto, las pone en fila */
+    flex-wrap: wrap;    /* Permite que las tarjetas bajen a la siguiente línea si no caben */
+    gap: 20px;          /* Añade espacio uniforme entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+.cards__title {
+    /* Ocupa todo el ancho disponible del padre */
+    width: 100%; 
+    
+    /* Centra el texto para que luzca como un encabezado real */
+    text-align: center; 
+    
+    /* Opcional: añade espacio abajo para que no pegue con las tarjetas */
+    margin-bottom: 30px; 
+}
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+.card__img {
+    border-radius: 10px 10px 0 0; /* Redondea solo las esquinas superiores */
+    width: 100%;
+    display: block;
+}
+.card > .card__title {
+    font-size: 1.5rem;
+    color: #333333;
+    margin: 15px 0;
+    font-weight: bold;
+}
+.card__link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.card__link:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.section--groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.group {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+.group--coro {
+    border-top: 5px solid #ff5733; /* Naranja */
+}
+
+.group--chirigota {
+    border-top: 5px solid #33ff57; /* Verde */
+}
+
+.group--comparsa {
+    border-top: 5px solid #3357ff; /* Azul */
+}
+
+.group--cuarteto {
+    border-top: 5px solid #f333ff; /* Rosa/Morado */
+}
+.group__img:hover + .group__title {
+    color: #007bff;
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+.section--agenda ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section--agenda > li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
