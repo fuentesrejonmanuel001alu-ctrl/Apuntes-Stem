@@ -1,0 +1,31 @@
+<script>
+
+    //Dado un array de palabras, escribe una función que encuentre la palabra más larga.
+    //Ejemplo: ["apple", "banana", "kiwi", "watermelon"] debería devolver "watermelon".
+
+    let palabras = ["apple", "banana", "kiwi", "watermelon"]
+    let palabraMasLarga = ""
+    for (let i = 0; i < palabras.length; i++) {
+        if (palabras[i].length > palabraMasLarga.length){
+            palabraMasLarga = palabras[i]
+        }
+    }
+    alert(palabraMasLarga)
+
+
+</script>
+
+function encontrarPalabraMasLarga(lista) {
+    let masLarga = ""; // Variable local para el récord
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i].length > masLarga.length) {
+            masLarga = lista[i];
+        }
+    }
+    return masLarga; // "Devolvemos" el resultado final
+}
+
+// Así la usamos:
+let frutas = ["apple", "banana", "kiwi", "watermelon"];
+let resultado = encontrarPalabraMasLarga(frutas);
+alert("La más larga es: " + resultado);

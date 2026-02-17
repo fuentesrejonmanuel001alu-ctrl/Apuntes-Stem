@@ -1,0 +1,18 @@
+<script>
+
+//Solicitar un número entero. Multiplicar todos los dígitos del número.
+
+let numero = Number(prompt("Dime un número"))
+
+let ultimoDecimal=1
+let acumulamos=1
+
+while(numero >0){
+    ultimoDecimal = numero % 10
+    acumulamos*= ultimoDecimal
+    numero= Math.floor(numero/10)
+
+}
+console.log("El resultado de multiplicar los dígitos es: " + acumulamos);
+
+</script>

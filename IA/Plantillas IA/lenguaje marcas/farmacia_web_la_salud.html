@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoría Farmacia</title>
+    <style>
+        /* Un poco de estilo para que no sea solo texto negro */
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f7f6; }
+        .informe { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: inline-block; text-align: left; }
+        h1 { color: #2c3e50; }
+        .alerta { color: #e74c3c; font-weight: bold; }
+        footer { margin-top: 50px; font-size: 0.8em; color: #7f8c8d; }
+        button { padding: 10px 20px; background: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Farmacia "La Salud"</h1>
+    <p>Gestión de inventario y control de cadena de frío.</p>
+
+    <div class="informe">
+        <h2>Resultados de la Auditoría</h2>
+        <div id="resultado">
+            <p>Pulsa el botón para procesar los datos del laboratorio...</p>
+        </div>
+        <button onclick="ejecutarAuditoria()">Generar Informe</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Auditoría Técnica Farmacéutica - Sistema de Control de Frío</p>
+    </footer>
+
+    <script>
+        function ejecutarAuditoria() {
+            const medicamentos = ["Insulina", "Aspirina", "Vacuna Gripe", "Jarabe", "Antibiótico"];
+            const precios = [45.00, 5.50, 80.00, 12.00, 65.00];
+            const estados = ["Frío OK", "Frío OK", "Error Térmico", "Frío OK", "Error Térmico"];
+
+            let productosRetirados = [];
+            let sumaMedicamentos = 0;
+            let precioMasCaro = 0;
+            let nombreMasCaro = "";
+
+            for (let i = 0; i < estados.length; i++) {
+                if (estados[i] == "Error Térmico") {
+                    productosRetirados.push(medicamentos[i]);
+                    sumaMedicamentos += precios[i];
+
+                    if (precios[i] > precioMasCaro) {
+                        precioMasCaro = precios[i];
+                        nombreMasCaro = medicamentos[i];
+                    }
+                }
+            }
+
+            // Inyectamos el resultado en el HTML en lugar de un alert
+            document.getElementById("resultado").innerHTML = `
+                <p class="alerta">🚫 Retirados: ${productosRetirados.join(", ")}</p>
+                <p>💰 Coste total pérdida: <strong>${sumaMedicamentos.toFixed(2)} €</strong></p>
+                <p>🏆 Producto más caro a desechar: <strong>${nombreMasCaro}</strong> (${precioMasCaro} €)</p>
+            `;
+        }
+    </script>
+</body>
+</html>

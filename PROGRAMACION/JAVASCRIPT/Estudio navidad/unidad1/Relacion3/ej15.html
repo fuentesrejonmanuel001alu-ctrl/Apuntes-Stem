@@ -1,0 +1,30 @@
+<script>
+
+//Solicita el valor de un ángulo y determina si es:
+//Ángulo agudo (< 90°).
+//Ángulo recto (= 90°).
+//Ángulo obtuso (> 90° pero < 180°).
+//Ángulo llano (= 180°).
+
+
+let valorAngulo = parseInt(prompt("Dime el valor del ángulo"))
+
+if (isNaN(valorAngulo) || (valorAngulo>180)){
+    alert("Introduce un número entero")
+} else {
+    if(valorAngulo<90){
+        console.log("Es un ángulo agudo")
+    } else if (valorAngulo==90){
+        console.log("Es un ángulo recto")
+    } else if (valorAngulo>90 && valorAngulo <180){
+        console.log("Es un ángulo obtuso")
+    } else if ( valorAngulo == 180){
+        console.log("Es un ángulo llano")
+    } else {
+        
+    }
+}
+
+
+
+</script>

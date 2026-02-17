@@ -1,0 +1,19 @@
+<script>
+
+//Solicitar un número entero. Dibujar una pirámide con tantas filas como indique el número.
+
+let numero = Number(prompt("Dime un número"));
+let secuenciaNumerica = ""; 
+
+for (let i = 1; i <= numero; i++) {
+    // 1. Truco de magia: Ponemos el nuevo número DELANTE de los anteriores
+    secuenciaNumerica = i + secuenciaNumerica;
+    
+    // 2. Añadimos los espacios para empujar a la derecha
+    let espacios = " ".repeat(numero - i);
+    
+    // 3. Resultado final: Espacios + Números al revés
+    console.log(espacios + secuenciaNumerica);
+}
+
+</script>

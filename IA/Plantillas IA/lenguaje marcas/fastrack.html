@@ -1,0 +1,34 @@
+<script>
+
+    let piezasGuardadas = []
+    let cantidadesGuardadas = []
+    let stockCritico = []
+    let mensaje=""
+
+    let nombrePieza = prompt("Dime el nombre de la pieza")
+
+    while (nombrePieza.toLocaleUpperCase() != "LISTO") {
+        piezasGuardadas.push(nombrePieza)
+        let cantidadPiezas = Number(prompt("Dime el número de piezas"))
+        if (cantidadPiezas < 0) {
+            alert("Error. Para registrar el dato, el número tiene que ser entero positivo")
+            cantidadPiezas = Number(prompt("Dime el número de piezas"))
+        }
+            if (cantidadPiezas < 5) {
+                stockCritico.push(nombrePieza)
+            }
+        nombrePieza = prompt("Dime el nombre de la pieza")
+        cantidadesGuardadas.push(cantidadPiezas)
+    }
+    let auditoriaAleatoria = Math.floor(Math.random() * 10) + 1
+    if (auditoriaAleatoria == 5) {
+        mensaje = "No apta la auditoría de este lote seleccionado"
+    }
+
+    console.log(`Las piezas que se han registrado son: ${piezasGuardadas.join(", ")}
+Las piezas totales que se han inventariado son: ${cantidadesGuardadas}
+Las piezas en estado crítico son: ${stockCritico.join(", ")}
+${mensaje}`)
+
+
+</script>

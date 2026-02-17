@@ -1,0 +1,39 @@
+<script>
+
+    let resultadosHigieneBidon = [];
+    let mensaje = ""
+    let sumaResultados = 0;
+    let promedio = 0;
+    let probabilidadAleatoria = 0;
+    let factorSuerte = 7;
+    let mensajeAlerta = "";
+
+    let nivelHigieneDeCadaBidon = prompt("💧 Introduce el nivel de higiene");
+
+    while (nivelHigieneDeCadaBidon.toUpperCase() != "FIN") {
+        let nivelHigienePorBidon = parseInt(nivelHigieneDeCadaBidon)
+        if (nivelHigienePorBidon >= 1 && nivelHigienePorBidon <= 100) {
+            resultadosHigieneBidon.push(nivelHigienePorBidon);
+            nivelHigieneDeCadaBidon = prompt("💧 Introduce el nivel de higiene")
+        } else {
+            alert("❌ Error. Debe introducir un nivel comprendido entre 0 y 100")
+            nivelHigieneDeCadaBidon = prompt("🚱 Introduce el nivel de higiene")
+        }
+        if (nivelHigienePorBidon < 40) {
+            mensaje = "⚠️ Alerta sanitaria activa";
+        }
+    }
+    for (let i = 0; i < resultadosHigieneBidon.length; i++) {
+        sumaResultados += resultadosHigieneBidon[i]
+        promedio = sumaResultados / resultadosHigieneBidon.length
+    }
+    probabilidadAleatoria = Math.floor(Math.random() * 10) + 1
+    if (probabilidadAleatoria == factorSuerte) {
+        mensajeAlerta = "¡Inspección de Sanidad superada con éxito! 🎖️"
+    }
+    console.log("🚰 Los niveles de higiene por bidón son: " + resultadosHigieneBidon.join(", ") + "\n" +
+        "🖩 La media aritmética de higiene es: " + promedio.toFixed(2) + "\n" +
+        mensaje + "\n" + mensajeAlerta)
+
+
+</script>

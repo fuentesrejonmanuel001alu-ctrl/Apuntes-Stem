@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+//Estructura Semántica: Etiquetas como <header>, <nav>, <main> y <footer> no cambian el aspecto visual por sí solas,
+//pero le dicen al navegador y a los lectores de pantalla (para personas ciegas) qué parte de la web es cada una.
+//Encabezados (h1 a h6): Se usan por jerarquía. El h1 es el más importante (título de la página), 
+//el h2 para secciones, etc. No se deben usar solo para hacer la letra más grande; para eso está el CSS.
+
+Listas:
+
+<ul>: (Unordered List) Para listas con puntos.
+
+<ol>: (Ordered List) Para procesos o rankings (1, 2, 3...).
+
+Atributos de Formulario:
+
+
+required: Impide enviar el formulario si el campo está vacío.
+
+
+placeholder: Texto gris de ejemplo que desaparece al escribir.
+
+id: Es el nombre único de la etiqueta. Sirve para que el <label> sepa a qué input pertenece y para los enlaces internos (#).
+
+Multimedia:
+
+<iframe>: Se usa para incrustar contenido externo, como un mapa de Google o un vídeo de YouTube.
+
+alt: En las imágenes, es el texto que aparece si la imagen falla. Es obligatorio por accesibilidad.
+
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>El Alfabeto Infantil Informático</title> </head>
+
+<body>
+    <header>
+        <img src="img/abecedario.jpg" alt="Logotipo Alfabeto" width="100"> <h1>Alfabeto Ilustrado</h1> </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li> <li><a href="historia.html">Historia</a></li>
+            <li><a href="#contacto">Ir al final</a></li> </ul>
+    </nav>
+
+    <main>
+        <section id="introduccion">
+            <h2>Misión del Sitio</h2> <p>Este sitio ayuda a niños a aprender informática.</p> <video src="media/cancion_Abecedario.mp4" controls width="400"></video>
+        </section>
+
+        <hr> <section id="listas">
+            <h2>Listas de Mario Kart</h2>
+            
+            <ol type="i" start="33">
+                <li>Seleccionar Mario Kart</li>
+                <li>Elegir piloto</li>
+            </ol>
+
+            <ul style="list-style-type: square;"> <li>Mario</li>
+                <li>Luigi</li>
+            </ul>
+        </section>
+
+        <section id="tablas">
+            <h2>Horario de Carreras</h2>
+            <table border="1"> <thead> <tr> <th>Día</th> <th>9:00 - 12:00</th>
+                    </tr>
+                </thead>
+                <tbody> <tr>
+                        <td>Lunes</td> <td>Circuito Mario</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="interactivo">
+            <h2>Preguntas Desplegables</h2>
+            <details>
+                <summary>¿Qué es un algoritmo?</summary> <p>Es una lista de pasos para resolver un problema.</p> </details>
+        </section>
+
+        <section id="formulario">
+            <h2>Inscripción de Pilotos</h2>
+            <form action="#" method="post">
+                <label for="piloto">Nombre del Piloto:</label>
+                <input type="text" id="piloto" name="piloto" required minlength="3"> <label for="edad">Edad:</label>
+                <input type="number" id="edad" min="8" max="99"> <label>Tipo de Piloto:</label>
+                <input type="radio" name="tipo" value="principiante"> Principiante
+                <input type="radio" name="tipo" value="experto"> Experto
+
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" rows="4" cols="30" placeholder="Escribe aquí..."></textarea> <button type="submit">Enviar Formulario</button> <button type="reset">Limpiar</button> </form>
+        </section>
+
+    </main>
+
+    <footer id="contacto">
+        <p>&copy; 2026 Mario Kart Grand Prix</p>
+        <p>Contacto: <a href="mailto:info@ejemplo.com">Correo ficticio</a></p> <p>Descarga la <a href="docs/GuiaRae.pdf" download>Guía RAE</a></p> </footer>
+
+</body>
+
+</html>

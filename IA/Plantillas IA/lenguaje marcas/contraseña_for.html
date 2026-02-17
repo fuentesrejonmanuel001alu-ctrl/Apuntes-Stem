@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <div id="mi-alerta" style="background-color: green; color: white; padding: 20px; border-radius: 10px;"></div>
+
+    <script>
+        const contrasenia = "1234abcd";
+        const intentos = 5;
+        let numeroIntentos = 0;
+        let bombas = intentos;
+        const emojiBomba = "💣";
+        const emojiCandado = "🔒";
+        const cajaAlerta = document.getElementById("mi-alerta");
+
+        let dimeContrasenia = (emojiCandado + "Dime la contraseña.\nIntento " + numeroIntentos + " : Te quedan " + emojiBomba.repeat(bombas) + " intentos");
+        for (let i = 0; i < intentos; i++) {
+            if (dimeContrasenia != contrasenia) {
+                bombas--;
+                numeroIntentos++;
+                dimeContrasenia = prompt(emojiCandado + "Dime la contraseña.\nIntento " + numeroIntentos + " : Te quedan " + emojiBomba.repeat(bombas) + " intentos");
+            }
+        }
+
+        if (dimeContrasenia == contrasenia) {
+            cajaAlerta.textContent = "¡Acertaste!";
+        }
+
+        else {
+            cajaAlerta.textContent = "¡Otra vez será!";
+        }
+
+    </script>
+</body>
+
+</html>

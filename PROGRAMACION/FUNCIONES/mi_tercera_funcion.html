@@ -1,0 +1,19 @@
+<script>
+
+
+    function verificarCarga(numeroBidones, capacidadBidon) {
+        let volumenTotal = (numeroBidones * capacidadBidon)
+        
+        let mensaje=""
+        if(volumenTotal>1000){
+            mensaje="Alerta: exceso de peso"
+            return mensaje
+        } else {
+            return volumenTotal
+        }
+
+    }
+    console.log(verificarCarga(100, 500))
+
+
+</script>

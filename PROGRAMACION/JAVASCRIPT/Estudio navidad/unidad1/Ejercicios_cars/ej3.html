@@ -1,0 +1,26 @@
+<script>
+
+    //Crea un programa que simule un entrenamiento de 5 vueltas para un coche. 
+    //En cada vuelta, se pide el tiempo (en segundos). Al final, muestra:
+
+
+    let mensaje = "Tiempo por vuelta:"
+    let sumamosTiemposPorVuelta = 0
+    let tiempoActual = 0
+    let tiempoPorVuelta = 0
+    let promedio = 0
+    let vueltaMasRapida = 0
+    for (let i = 0; i < 5; i++) {
+        tiempoPorVuelta = parseFloat(prompt("Dime cuánto ha sido tu tiempo por vuelta"))
+        sumamosTiemposPorVuelta += tiempoPorVuelta
+        if (tiempoPorVuelta > vueltaMasRapida) {
+            vueltaMasRapida = tiempoPorVuelta
+        }
+    }
+    promedio = sumamosTiemposPorVuelta / 5
+    console.log("Número total de vueltas: 5");
+    console.log("Total gastado (tiempo): " + sumamosTiemposPorVuelta + " s");
+    console.log("Tiempo promedio: " + promedio + " s");
+    console.log("La vuelta más rápida ha sido: " + vueltaMasRapida + " s");
+
+</script>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="entrenamientos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sesion" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              
+              <xs:element name="fecha" type="xs:date"/>
+              
+              <xs:element name="horax">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="([01][0-9]|2[0-3]):[0-5][0-9]"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="fuerza"/>
+                    <xs:enumeration value="cardio"/>
+                    <xs:enumeration value="sparring"/>
+                    <xs:enumeration value="tecnica"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="duracionrv">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="30"/>
+                    <xs:maxInclusive value="240"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="ubicacion" type="xs:string"/>
+
+              <xs:element name="coach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="[A-Z].*"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="participantes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="boxeador" minOccurs="2" maxOccurs="10">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nombre">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:pattern value="[A-Z].*"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="alias" type="xs:string" minOccurs="0"/>
+                          <xs:element name="pais">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="2"/>
+                                <xs:maxLength value="40"/>
+                                <xs:pattern value="[a-zA-Z\s]+"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="ejercicios" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ejercicio" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nombre" type="xs:string"/>
+                          <xs:choice>
+                            <xs:element name="repeticiones">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                  <xs:minInclusive value="1"/>
+                                  <xs:maxInclusive value="50"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="duracionbloque">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                  <xs:minInclusive value="5"/>
+                                  <xs:maxInclusive value="120"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:element>
+                          </xs:choice>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="notas" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+
+            <xs:attribute name="codigo" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="TR-[A-Z]\s[a-z]\s\d"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="intensidad" use="optional">
+              <xs:simpleType>
+                <xs:restriction>

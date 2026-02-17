@@ -1,0 +1,20 @@
+<script>
+
+//Solicita tres números y calcula el promedio.
+
+let num1 =Number(prompt("Dime un número"))
+let num2 =Number(prompt("Dime otro número"))
+let num3 =Number(prompt("Dime otro número"))
+
+if (isNaN(num1) || (isNaN(num2)) || (isNaN(num3))){
+    alert("Introduce tres valores enteros")
+} else {
+
+    
+    let promedio = (num1+num2+num3)/3
+    
+    console.log("El promedio de los tres números es: " + promedio.toFixed(2))
+}
+
+
+</script>

@@ -1,0 +1,55 @@
+<script>
+
+    let jugadores = []
+    let puntuaciones = []
+    const numeroMaximoJugadores = 6
+
+    for (let i = 0; i < numeroMaximoJugadores; i++) {
+        let nombreJugador = prompt("Dime el nombre del jugador " + (i + 1) + ":")
+        let puntuacionJugador = parseFloat(prompt("Dime la puntuación del jugador " + (i + 1) + ":"))
+        jugadores.push(nombreJugador)
+        puntuaciones.push(puntuacionJugador)
+    }
+    let eligeMenu = Number(prompt(`Elige una de las opciones:\n1.Añadir un nuevo jugador\n2.Mostrar jugadores y puntuaciones\n3.Mostrar el jugador con mayor puntuación\n4.Mostrar el jugador con menor puntuación\n5.Salir`))
+    while (eligeMenu !== 5) {
+        if (eligeMenu === 1) {
+            nombreJugador = prompt("Dime el nombre del jugador:")
+            puntuacionJugador = parseFloat(prompt("Dime la puntuación del jugador:"))
+            jugadores.push(nombreJugador)
+            jugadores.shift()
+            puntuaciones.push(puntuacionJugador)
+            puntuaciones.shift()
+            console.log("Jugadores que hay: " + jugadores + "\n" + "Sus puntuaciones: " + puntuaciones)
+        } else if (eligeMenu === 2) {
+            for (let i = 0; i < jugadores.length; i++) {
+                console.log((i + 1) + ". " + jugadores[i] + " - " + puntuaciones[i].toFixed(2))
+            }
+        } else if (eligeMenu === 3) {
+            let jugadorMayorPuntuacion = puntuaciones[0]
+            let jugadorGanador = jugadores[0]
+            for (let i = 0; i < puntuaciones.length; i++) {
+                if (puntuaciones[i] > jugadorMayorPuntuacion) {
+                    jugadorMayorPuntuacion = puntuaciones[i]
+                    jugadorGanador = jugadores[i]
+                }
+            }
+            console.log("El jugador con mayor puntuación es: " + jugadorGanador)
+        } else if (eligeMenu === 4) {
+            let jugadorMenorPuntuacion = puntuaciones[0]
+            let jugadorPerdedor = jugadores[0]
+            for (let i = 0; i < puntuaciones.length; i++) {
+                if (puntuaciones[i] < jugadorMenorPuntuacion) {
+                    jugadorMenorPuntuacion = puntuaciones[i]
+                    jugadorPerdedor = jugadores[i]
+                }
+            }
+            console.log("El jugador con menor puntuación es: " + jugadorPerdedor)
+        } else {
+
+        }
+        eligeMenu = Number(prompt(`Elige una de las opciones:\n1.Añadir un nuevo jugador\n2.Mostrar jugadores y puntuaciones\n3.Mostrar el jugador con mayor puntuación\n4.Mostrar el jugador con menor puntuación\n5.Salir`))
+    }
+
+
+
+</script>

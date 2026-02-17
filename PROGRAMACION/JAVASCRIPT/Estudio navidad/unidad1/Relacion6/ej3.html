@@ -1,0 +1,35 @@
+<script>
+
+    //Crea un programa para dividir cuentas y calcular propinas. 
+    //El programa debe pedir productos de una cuenta hasta que el usuario introduce un 0. 
+    //El programa pide personas a repartir y porcentaje de propina que quieren dejar.
+
+
+    let cuenta = 0
+    let pagarPorPersona = 0
+    let totalPropina = 0
+    let cuentaAPagar = 0
+    let listadoPrecios = []
+    let numeroPersonas = parseInt(prompt("¿Cuántas personas sois?"))
+    let porcentajePropina = parseFloat(prompt("¿Qué porcentaje de propina se va a dejar?"))
+    let productos = parseFloat(prompt("Dime el precio de los productos que se han consumido en esta mesa"))
+
+    while (productos != 0) {
+        cuenta += productos
+        listadoPrecios.push(productos)
+        productos = parseFloat(prompt("Dime el precio de los productos que se han consumido en esta mesa"))
+        pagarPorPersona = cuenta / numeroPersonas
+        totalPropina = cuenta * (porcentajePropina / 100)
+        cuentaAPagar = cuenta + totalPropina
+    }
+    console.log(`
+    El total de productos es: ${listadoPrecios} €
+    La cuenta es: ${cuenta} €
+    El total a pagar por persona es ${pagarPorPersona} €
+    La propina que se deja es de ${totalPropina} €
+    La cuenta total con propina es ${cuentaAPagar} €`)
+
+
+
+
+</script>

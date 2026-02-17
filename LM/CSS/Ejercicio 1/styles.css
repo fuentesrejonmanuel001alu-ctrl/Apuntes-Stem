@@ -1,0 +1,12 @@
+/* 1. Márgenes y espaciado uniformes en todos los elementos */
+* {
+    margin: 20px;
+    padding: 10px;
+}
+
+/* 2. Color de texto y 3. Fondo degradado */
+body {
+    color: darkblue;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    min-height: 100vh;
+}

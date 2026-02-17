@@ -1,0 +1,52 @@
+<script>
+
+    let palabraQueTienesQueAcertar = "AHORCADO"
+
+    let palabraOcultaConGuiones = ""
+
+    let palabraSustituyeGuion = ""
+
+    let intentos = 6
+
+
+    for (i = 0; i < palabraQueTienesQueAcertar.length; i++) {
+        palabraOcultaConGuiones += "-"
+    }
+    while (intentos > 0 && palabraQueTienesQueAcertar != palabraOcultaConGuiones) {
+
+        let dimeLetras = prompt("Dime una letra")
+
+        if (palabraQueTienesQueAcertar.includes(dimeLetras)) {
+            for (let i = 0; i < palabraOcultaConGuiones.length; i++) {
+
+                if (palabraQueTienesQueAcertar[i] == dimeLetras) {
+                    palabraSustituyeGuion += dimeLetras
+
+                } else {
+                    palabraSustituyeGuion += palabraOcultaConGuiones[i]
+
+                }
+
+
+            }
+            palabraOcultaConGuiones = palabraSustituyeGuion
+
+            
+        } else {
+            intentos--
+            alert("¡Fallaste! Te quedan " + (intentos - 1) + " intentos")
+            if (intentos == 0) {
+
+            } else {
+
+            }
+        }
+    }
+    palabraOcultaConGuiones == palabraQueTienesQueAcertar
+    console.log("¡GANASTE!")
+
+    intentos == 0
+    console.log("¡PERDISTE!")
+
+
+</script>

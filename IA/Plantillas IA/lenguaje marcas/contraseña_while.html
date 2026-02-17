@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>
+        /* El símbolo # busca el ID "mi-alerta" */
+        #mi-alerta {
+            background-color: #27ae60;
+            /* Un verde elegante */
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mi-alerta"></div>
+    <input type="text" id="usuario-input" placeholder="Dime la contraseña">
+    <button id="boton-comprobar">Comprobar</button>
+
+    <script>
+
+
+        const contrasenia = "1234abcd";
+        const cajaAlerta = document.getElementById("mi-alerta");
+        const inputUsuario = document.getElementById("usuario-input");
+        const boton = document.getElementById("boton-comprobar");
+
+        let intentos = 5;
+
+        // Esta función se activa cuando haces clic en el botón
+        boton.onclick = function () {
+            let intentoActual = inputUsuario.value; // Cogemos lo que escribiste
+
+            if (intentos > 0) {
+                if (intentoActual == contrasenia) {
+                    cajaAlerta.textContent = "¡Acertaste! 🎉";
+                    cajaAlerta.style.backgroundColor = "green";
+                } else {
+                    intentos--;
+                    cajaAlerta.textContent = "Fallaste. Te quedan " + intentos + " intentos. ❌";
+                    cajaAlerta.style.backgroundColor = "red";
+                }
+            } else {
+                cajaAlerta.textContent = "BOMBA EXPLOTADA. No quedan intentos. 💣";
+            }
+        };
+    </script>
+</body>
+
+</html>

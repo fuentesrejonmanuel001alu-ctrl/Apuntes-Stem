@@ -1,0 +1,66 @@
+
+    Recupera los nombres y salarios de todos los empleados.
+
+
+SELECT nombre, salario FROM empleados;
+
+    Selecciona todos los datos de la tabla empleados.
+
+
+SELECT * FROM empleados;
+
+    Empleados en IT y Ciudad Madrid.
+
+
+SELECT * FROM empleados WHERE departamento = 'it' AND ciudad = 'madrid';
+
+    Salario entre 3001 y 6000.
+
+
+SELECT * FROM empleados WHERE salario > 3000 AND salario <= 6000;
+
+    Lista única de ciudades.
+
+
+SELECT DISTINCT ciudad FROM empleados;
+
+    Ventas o Marketing con salario > 5000.
+
+
+SELECT * FROM empleados WHERE (departamento = 'ventas' OR departamento = 'marketing') AND salario > 5000;
+
+    Empleados que NO son de Recursos Humanos.
+
+
+SELECT * FROM empleados WHERE departamento <> 'recursos humanos';
+
+    Clientes de Barcelona.
+
+
+SELECT * FROM clientes WHERE ciudad = 'barcelona';
+
+    Departamentos con menores de 30 años y salario > 4000.
+
+
+SELECT DISTINCT departamento FROM empleados WHERE edad < 30 AND salario > 4000;
+
+    Salario >= 3500 en el departamento de Desarrollo.
+
+
+SELECT * FROM empleados WHERE salario >= 3500 AND departamento = 'desarrollo';
+
+
+Partidos con > 4 goles totales	SELECT * FROM partidos WHERE (goles_local + goles_visitante) > 4;
+4	Jugadores de equipos de Madrid	SELECT * FROM jugadores WHERE id_equipo IN (1, 3, 17, 20);
+5	Victorias locales	SELECT * FROM partidos WHERE goles_local > goles_visitante;
+6	Equipos por ciudad (A-Z)	SELECT * FROM equipos ORDER BY ciudad ASC;
+7	Delanteros con > 20 goles	SELECT * FROM jugadores WHERE posicion = 'Delantero' AND goles > 20;
+8	Promedio goles (Local) ID:1	SELECT AVG(goles_local) FROM partidos WHERE id_equipo_local = 1;
+9	Partidos en enero 2023	SELECT * FROM partidos WHERE fecha BETWEEN '2023-01-01' AND '2023-01-31';
+10	Contar jugadores de equipo 1	SELECT COUNT(*) FROM jugadores WHERE id_equipo = 1;
+11	Ciudad ASC / Fundación DESC	SELECT * FROM equipos ORDER BY ciudad ASC, fundado DESC;
+12	Edad promedio por equipo	SELECT id_equipo, AVG(edad) AS edad_promedio FROM jugadores GROUP BY id_equipo ORDER BY edad_promedio DESC;
+13	Promedio goles/asistencias	SELECT id_equipo, AVG(goles) AS promedio_goles, AVG(asistencias) AS promedio_asistencias FROM jugadores GROUP BY id_equipo ORDER BY promedio_goles DESC, promedio_asistencias ASC;
+14	Total goles local	SELECT id_equipo_local, SUM(goles_local) AS total_goles FROM partidos GROUP BY id_equipo_local ORDER BY total_goles DESC;
+15	Partidos jugados como local	SELECT id_equipo_local, COUNT(*) AS partidos_local FROM partidos GROUP BY id_equipo_local ORDER BY partidos_local DESC;
+16	Victorias locales detalladas	SELECT id_equipo_local, COUNT(*) AS victorias_local, AVG(goles_local) AS prom_goles FROM partidos WHERE goles_local > goles_visitante GROUP BY id_equipo_local ORDER BY victorias_local DESC, prom_goles DESC;

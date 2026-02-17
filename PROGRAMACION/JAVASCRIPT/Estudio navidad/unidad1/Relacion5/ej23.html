@@ -1,0 +1,20 @@
+<script>
+
+
+let numeroFilas = Number(prompt("Dime de cuántas filas quieres la pirámide invertida"));
+
+// Empezamos desde el número total y bajamos hasta 1
+for (let i = numeroFilas; i >= 1; i--) {
+    
+    // 1. Los espacios aumentan conforme bajamos: (Total - i)
+    let espacios = " ".repeat(numeroFilas - i);
+    
+    // 2. Los asteriscos disminuyen: (i)
+    let asteriscos = "*".repeat(i);
+    
+    // 3. Juntamos y mostramos
+    console.log(espacios + asteriscos);
+}
+
+
+</script>

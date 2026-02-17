@@ -1,0 +1,43 @@
+<script>
+
+    //Solicitar un número entero. 
+    //Solicitar otro número por pantalla hasta que este se corresponda con el primer número introducido.
+    //Indicar si el número buscado es mayor o menor que el introducido
+
+    let numeroPrincipal = Number(prompt("Dime un número"))
+    let numero2 = ""
+
+    while (numeroPrincipal != numero2) {
+        numero2 = Number(prompt("Dime otro número"))
+        if (numero2 > numeroPrincipal) {
+            alert("El número buscado es menor")
+        } else if (numero2 == numeroPrincipal){
+            alert("Acertaste")
+        } else {
+            alert("El número buscado es mayor")
+        }
+
+    }
+    
+
+</script>
+
+let numeroPrincipal = Number(prompt("Dime un número"))
+    let numero2 = ""
+    let intentos = 3
+
+    for (let i = 0; i < intentos && numeroPrincipal != numero2; i++) {
+        numero2 = Number(prompt("Dime otro numero. Te quedan " + (intentos - i) + " intentos"))
+        if (numero2 < numeroPrincipal) {
+            alert("El número principal es mayor")
+        } else if (numero2> numeroPrincipal){
+            alert("El número principal es menor")
+        } else {
+
+        }
+    }
+    if (numeroPrincipal == numero2) {
+        alert("Acertaste")
+    } else {
+        alert("Fin de intentos. El número es " + numeroPrincipal)
+    }

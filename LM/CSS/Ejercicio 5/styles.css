@@ -1,0 +1,24 @@
+/* 1. Fuentes diferentes */
+h1, h2 {
+    font-family: 'Verdana', sans-serif; /* Para los encabezados */
+}
+
+p {
+    font-family: 'Times New Roman', serif; /* Para los párrafos */
+}
+
+/* 2. Tamaño de fuente de los subtítulos (MUY GRANDE para que se note) */
+h2 {
+    font-size: 60px !important; /* Cambia el tamaño */
+    color: #2c3e50;
+}
+
+/* 3. Cursiva y color para la cita */
+blockquote {
+    /* 'font-style: italic' es lo que inclina la letra */
+    font-style: italic !important; 
+    color: red !important; /* Rojo brillante para confirmar que funciona */
+    font-size: 25px;
+    border-left: 5px solid red;
+    padding-left: 15px;
+}

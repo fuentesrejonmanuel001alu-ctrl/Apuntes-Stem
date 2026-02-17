@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto hace que el padding no "infle" el tamaño de las cajas */
+}
+.campaña-total{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #b84b0b;
+}
+
+/* Usamos la clase que pusimos en el HTML */
+.cabecera-alerta {
+    display: flex;                /* Activamos Flexbox */
+    justify-content: space-between; /* Título a la izquierda, menú a la derecha */
+    padding: 20px 40px;           /* Espaciado interno superior/inferior y laterales para no tocar bordes */
+    align-items: center;          /* Centra verticalmente los elementos */
+    background-color: #000000;    /* Fondo negro sólido */
+    border-bottom: 40px solid #ff4d4d; /* Una línea roja potente de advertencia */
+}
+.titulo-impacto {
+    font-family: Arial, sans-serif; /* Fuente clara y moderna */
+    font-size: 32px;               /* Tamaño grande para que destaque */
+    font-weight: bold;             /* Grosor contundente */
+    color: #ffffff;                /* Blanco para contrastar con el fondo negro */
+    text-align: left;              /* Alineación controlada */
+    margin: 0;                     /* Eliminamos espacio extra del modelo de caja */
+    border-left: 8px solid #ff4d4d; /* Una barra vertical roja a la izquierda DETALLE VISUAL DECORATIVO*/
+    padding-left: 15px;             /* Espacio entre la barra y el texto DETALLE VISUAL DECORATIVO */
+}
+
+/* Estilos para el menú (contenedor nav) */
+.menu-navegacion>ul {
+    /* 1. ELIMINAR ESTILOS POR DEFECTO (Apartado 2.2) */
+    list-style: none;             /* Quita los puntos de la lista */
+    padding: 0;                   /* Quita el espacio interno por defecto */
+    margin: 0;                    /* Quita el margen por defecto */
+
+    /* 2. ALINEAR HORIZONTALMENTE (Apartado 5.1 y 5.2) */
+    display: flex;                /* Activa Flexbox para poner los hijos en fila */
+    flex-direction: row;          /* Asegura la dirección horizontal */
+}
+/* Seleccionamos la lista para ponerla en fila */
+.lista-enlaces {
+    display: flex;         /* Los pone en una fila */
+    list-style: none;      /* Quita los puntos de la lista */
+    margin: 0;             /* Limpia márgenes */
+    padding: 0;            /* Limpia rellenos */
+}
+
+/* Seleccionamos cada elemento de la lista para darles aire */
+.lista-enlaces li {
+    margin-left: 20px;     /* Añade espacio a la izquierda de cada palabra */
+}
+
+/* Opcional: Estilo para los enlaces (quitar azul y subrayado) */
+.lista-enlaces a {
+    color: white;          /* Color blanco como el título */
+    text-decoration: none; /* Quita el subrayado (estándar de CSS) */
+}
+
+/* 1. ESTILO DE ENLACES POR DEFECTO */
+.lista-enlaces a {
+    color: #ffffff;             /* Blanco para que se vea sobre negro */
+    text-decoration: none;      /* Quita el subrayado */
+    font-weight: normal;        /* Peso normal */
+    padding: 5px 10px;          /* Espacio para que el área de clic sea mayor */
+}
+
+/* 2. EFECTO AL PASAR EL RATÓN (Hover) */
+.lista-enlaces a:hover {
+    background-color: #ff4d4d;  /* Fondo rojo (color de la alerta) */
+    color: #000000;             /* El texto cambia a negro para contrastar */
+}
+
+/* 3. ENLACE DESTACADO (ACTIVO) */
+.lista-enlaces a.activo {
+    border: 2px solid #ff4d4d;  /* Un borde rojo para resaltar */
+    font-weight: bold;          /* Texto en negrita */
+}
+.seccion-hero {
+    /* DIMENSIONES */
+    height: 350px;                /* Altura fija para que sea una sección grande */
+    
+    /* FONDO Y COLOR */
+    background-color: #333333;    /* Gris oscuro para que resalte el texto */
+    color: #ffffff;               /* Texto blanco */
+    
+    /* ALINEACIÓN CON FLEXBOX */
+    display: flex;                /* Activamos Flexbox */
+    flex-direction: column;       /* Elementos uno debajo de otro */
+    justify-content: center;      /* Centrado vertical (eje principal) */
+    align-items: center;          /* Centrado horizontal (eje transversal) */
+    
+    /* ESPACIADO */
+    padding: 20px;                /* Espacio interior para que no pegue a los bordes */
+    text-align: center;           /* Alineación del texto */
+
+    /* IMAGEN DE FONDO */
+    background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000'); 
+    
+    /* AJUSTES DE IMAGEN (Para que no se vea mal) */
+    background-size: cover;       /* La imagen ocupa toda la caja sin deformarse */
+    background-position: center;  /* Centra la imagen para que se vea lo importante */
+    background-repeat: no-repeat; /* Evita que la imagen se duplique */
+    
+    /* MEJORA DE VISIBILIDAD */
+    background-color: rgba(0, 0, 0, 0.7); /* Capa oscura por si la imagen tarda en cargar */
+    background-blend-mode: overlay;       /* Mezcla el color negro con la imagen para que el texto blanco se lea perfecto */
+}
+/* EL TÍTULO COMO PROTAGONISTA */
+.seccion-hero h2 {
+    font-size: 48px;            /* Tamaño muy grande para que mande */
+    font-weight: bold;          /* Negrita contundente */
+    color: #ff4d4d;             /* Rojo de alerta para captar la atención */
+    text-transform: uppercase;  /* Todo en mayúsculas para dar fuerza */
+    margin-bottom: 10px;        /* Separación con el subtítulo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Sombra para que se lea sobre la imagen */
+}
+
+/* EL TEXTO DESCRIPTIVO COMO SUBTÍTULO */
+.seccion-hero p {
+    font-size: 20px;            /* Más pequeño que el título, pero legible */
+    color: #ffffff;             /* Blanco para contrastar */
+    max-width: 600px;           /* Limitamos el ancho para que no sea una línea infinita */
+    line-height: 1.4;           /* Espaciado entre líneas para que respire */
+    text-align: center; /* */
+}
+/* EL BOTÓN COMO LLAMADA A LA ACCIÓN */
+.boton-accion {
+    display: inline-block;      /* Permite que tenga márgenes y rellenos */
+    margin-top: 20px;           /* Separa el botón del texto de arriba */
+    padding: 15px 30px;         /* Crea el cuerpo del botón (arriba/abajo y lados) */
+    background-color: #ff4d4d;  /* Fondo rojo llamativo */
+    color: white;               /* Texto blanco */
+    text-decoration: none;      /* Quita el subrayado de enlace */
+    font-weight: bold;          /* Texto contundente */
+    border-radius: 5px;         /* Bordes suavizados para diseño moderno */
+    transition: all 0.3s ease;  /* Hace que los cambios sean suaves, no bruscos */
+}
+
+/* EFECTO AL PASAR EL RATÓN (Hover + Transformación) */
+.boton-accion:hover {
+    background-color: #ffffff;  /* Cambia el fondo a blanco */
+    color: #ff4d4d;             /* El texto pasa a rojo */
+    transform: scale(1.1);      /* TRANSFORMATION: El botón crece un 10% */
+    cursor: pointer;            /* Cambia el icono del ratón a la mano */
+}
+/* EL CONTENEDOR PADRE */
+.contenedor-recursos {
+    display: flex;            /* Ponemos las tarjetas en fila */
+    justify-content: space-around; /* Deja el mismo espacio entre ellas */
+    padding: 50px;            /* Espacio alrededor de todo el bloque */
+    background-color: #f4f4f4; /* Un gris clarito para que resalten las tarjetas */
+   /*Las de abajo son otras porque en el 4.3 nos piden cambios*/
+    flex-wrap: wrap;          /* 3. ¡CLAVE! Permite que las tarjetas bajen si no caben (móviles) */
+    justify-content: center;  /* Centra el grupo de tarjetas */
+    gap: 20px;                /* 2. Crea una separación visual exacta entre ellas */
+    padding: 40px 20px; 
+}
+/* Usamos el ID que acabamos de crear */
+#seccion-amenazas {
+    background-color: #f9f9f9; /* Un gris muy suave para que las tarjetas blancas resalten */
+    padding: 60px 20px;        /* Espacio generoso alrededor del grupo de tarjetas */
+    border-top: 2px solid #eee; /* Una línea sutil para separar esta sección de la anterior */
+}
+/* Prueba con esta versión más potente */
+#seccion-amenazas .tarjeta img:hover + h3 {
+    color: #000000 !important; /* El !important asegura que gane a cualquier otro color previo */
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Esto solo afecta a las tarjetas que estén dentro de la sección de amenazas */
+#seccion-amenazas .tarjeta {
+    border-color: #ff4d4d; /* Ejemplo: ponerles un borde rojo solo en esta sección */
+    /* 2. REGLA ESPECÍFICA (Añádela debajo) */
+/* Esto solo se activará porque le pusimos el id="seccion-amenazas" al padre */
+    border-top: 5px solid #9ed61b; /* Por ejemplo, una línea roja arriba para avisar de "peligro" */
+}
+    #seccion-amenazas {
+    display: flex;            /* 1. Activa Flexbox: las tarjetas se ponen en fila */
+    flex-wrap: wrap;          /* 2. Permite que las tarjetas bajen si no caben en móviles */
+    justify-content: center;  /* 3. Centra las tarjetas horizontalmente si sobra espacio */
+    gap: 30px;                /* 4. Crea una separación uniforme de 30px entre ellas */
+    padding: 50px 20px;       /* 5. Margen interno para que no peguen a los bordes */
+}
+
+/* CADA TARJETA INDIVIDUAL */
+/* 1. EL CONTENEDOR (LA CAJA) - Fusionado y limpio */
+.tarjeta {
+    background-color: white;     /* Fondo */
+    padding: 20px;               /* Espacio interno */
+    border: 1px solid #ddd;      /* Borde */
+    border-radius: 8px;          /* Esquinas */
+    text-align: center;          /* Alineación texto */
+    
+    /* Propiedades de Flexbox y Adaptación */
+    flex: 1 1 300px;             
+    max-width: 350px;            
+    
+    /* La novedad del ejercicio 4.3 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    
+    /* Para que el efecto hover sea suave */
+    transition: transform 0.3s ease;
+}
+
+/* 2. ESTILO DE LA IMAGEN - Selector de descendiente (Espacio) */
+.tarjeta img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;          /* Bordes redondeados */
+    margin-bottom: 15px;
+    object-fit: cover;           /* Para que la imagen no se deforme */
+}
+
+/* 3. ESTILO DEL TÍTULO - Selector de hijo directo (>) */
+/* Sustituye tu ".tarjeta h3" por este para cumplir el requisito */
+.tarjeta > h3 {
+    color: #b84b0b;              /* El naranja de tu campaña */
+    margin-bottom: 15px;         /* Separación */
+    font-size: 1.4rem;           /* Tamaño destacado */
+}
+
+/* 1. TARJETA DE RIESGO LEGAL (La primera) */
+.tarjeta:nth-child(1) {
+    background-color: #fff5f5; /* Fondo rosado muy suave */
+    border-top: 5px solid #ff4d4d; /* Borde superior grueso */
+}
+.tarjeta:nth-child(1) > h3 {
+    font-weight: 900; /* Nombre más contundente */
+    letter-spacing: 2px; /* Letras más separadas */
+}
+
+/* 2. TARJETA DE MALWARE (La segunda) */
+.tarjeta:nth-child(2) {
+    background-color: #f0fff0; /* Fondo verdoso suave */
+    margin-top: -10px; /* La elevamos un poco para que destaque */
+    transform: scale(1.05); /* Un pelín más grande de base */
+}
+.tarjeta:nth-child(2) > h3 {
+    text-transform: uppercase; /* Nombre en mayúsculas */
+    color: #2e7d32; /* Verde oscuro */
+}
+
+/* 3. TARJETA DE ÉTICA (La tercera) */
+.tarjeta:nth-child(3) {
+    background-color: #f0f4ff; /* Fondo azulado suave */
+    border-radius: 30px; /* Esquinas mucho más redondeadas */
+}
+.tarjeta:nth-child(3) > h3 {
+    font-style: italic; /* Nombre en cursiva */
+    text-decoration: underline; /* Nombre subrayado */
+}
+
+/* SELECTOR DE HERMANOS ADYACENTES (+) */
+/* "Cuando pases el ratón por la imagen, afecta al h3 que viene después" */
+
+/* SELECTOR DE HERMANOS ADYACENTES (+) REFORZADO */
+/* Usamos el ID para asegurar que este color gane a los anteriores */
+
+#seccion-amenazas .tarjeta img:hover + h3 {
+    color: #000000 !important;      /* El negro ganará a los colores de nth-child */
+    transform: translateY(-8px);    /* El título sube un poco más para que se note */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Efecto visual extra: cuando tocas la imagen, que esta también reaccione */
+.tarjeta img:hover {
+    transform: rotate(5deg) scale(1.1); /* La imagen gira y crece un poco */
+    transition: transform 0.3s ease;
+}
+
+/* SELECTOR DE ID PARA EL CONTENEDOR */
+#seccion-campaña {
+    background-color: #222;           /* Un negro profundo para variar */
+    padding: 80px 20px;               /* Mucho aire arriba y abajo */
+    text-align: center;               /* Todo centrado por defecto */
+    border-bottom: 10px solid #9ed61b; /* Una base verde lima para cerrar con fuerza */
+}
+
+/* ESTILOS INTERNOS (Descendientes) */
+#seccion-campaña h2 {
+    color: #9ed61b;                   /* Título verde lima */
+    font-size: 2.5rem;                /* Tamaño grande */
+    margin-bottom: 20px;
+}
+
+#seccion-campaña p {
+    color: #ccc;                      /* Gris suave para el texto */
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;              /* Centra el bloque de texto y da margen abajo */
+}
+
+/* USANDO EL ID QUE ACABAMOS DE CREAR */
+#seccion-campañas {
+    background-color: #1a1a1a;       /* Fondo oscuro */
+    padding: 50px 20px;              /* Espaciado del modelo de caja */
+    color: white;
+}
+
+/* Seleccionamos la lista que es hija directa */
+/* RESET DE ESTILOS POR DEFECTO PARA LA LISTA */
+#seccion-campañas ul {
+    list-style: none; /* 1. ELIMINA LAS VIÑETAS (los puntos negros) */
+    padding: 0;      /* 2. QUITA EL RELLENO lateral que traen por defecto */
+    margin: 0;       /* 3. QUITA EL MARGEN exterior para control total */
+    
+    /* Ahora la preparamos para que se vea moderna */
+    display: flex;   
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para los elementos de la lista */
+#seccion-campañas li {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    /* Al quitar el estilo por defecto, ahora podemos controlar 
+       nosotros el espaciado exacto */
+}
+/* SELECTOR DE TIPO COMBINADO (Clase + Hijo directo) */
+/* Solo afecta a los 'li' que son hijos inmediatos de un 'ul' dentro de nuestra clase */
+
+/* ===================================================
+   6. SECCIÓN DE EVENTOS O CAMPAÑAS 
+   =================================================== */
+
+/* ===================================================
+   6. SECCIÓN DE CAMPAÑAS (FINAL)
+   =================================================== */
+.seccion-lista-moderna {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.seccion-lista-moderna > ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Diseño común para las tarjetas */
+.seccion-lista-moderna > ul > li {
+    background-color: #ffffff;
+    border: 2px solid #ff4d4d;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0px #000;
+    flex: 1 1 300px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+/* EL TERCER EVENTO DIFERENCIADO */
+.seccion-lista-moderna > ul > li:nth-child(3) {
+    background-color: #9ed61b;
+    border: 3px solid #000;
+    transform: rotate(2deg);
+    box-shadow: 8px 8px 0px #ff4d4d;
+}
+
+/* LA FECHA DESTACADA (Etiqueta <time>) */
+.seccion-lista-moderna li time {
+    display: inline-block;
+    margin-top: auto;
+    padding: 8px 15px;
+    background-color: #000;
+    color: #9ed61b;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-align: center; /* Centra el texto dentro de la barrita negra */
+    width: 100%;        /* Ocupa todo el ancho de la caja negra */
+}
+
+/* ===================================================
+   7. FOOTER ADAPTATIVO (FINAL)
+   =================================================== */
+#pie-pagina {
+    background-color: #121212; /* Fondo oscuro */
+    color: #f0f0f0;            /* Texto claro */
+    padding: 40px 50px;
+    border-top: 5px solid #ff4d4d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;           /* Adaptabilidad */
+    gap: 30px;
+}
+
+#pie-pagina p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+#pie-pagina ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+/* EFECTOS EN LOS ENLACES */
+#pie-pagina ul li a {
+    color: #9ed61b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#pie-pagina ul li a:hover {
+    background-color: #ff4d4d;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+}
+

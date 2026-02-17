@@ -1,0 +1,398 @@
+<!DOCTYPE html> <!--Indica al navegador que usamos HTML5 para evitar fallos de diseño.-->
+
+<html lang="es"><!--Define que nuestra web sobre el Mustang está en español-->
+
+<head><!--"Contiene la configuración ""invisible"", como el título de la pestaña."-->
+    <meta charset="UTF-8" /> <!--"Soporta todos los caracteres"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--"Crucial para las páginas y ocupar el ancho"-->
+    <title>Ford Mustang GT Convertible</title><!--Esta es la pestaña-->
+    <style>
+        /* ESTO ES EL CSS, TAMBIÉN PODEMOS HACER UN ARCHIVO LLAMADO ESTILOS.CSS Y HACEMOS UN ENLACE EXTERNO ASÍ:
+    <link rel="stylesheet" href="estilos.css">
+    Selectores: Universal (*), de etiqueta (body, h1), de ID (#) y de clase.
+
+Modelo de Caja: margin, padding, border y box-sizing.
+
+Colores y Texto: color, background-color, font-family y text-align.
+
+Flexbox: display: flex y justify-content.
+
+No he añadido nada de "mi cosecha" que no esté en tu temario para que no te líes en el examen.
+
+2. ¿Qué es Flexbox y qué es el Modelo de Caja (Box Model)?
+Aquí es donde hay una pequeña confusión de nombres. En tu temario no existe el "Flex Model", lo que existe es el Modelo de Caja y el sistema Flexbox.
+
+Modelo de Caja (Box Model): Es la base de todo en CSS. Dice que cada elemento HTML es una caja. Esta caja tiene:
+
+Contenido: El texto o imagen.
+
+Padding (Relleno): El espacio entre el texto y el borde.
+
+Border (Borde): La línea que rodea al padding.
+
+Margin (Margen): El espacio por fuera del borde para separarse de otras cajas.
+
+Flexbox: Es un sistema de diseño para organizar esas cajas. Se usa para que los elementos dentro de un contenedor se alineen automáticamente (por ejemplo, poner los botones del menú uno al lado del otro en fila sin que se amontonen).
+
+Resumen: El Modelo de Caja es cómo es una caja por dentro; Flexbox es cómo colocas varias cajas en la habitación.
+     1. SELECTOR UNIVERSAL: Limpieza y Box Model */
+        * {
+            margin: 0;
+            /* Elimina el margen por defecto del navegador */
+            padding: 0;
+            /* Elimina el relleno por defecto */
+            box-sizing: border-box;
+            /* Incluye padding y borde en el ancho total */
+        }
+
+        /* 2. SELECTOR POR ELEMENTO: Tipografía y Colores Globales */
+        body {
+            font-family: Arial, sans-serif;
+            /* Define la fuente principal */
+            line-height: 1.6;
+            /* Mejora la legibilidad del texto */
+            background-color: #f4f4f4;
+            /* Color de fondo gris claro para la web */
+            color: #333;
+            /* Color de texto gris oscuro */
+        }
+
+        /* 3. DISEÑO CON FLEXBOX: El Menú de Navegación */
+        nav ul {
+            display: flex;
+            /* Convierte la lista en un contenedor flexible */
+            justify-content: space-around;
+            /* Distribuye los enlaces con espacio uniforme */
+            background-color: #222;
+            /* Fondo oscuro para el menú */
+            padding: 15px;
+            /* Espacio interno del menú */
+            list-style-type: none;
+            /* Quita las bolitas de la lista */
+        }
+
+        nav a {
+            color: white;
+            /* Texto de enlaces en blanco */
+            text-decoration: none;
+            /* Quita el subrayado de los enlaces */
+            font-weight: bold;
+            /* Pone el texto en negrita */
+        }
+
+        /* 4. EL MODELO DE CAJA: Secciones y Contenedores */
+        main {
+            max-width: 1000px;
+            /* El contenido no se estira más de 1000px */
+            margin: 20px auto;
+            /* 20px arriba/abajo y centrado horizontalmente */
+            padding: 20px;
+            /* Espacio entre el borde y el contenido */
+            background-color: white;
+            /* Fondo blanco para el contenido principal */
+            border: 1px solid #ddd;
+            /* Borde fino alrededor del contenido */
+        }
+
+        section {
+            margin-bottom: 40px;
+            /* Separa las secciones (Historia, Modelos, etc.) */
+        }
+
+        /* 5. SELECTOR POR CLASE E ID: Títulos y Botones */
+        h1,
+        h2 {
+            color: #b22222;
+            /* Color rojo "Mustang" para títulos */
+            text-align: center;
+            /* Centra los encabezados */
+            margin-bottom: 15px;
+            /* Espacio debajo del título */
+        }
+
+        #contacto {
+            background-color: #eee;
+            /* Fondo gris suave para el formulario */
+            padding: 20px;
+            /* Espacio interno para que no pegue al borde */
+            border-radius: 8px;
+            /* Bordes redondeados (estética) */
+        }
+
+        /* 6. ESTILOS DE TABLAS: Datos Técnicos */
+        table {
+            width: 100%;
+            /* La tabla ocupa todo el ancho disponible */
+            border-collapse: collapse;
+            /* Une los bordes de las celdas */
+            margin-top: 15px;
+            /* Espacio sobre la tabla */
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            /* Borde para ver las celdas */
+            padding: 10px;
+            /* Espacio interno en cada celda */
+            text-align: left;
+            /* Alinea el texto a la izquierda */
+        }
+
+        th {
+            background-color: #222;
+            /* Fondo oscuro para los títulos de la tabla */
+            color: white;
+            /* Texto blanco para los títulos */
+        }
+
+        /* 7. ESTILOS DE FORMULARIO: Botón dinámico */
+        button[type="submit"] {
+            background-color: #b22222;
+            /* Fondo rojo */
+            color: white;
+            /* Texto blanco */
+            padding: 10px 20px;
+            /* Botón más grande y fácil de pulsar */
+            border: none;
+            /* Quita el borde por defecto */
+            cursor: pointer;
+            /* Cambia el cursor al pasar por encima */
+            width: 100%;
+            /* El botón ocupa todo el ancho en móviles */
+        }
+    </style>
+</head>
+
+<body><!--"Aquí irá todo lo que el usuario verá: fotos, motores y precios."-->
+
+    <header>
+        <!--Contiene elementos que generalmente aparecen al inicio de una página web, como logotipos, títulos y menús de navegación.-->
+        <h1>Ford Mustang: El Rey de los Muscle Cars</h1><!--Etiqueta de encabezado principal-->
+        <nav id="menu-mustang"><!--nav identifica moverte por la página principal, un menú-->
+            <!--Etiqueta fundamental porque ayuda a lectores con discapacidad y secciones importantes web-->
+            <!--ID es el DNI, enlaza menús web y permite a CSS y JS encontrar el elemento para cambiarlo-->
+            <ul> <!--Es el contenedor de las listas desordenadas-->
+                <li><a href="#historia">Historia</a></li>
+                <!--El li: es el elemento de la lista y a: es la etiqueta de ancla o enlace (Anchor). Su función es conectar con otra página o sección, de un sitio a otro.
+                Externo: <a href="http://google.com"> (Te vas a otra web). Interno (Ancla): <a href="#historia"> (Saltas a un id de tu propia página)-->
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#galeria">Galería multimedia</a></li>
+                <li><a href="#contacto">Únete al Club</a></li>
+            </ul>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!--Envuelve el contenido central y único de la página. Solo debe ir lo que no se repite en otras páginas (por ejemplo, la historia específica del Mustang), 
+        dejando fuera el menú o el pie de página. Uno por página: Solo puede haber un elemento <main> visible en cada documento HTML. Jerarquía: Se coloca justo después del <header> y antes del <footer>.-->
+        <section id="historia">
+            <!--sirve para agrupar contenido que tiene un tema común, como si fuera un capítulo de un libro o un bloque lógico de tu web. 
+        Ayuda a organizar el <main> en partes diferenciadas (por ejemplo: una sección para "Historia", otra para "Motores", etc.).-->
+            <h2>El Legado del Ford Mustang</h2> <!--Etiqueta secundaria-->
+            <p>Un icono de potencia y diseño desde 1964.</p>
+            <!--es la abreviatura de párrafo (paragraph). Se utiliza para agrupar bloques de texto dentro de tu página web.-->
+            <p>El Ford Mustang fue presentado oficialmente en la Feria Mundial de Nueva York el 17 de abril de 1964.</p>
+            <p>Se convirtió en el lanzamiento más exitoso de la marca desde el Modelo A.</p>
+        </section>
+        <section id="modelos">
+            <h2>Catálogo de Leyendas</h2>
+            <p>Estos son los modelos que definieron cada época del Mustang:</p>
+
+            <ul>
+                <li><strong>Mustang 1964 ½:</strong> El que lo empezó todo. El primer "Pony Car".</li>
+                <li><strong>Shelby GT500 "Eleanor":</strong> Famoso por su potencia y su diseño agresivo.</li>
+                <li><strong>Mustang Mach 1:</strong> El rey de las pistas en los años 70.</li>
+                <li><strong>Mustang Dark Horse 2024:</strong> La bestia moderna con 500 CV de potencia.</li>
+            </ul>
+        </section>
+        <section id="galeria">
+            <h2>Fotos del Modelo GT</h2>
+
+            <figure>
+                <!--Con esta etiqueta en cada foto, evitamos que las fotos estén pegadas y ponemos pie de foto o vídeo-->
+                <img width="400"
+                src="Multimedia Mustang/mustang1.jpg" alt="Ford Mustang GT con fondo nevado">
+                <figcaption>El modelo más bonito de la historia</figcaption>
+                <!--Es la información que acompaña a la foto-->
+            </figure>
+            <figure>
+                <img width="400"
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMGo79XTWEQLGUxHJgWywVuLK1J4icrUj2Qi6YngrjEK2k9iYA638J7bfWa73_mDzm9wiRqubmCUXO75Ii_Hjwc6OtetA20SRPOBD3ks7is8xXwTE4a59kxEbEbHYkAQu0di4zNEuxXRQ/s1600/Ford+Mustang+Convertible.jpg"
+                    alt="Ford Mustang rojo de exposición"><!--Si la imagen es externa (de google, p.ej), usamos href para ir a esa foto-->
+                <figcaption>En cualquier color enamora</figcaption>
+            </figure>
+            <figure>
+                <img width="500" height="315" src="Multimedia Mustang/mustang3.jpg"
+                    alt="Ford Mustang de culo"><!--width: ancho, height: alto, para fotos y vídeo-->
+                <figcaption>Esa trasera recuerda al modelo clásico</figcaption>
+            </figure>
+            <figure>
+                <img width="500" height="405" src="Multimedia Mustang/mustang4.jpg" alt="Ford Mustang con raya">
+                <figcaption>Algunos nostálgicos prefieren sus rayas</figcaption>
+            </figure>
+            <figure>
+                <video width="300" controls autoplay muted
+                    loop><!--controls te muestra la barra de controles: play, pausa, volumen, etc, autoplay hace que funcione solo, sin muted no funciona autoplay, loop se reproduce automáticamente al acabar-->
+                    <source src="Multimedia Mustang/mustangclasico.mp4" type="video/mp4">
+                    <!--No es obligatorio poner type, pero es recomendable. Este vídeo está descargado en PC-->
+                </video>
+                <title>vídeo short de clásico negro circulando</title>
+                <figcaption>Desde el primer modelo ya enamoraba</figcaption>
+                <!--Si queremos que se lea, tiene que ir fuera de la etiqueta vídeo-->
+            </figure>
+            <figure>
+                <a href="https://youtu.be/et3hzbSpd-A">Ver vídeo de
+                    conducción</a><!--Esto se abre en el mismo navegador-->
+                <!--Si no hubiésemos puesto br, los enlaces salen pegados. IMPORTANTE: BR, ¡NO TIENE ETIQUETA DE CIERRE /BR!-->
+                <br><a href="https://youtu.be/et3hzbSpd-A" target="_blank">Ver este vídeo del
+                    Mustang</a><!--Abre una pestaña nueva-->
+                <br><a href="https://youtube.com/shorts/dvRzgaTGE-k?si=CQxOhtkJJBPiihOH">Escuchar el rugido de su V8
+                    mientras se conduce</a>
+            </figure>
+            <br><iframe width="500" height="405" src="https://www.youtube.com/embed/et3hzbSpd-A?autoplay=1&mute=1"
+                title="Ford Mustang Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <title>Es un vídeo de 5 minutos</title>
+            <!--allow:Es el atributo más importante hoy en día. Es una lista de "permisos" que tú le das al vídeo externo para que pueda
+                    usar funciones del navegador del usuario y con allowfullscreen permites la Pantalla completa-->
+            <!--Dato importante: si el siguiente vídeo es enlace externo (como es el caso), hay que abrir la etiqueta de div-->
+            <br><iframe width="500" height="315" src="https://www.youtube.com/embed/dkyIkOQAR2w"
+                title="Reproductor de vídeo Mustang" frameborder="1"></iframe>
+            <title>Es un Mustang clásico blanco</title>
+
+            <!--los iframe se identifican como texto y se pegan al lado de la anterior foto, para evitar esto, o ponemos <div>ETIQUETA</div> 
+                que ocupa todo el ancho y obligamos a dar salto o ponemos <br>. Title es invisible, como alt en imágenes y framborder para bordes-->
+
+            <!--Si hiciéramos uso de accelerometer y gyroscope: Permite que el vídeo detecte 
+                si el usuario mueve el móvil (por ejemplo, para vídeos en 360°) y clipboard-write: Permite que puedas darle a 
+                un botón dentro del vídeo para "Copiar enlace" al portapapeles.-->
+        </section>
+        <section id="especificaciones">
+            <h2>Potencia V8</h2>
+            <p>500 caballos de puro músculo americano.</p>
+        </section>
+        <section id="detalles">
+            <h3>Características del Mustang Dark Horse</h3>
+            <ul><!--Etiqueta de lista desordenada En <ul> (Desordenadas): 
+                Aunque ahora se hace con CSS, el temario menciona que existen estilos como 
+                disc (punto relleno), circle (círculo vacío) o square (cuadrado).-->
+                <li><strong>Motor:</strong> V8 de 5.0 litros</li><!--formato de lista-->
+                <li><strong>Potencia:</strong> 500 CV</li>
+                <li><strong>Transmisión:</strong> Manual de 6 velocidades o Automática de 10</li>
+            </ul>
+
+            <h3>Pasos para el arranque perfecto</h3>
+            <ol type="1"><!--Etiqueta lista ordenada. En <ol> (Ordenadas): Puedes usar type="A" 
+                (letras mayúsculas), type="i" (números romanos) o type="1" (números normales).-->
+                <li>Pisar el embrague a fondo</li>
+                <li>Pulsar el botón "Engine Start"</li>
+                <li>Disfrutar del rugido del motor</li>
+            </ol>
+        </section>
+        <section id="comparativa">
+            <h2>Comparativa de Rendimiento</h2>
+            <table style="border: 1px solid black;" width="100%">
+                <thead>
+                    <tr><!--Es la fila TABLE ROW-->
+                        <th scope="col">Modelo</th><!--Es un GPS para ciegos-->
+                        <th scope="col">Año</th>
+                        <th scope="col">Caballos (CV)</th>
+                        <!--scope="col": Indica que el título es para la columna (ej: "Modelo", "Año").
+                        scope="row": Indica que el título es para la fila 
+                        (ej: si pusieras el nombre del coche a la izquierda).-->
+                    </tr>
+                </thead>
+                <tfoot><!--Suelo de la tabla, aparecerá abajo-->
+                    <tr>
+                        <td colspan="3">Datos extraídos de Ford Performance</td><!--Combinar, unir celdas-->
+                    </tr>
+                </tfoot>
+                <tbody><!-- Sirve para agrupar los datos reales: 
+                    Sirve para separar el contenido (los modelos de coche, sus años, sus CV) de los títulos o los pies de página.
+                    También es organización semántica: Le dice al navegador: "Todo lo que esté aquí dentro
+                    es la información principal". También es control visual: Si en el futuro quieres que 
+                    todas las filas de datos tengan un color, pero que los títulos no cambien, 
+                    aplicarás el estilo directamente al <tbody>. También es Carga eficiente: En tablas muy
+                    grandes (por ejemplo, una lista de todos los Mustang fabricados desde 1964), 
+                    el navegador puede empezar a mostrar el cuerpo mientras el resto se procesa.-->
+                    <tr>
+                        <td>Mustang Clásico</td><!--TABLE DATA celda, lo que va dentro-->
+                        <td>1964</td>
+                        <td>271</td>
+                    </tr>
+                    <tr>
+                        <td>Mustang Dark Horse</td>
+                        <td>2024</td>
+                        <td>500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="contacto">
+            <h2>Únete al Club de Fans</h2>
+            <form action="/enviar-datos" method="POST"> <!--action: Es la dirección a la que envías el sobre. 
+                 En este caso, le dices al navegador: "Cuando el usuario pulse el botón, 
+                 envía la información a la página /enviar-datos" POST Es la forma de enviarlo, el método 
+                 seguro. Envía los datos "escondidos" dentro del sobre, no a la vista de todos en la 
+                 barra de direcciones del navegador.-->
+                <label for="nombre">Nombre Completo:</label> <!--Label etiqueta de texto que ve el usuario
+                for="nombre": Es el cable que conecta el texto con el hueco de escritura. Al poner "nombre", le dices: 
+                "Yo soy la etiqueta del input que tiene el ID nombre". Esto es vital para la accesibilidad 
+                (lectores de pantalla).-->
+                <input type="text" id="nombre" name="user_name" required placeholder="Tu nombre">
+                <!--type="text": Define qué tipo de datos admite. En este caso, letras. Si fuera password, saldrían 
+                puntitos; si fuera number, solo números. id="nombre": El DNI del hueco. Sirve para que el 
+                label sepa a quién pertenece. name="user_name": ¡OJO! Este es el nombre que recibirá el 
+                servidor. Cuando los datos lleguen a la fábrica, ellos leerán: "user_name: Juan". Es el 
+                nombre de la variable. required: Obliga al usuario a escribir algo. Si no lo hace, el 
+                formulario no se envía. placeholder: Es ese texto gris que aparece dentro del hueco y 
+                desaparece cuando empiezas a escribir.-->
+                <br>
+            </form>
+
+            <label for="correo">Email:</label>
+            <input type="email" id="correo" name="user_email" required> <br>
+
+            <label for="modelo-pref">Modelo favorito:</label><!--model-pref: No es una etiqueta de HTML, 
+                es simplemente el ID o Name que tú le has inventado a tu lista desplegable (abreviatura de 
+                "modelo preferido").-->
+            <select id="modelo-pref" name="preferencia">
+                <option value="clasico">Mustang 1964</option><!--option: Son las opciones que aparecen
+                    dentro de un menú desplegable (<select>). value: Es lo que realmente se envía al 
+                    servidor. El usuario ve "Mustang 1964", pero el servidor recibe el código corto que tú 
+                    pongas en el value (por ejemplo: 64_classic-->
+                <option value="moderno">Mustang 2024</option>
+            </select>
+
+            <br><!--(Break): Es un salto de línea invisible. Lo usas para que el texto de abajo 
+                no se pegue al de arriba. Es como el "Enter" del teclado. NO SE CIERRA-->
+
+            <button type="submit">¡Quiero unirme!</button><!--type="submit", recoge los datos. Su uso es finalizar
+                el registro, type="reset", borro todo lo que el usuario haya escrito, Uso: Cuando el 
+                usuario se equivoca mucho y quiere empezar de cero, type="button" Se usa para conectarlo 
+                con JavaScript. Por ejemplo, para que al pulsarlo se abra una ventana, cambie el color de 
+                la página o calcule algo (como el precio de un Mustang con extras) sin necesidad de 
+                enviar el formulario todavía.-->
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <hr><!--no tiene etiqueta de cierre, dibuja una línea horizontal-->
+        <section>
+            <h4>Nuestra Sede</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d2950.446337831002!2d-83.2104576!3d42.311681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b33608332152d%3A0x63346944e43f5f3e!2sFord%20Motor%20Company%20World%20Headquarters!5e0!3m2!1ses!2ses!4v1705260000000!5m2!1ses!2ses"
+                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <p>Mustang Fan Page - Tu rincón de Muscle Cars</p>
+            <p>Contacto: <a href="mailto:tu-correo@ejemplo.com">Enviar Email</a></p>
+        </section>
+        <p>&copy; 2026 <strong>Mustang Fan Club</strong>. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<script>
+
+
+    //Crea un array llamado letras con los valores "a", "b", "c", "d".
+    //Invierte el array utilizando alguno (o varios) de las siguientes funciones: push(), pop(), shift() y unshift().
+    //Imprime el array invertido.
+
+    let valores = ["a", "b", "c", "d"]
+    valores.shift()
+    valores.pop()
+    valores.shift()
+    valores.unshift("d")
+    valores.push("b")
+    valores.push("a")
+    console.log(valores)
+</script>
+
+let valores=["a","b","c","d"]
+valores[0]="d"
+valores[1]="c"
+valores[2]="b"
+valores[3]="a"
+console.log(valores)
+
+
+let letras = ["a", "b", "c", "d"]
+    let invertido = []
+    let numerosFijos = letras.length
+
+    for (let i = 0; i < numerosFijos; i++) {
+        invertido.push(letras.pop())
+    }
+    console.log(invertido)

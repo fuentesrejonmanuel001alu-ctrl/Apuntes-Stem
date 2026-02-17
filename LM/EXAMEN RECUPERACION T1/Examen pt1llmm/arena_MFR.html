@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arena - Datos MFR</title>
+</head>
+<body>
+
+    <header>
+        <h1>STEM Arena Mini</h1>
+        <p>En tu academia favorita, disfruta de unas mini vacaciones en la playa</p>
+        <nav>
+            <ul>
+                <li><a href="index_MFR.html">Inicio</a></li>
+                <li><a href="arena_MFR.html">Arena (XML)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Visualización de Datos del Torneo</h2>
+            <iframe src="xml/arena.xml" width="100%" height="300px"></iframe>
+            
+        </section>
+
+        <section>
+            <h3>Conceptos Clave</h3>
+            <dl>
+                <dt>DTD</dt>
+                <dd>Documento que define la estructura legal de un archivo XML.</dd>
+                <dt>XSD</dt>
+                <dd>Esquema avanzado que valida los tipos de datos y patrones del XML.</dd>
+                <dt>Validación</dt>
+                <dd>Proceso de comprobar que el archivo XML cumple con todas las reglas definidas.</dd>
+            </dl>
+        </section>
+
+        <form action="#" method="get">
+            
+            <fieldset>
+                <legend>Rol en el evento:</legend>
+                <input type="radio" id="rol1" name="rol" value="competidor">
+                <label for="rol1">Competidor/a</label><br>
+                
+                <input type="radio" id="rol2" name="rol" value="espectador">
+                <label for="rol2">Espectador/a</label><br>
+                
+                <input type="radio" id="rol3" name="rol" value="staff">
+                <label for="rol3">Staff</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Áreas de Interés:</legend>
+                <input type="checkbox" id="int1" name="intereses" value="frontend">
+                <label for="int1">Frontend</label><br>
+                
+                <input type="checkbox" id="int2" name="intereses" value="linux">
+                <label for="int2">Linux</label><br>
+                
+                <input type="checkbox" id="int3" name="intereses" value="bbdd">
+                <label for="int3">Bases de Datos</label>
+            </fieldset>
+
+            <p>
+                <label for="modalidad">Modalidad de participación:</label>
+                <select id="modalidad" name="modalidad">
+                    <option value="online">Online</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="mixta">Mixta</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="notas">Notas adicionales:</label><br>
+                <textarea id="notas" name="notas" rows="5" cols="50" placeholder="Escribe aquí tus observaciones..."></textarea>
+            </p>
+
+            <button type="submit">Enviar Preferencias</button>
+            <button type="reset">Reiniciar Formulario</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Autor: Manuel — <a href="mailto:tu-correo@ejemplo.com">Enviar Email</a></p>
+        <p>&copy; 2026 <strong>STEM Arena Mini</strong>. Licencia Creative Commons.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<script>
+
+let filas = Number(prompt("¿De cuántas filas quieres la pirámide real?"));
+
+for (let i = 1; i <= filas; i++) {
+    // 1. Espacios: El total menos la fila actual
+    let espacios = " ".repeat(filas - i);
+    
+    // 2. Estrellas: La fórmula para números impares
+    let estrellas = "*".repeat((i * 2) - 1);
+    
+    // 3. ¡Construcción completada!
+    console.log(espacios + estrellas);
+}
+
+
+</script>

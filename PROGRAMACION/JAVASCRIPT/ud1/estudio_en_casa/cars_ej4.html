@@ -1,0 +1,30 @@
+<script>
+
+const nombre = []
+let coche = ""
+let puntos = 0
+
+let medalla = ""
+
+for (i = 0; i < 3; i++) {
+  coche = prompt("Dime el nombre del coche")
+  puntos = parseFloat(prompt("Dime cuántos puntos ha conseguido")) 
+  nombre.push(coche)
+  
+  
+  
+  if (puntos < 50) {
+    medalla = "Fuera del podio"
+  } else if (puntos >= 50 && puntos <= 79) {
+    medalla = "Plata"
+  } else {
+    medalla = "Oro"
+  }
+  
+  console.log("Coche " + (i + 1) + ": " + coche + " - " + puntos + " puntos → " + medalla)
+}
+
+
+
+
+</script>

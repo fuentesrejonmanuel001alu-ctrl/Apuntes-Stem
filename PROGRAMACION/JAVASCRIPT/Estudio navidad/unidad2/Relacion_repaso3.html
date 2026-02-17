@@ -1,0 +1,50 @@
+<script>
+
+    let cartas = [];
+    let precios = [];
+    const LIMITE = 8;
+    let totalCompra = 0;
+    let tiposComprados = 0;
+
+    // --- FASE 1: LLENAR EL INVENTARIO ---
+    let nombreEntrada = prompt("Introduce nombre de carta (o 'FIN' para terminar):");
+
+    while (nombreEntrada.toUpperCase() !== "FIN" && cartas.length < LIMITE) {
+        let precioEntrada = parseFloat(prompt("Introduce el precio de " + nombreEntrada + ":"));
+
+        cartas.push(nombreEntrada);
+        precios.push(precioEntrada);
+
+        if (cartas.length < LIMITE) {
+            nombreEntrada = prompt("Siguiente carta (o 'FIN'):");
+        }
+    }
+
+    // --- FASE 2: REALIZAR COMPRAS ---
+    let compra = prompt("¿Qué carta quieres comprar? (Escribe 'FIN' para pagar):");
+
+    while (compra.toUpperCase() !== "FIN") {
+        let indice = cartas.indexOf(compra);
+
+        if (indice !== -1) {
+            let cantidad = parseInt(prompt("¿Cuántas unidades de " + compra + " quieres?"));
+            let subtotal = precios[indice] * cantidad;
+
+            totalCompra += subtotal;
+            tiposComprados++;
+
+            console.log(compra + " x" + cantidad + ": " + subtotal.toFixed(2) + "€");
+        } else {
+            console.log("Lo siento, no tenemos la carta: " + compra);
+        }
+
+        compra = prompt("¿Algo más? (o 'FIN' para el total):");
+    }
+
+    console.log("--- TICKET FINAL ---");
+    console.log("Total a pagar: " + totalCompra.toFixed(2) + "€");
+    console.log("Tipos de cartas distintas: " + tiposComprados);
+
+
+
+</script>

@@ -1,0 +1,25 @@
+<script>
+  //Pide al usuario el tiempo que estuvo estacionado (en horas) y calcula el coste:
+  //- Primeras 2 horas: 5€ cada hora.
+  //- De 2 a 5 horas: 4€ cada hora.
+  //- Más de 5 horas: 3€ cada hora adicional.
+
+  let tiempoEstacionado = parseFloat(
+    prompt("¿Cuántas horas estuviste estacionado?"));
+
+  const primeras2Horas = 5;
+  const de2a5 = 4;
+  const masDe5 = 3;
+
+  if (!(tiempoEstacionado >= 0)) {
+    console.log("Dato erróneo");
+  } else if (tiempoEstacionado <= 2) {
+    console.log(
+      " Tienes que pagar " + primeras2Horas * tiempoEstacionado + " €"
+    );
+  } else if (tiempoEstacionado > 2 && tiempoEstacionado <= 5) {
+    console.log("Tienes que pagar " + tiempoEstacionado * de2a5 + " €");
+  } else {
+    console.log("Tienes que pagar " + tiempoEstacionado * masDe5 + " €");
+  }
+</script>
