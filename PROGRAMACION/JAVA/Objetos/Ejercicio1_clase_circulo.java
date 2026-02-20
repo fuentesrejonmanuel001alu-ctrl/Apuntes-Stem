@@ -4,12 +4,12 @@ public class Ejercicio1_clase_circulo {
 
     public static void main(String[] args) {
 
-     Circulo circulo1= new Circulo(5);
-     Circulo circulo2= new Circulo(1);
-     
-     System.out.println("Círculo de radio " + circulo1.radio + " Área: " + circulo1.calcularArea() + " Perímetro: " );
-         
-     
+    Circulo circulo1= new Circulo(5);
+    Circulo circulo2= new Circulo(1);
+
+    System.out.println("Círculo de radio " + circulo1.radio + " Área: " + circulo1.calcularArea() + " Perímetro: " );
+
+    
     }
     
 }
