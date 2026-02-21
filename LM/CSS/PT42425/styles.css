@@ -1,0 +1,125 @@
+/* El asterisco selecciona TODOS los elementos */
+* {
+    box-sizing: border-box; /* Fundamental: el padding no agranda la caja */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between; /* Título a la izquierda, nav a la derecha */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db; /* Cambio de color al pasar el ratón */
+}
+main { padding: 20px; max-width: 1000px; margin: auto; }
+
+.perfil-usuario { /* Añade esta clase a la primera sección en tu HTML */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.perfil-usuario img {
+    border-radius: 50%; /* Imagen redonda */
+    border: 3px solid #3498db;
+}
+
+.perfil-usuario p {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/* Contenedor de posts */
+.publicaciones-container { 
+    display: flex;
+    flex-direction: column; /* Organiza en columnas (uno debajo de otro) */
+    gap: 15px; 
+}
+
+article {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    border: 2px solid transparent;
+}
+
+article:hover {
+    background-color: #eaf2f8;
+}
+
+/* Diferentes bordes para cada publicación usando nth-child */
+article:nth-child(1) { border-style: solid; border-color: #3498db; }
+article:nth-child(2) { border-style: dashed; border-color: #e74c3c; }
+article:nth-child(3) { border-style: double; border-color: #2ecc71; }
+
+/* EXTRA: Selector hermano adyacente */
+/* Si un artículo recibe foco o hover, el h3 del siguiente cambia de color */
+article:hover + article h3 {
+    color: orange;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+button:hover {
+    background-color: darkblue;
+    transform: scale(1.1); /* Se agranda un 10% */
+}
+
+.otros-usuarios {
+    display: flex; /* En fila */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.otros-usuarios article {
+    flex: 1; /* Todos miden lo mismo */
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.otros-usuarios img {
+    transition: transform 0.3s;
+}
+
+.otros-usuarios article:hover img {
+    transform: scale(1.2); /* La imagen crece al pasar el ratón */
+}

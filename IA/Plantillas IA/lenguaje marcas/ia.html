@@ -1,0 +1,44 @@
+<script>
+
+    const productos = ["Silla Gaming", "Escritorio", "Ratón", "Monitor", "Teclado"];
+    const costes = [250, 450, 30, 200, 80];
+    const estados = ["Enviado", "Cancelado", "Enviado", "Cancelado", "Enviado"];
+
+    let listaCancelados = []
+    let productosDeMasDe400=[]
+    let sumaProductosCancelados = 0
+    let aplicacionIVA = 0
+    let costeIVA = 0
+    let mensaje = ""
+    
+    let emojiOrdenador="🖥️"
+    let emojiIVA="💣"
+    let emojiDinero="💰"
+    let emojiReponer="⚠️"
+
+
+    for (let i = 0; i < productos.length; i++) {
+
+        if (estados[i] === "Cancelado") {
+            listaCancelados.push(productos[i])
+            sumaProductosCancelados += costes[i]
+            if (costes[i] > 400) {
+                productosDeMasDe400.push(productos[i])
+                mensaje = (emojiReponer + " ¡Atención! Pérdida crítica: " + productosDeMasDe400)
+            }
+        }
+        
+    }
+    aplicacionIVA = sumaProductosCancelados * 0.21
+    costeIVA = sumaProductosCancelados + aplicacionIVA
+    console.log(`
+${emojiOrdenador} Los productos que han sido cancelados son: ${listaCancelados.join(", ")}
+
+${emojiIVA} El coste de los productos cancelados asciende a: ${sumaProductosCancelados} €
+
+${emojiDinero} El el IVA del 21% son: ${aplicacionIVA.toFixed(2)} €, que sumado al coste, asciende a: ${costeIVA.toFixed(2)} €
+
+${mensaje}
+`)
+
+</script>

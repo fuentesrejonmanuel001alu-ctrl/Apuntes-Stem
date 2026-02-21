@@ -1,0 +1,23 @@
+<script>
+
+    //Crea un programa que simule un cajero. 
+    //El usuario tiene un saldo inicial de 1000 euros 
+    //y el cajero permite al usuario retirar dinero mientras su saldo no se quede por debajo de cero.
+
+    let saldo = 1000
+    while (saldo > 0) {
+        let retirada = parseFloat(prompt("¿Qué cantidad deseas retirar?\nTe quedan: " + saldo + " €"))
+        if (retirada <= saldo) {
+            saldo -= retirada
+        } else {
+            alert("No dispones de suficiente efectivo para retirar")
+        }
+    }
+    if (saldo == 0) {
+        alert("Se acabó")
+    }
+
+
+
+
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html> <html lang="es"> <head>
+    <meta charset="UTF-8"> <title>Resumen de Pedidos</title>
+    <style>
+        /* Un poco de diseño básico */
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; }
+        .contenedor { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .alerta { color: red; font-weight: bold; border: 2px solid red; padding: 10px; display: none; }
+    </style>
+</head>
+<body>
+
+    <main class="contenedor"> <h1>Gestión de Inventario 📋</h1>
+        
+        <p><strong>Productos cancelados:</strong> <span id="lista"></span></p> 
+        <p><strong>Coste base:</strong> <span id="costeBase"></span> €</p>
+        <p><strong>Total con IVA (21%):</strong> <span id="totalIVA"></span> €</p>
+
+        <div id="alertaCritica" class="alerta"></div> </main>
+
+    <script>
+        // Tus datos originales
+        const productos = ["Silla Gaming", "Escritorio", "Ratón", "Monitor", "Teclado"];
+        const costes = [250, 450, 30, 200, 80];
+        const estados = ["Enviado", "Cancelado", "Enviado", "Cancelado", "Enviado"];
+
+        let listaCancelados = [];
+        let sumaProductosCancelados = 0;
+        let mensajeAlerta = "";
+
+        // Tu lógica de procesamiento
+        for (let i = 0; i < productos.length; i++) {
+            if (estados[i] === "Cancelado") {
+                listaCancelados.push(productos[i]);
+                sumaProductosCancelados += costes[i];
+                if (costes[i] > 400) {
+                    mensajeAlerta = "⚠️ ¡Atención! Pérdida crítica: " + productos[i];
+                }
+            }
+        }
+
+        const aplicacionIVA = sumaProductosCancelados * 0.21;
+        const costeIVA = sumaProductosCancelados + aplicacionIVA;
+
+        // --- CONEXIÓN CON LA WEB ---
+        // Buscamos las etiquetas por su ID y les asignamos el valor
+        document.getElementById("lista").innerText = listaCancelados.join(", ");
+        document.getElementById("costeBase").innerText = sumaProductosCancelados;
+        document.getElementById("totalIVA").innerText = costeIVA.toFixed(2);
+
+        // Si hay un mensaje de alerta, lo mostramos
+        if (mensajeAlerta !== "") {
+            const divAlerta = document.getElementById("alertaCritica");
+            divAlerta.innerText = mensajeAlerta;
+            divAlerta.style.display = "block"; // Hacemos que el div sea visible
+        }
+    </script>
+</body>
+</html>

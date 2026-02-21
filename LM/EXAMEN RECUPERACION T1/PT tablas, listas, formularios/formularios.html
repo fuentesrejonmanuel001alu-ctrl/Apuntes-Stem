@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mario Kart - Registro de Pilotos</title>
+</head>
+<body>
+
+    <h1>Ficha de Inscripción: Grand Prix</h1>
+
+    <form action="#">
+        <p>
+            <label for="piloto">Nombre del Piloto:</label>
+            <input type="text" id="piloto" name="piloto" minlength="3" maxlength="20" required>
+        </p>
+
+        <p>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="edad">Edad (8-99):</label>
+            <input type="number" id="edad" name="edad" min="8" max="99" required>
+        </p>
+
+        <fieldset>
+            <legend>Ítems preferidos:</legend>
+            <input type="checkbox" id="item1" name="items" value="rojo">
+            <label for="item1">Caparazón rojo 🔴</label><br>
+            
+            <input type="checkbox" id="item2" name="items" value="platano">
+            <label for="item2">Plátano 🍌</label><br>
+            
+            <input type="checkbox" id="item3" name="items" value="estrella">
+            <label for="item3">Estrella ⭐</label>
+        </fieldset>
+
+        <p>
+            <label for="copa">Selecciona tu Copa:</label>
+            <select id="copa" name="copa">
+                <option value="champi">Copa Champiñón</option>
+                <option value="flor">Copa Flor</option>
+                <option value="estrella">Copa Estrella</option>
+                <option value="especial">Copa Especial</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="mensaje">Comentarios de carrera:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Cuéntanos tu estrategia..."></textarea>
+        </p>
+
+        <button type="submit">Enviar Inscripción 🏎️</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<script>
+
+    //El programa pide el número de coches en carrera. 
+    //Por cada coche, solicita su nombre y puntos conseguidos (máximo 100). Si los puntos son:
+
+
+    let nombreCocheQueHaPasado = ""
+    let respuestaNombreCocheQueHaPasado = ""
+    let puntosConseguidosCocheQueHaPasado = ""
+    let respuestaPuntosConseguidosCocheQueHaPasado = 0
+    let medalla = ""
+    let numeroDeCochesEnCarrera = parseInt(prompt("¿Cuántos coches hay en carrera?"))
+
+    for (let i = 0; i < numeroDeCochesEnCarrera; i++) {
+        nombreCocheQueHaPasado = prompt("Nombre del coche " + (i + 1) + ":")
+        puntosConseguidosCocheQueHaPasado = parseInt(prompt("¿Cuántos puntos ha conseguido el coche que acaba de pasar?"))
+        if (puntosConseguidosCocheQueHaPasado >= 80) {
+            medalla = "Oro"
+        } else if (puntosConseguidosCocheQueHaPasado >= 50) {
+            medalla = "Plata"
+        } else if (puntosConseguidosCocheQueHaPasado < 50) {
+            medalla = "Fuera del podio"
+        } else {
+
+        }
+        console.log(`Coche ${i + 1}: ${nombreCocheQueHaPasado} - ${puntosConseguidosCocheQueHaPasado} puntos → ${medalla}`);
+    }
+
+
+
+
+</script>

@@ -1,0 +1,14 @@
+/* 1. Color para todos los párrafos */
+p {
+    color: #883b3b;
+}
+
+/* 2. Fondo para los párrafos con clase destacado */
+.destacado {
+    background-color: #4b85af;
+}
+
+/* 3. Tamaño de fuente para el botón con ID accion */
+#accion {
+    font-size: 18px;
+}

@@ -1,0 +1,6 @@
+<!ELEMENT concesionario (coche+)>
+<!ELEMENT coche (modelo, potencia, precio)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT potencia (#PCDATA)>
+<!ATTLIST potencia unidad CDATA #REQUIRED>
+<!ELEMENT precio (#PCDATA)>

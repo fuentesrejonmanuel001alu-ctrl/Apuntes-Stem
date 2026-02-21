@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica: Listas en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #ccc;
+            overflow-x: auto;
+        }
+        ul {
+            list-style-type: square;
+        }
+        ul ul {
+            list-style-type: circle;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Práctica: Listas en HTML</h1>
+    <p>En esta actividad, practicarás la creación de listas ordenadas, no ordenadas y anidadas utilizando HTML. Completa
+        las tareas indicadas en los comentarios del código y utiliza las etiquetas <code>&lt;ol&gt;</code>,
+        <code>&lt;ul&gt;</code>, y <code>&lt;li&gt;</code> para resolverlas.</p>
+
+    <h2>Instrucciones</h2>
+    <ol>
+        <li>Crea una lista ordenada con tus tres películas favoritas.</li>
+        <li>Crea una lista no ordenada con tres hobbies que disfrutes.</li>
+        <li>Crea una lista anidada dentro de una lista ordenada:
+            <ul>
+                <li>El primer nivel debe enumerar dos tipos de comida (ejemplo: italiana, japonesa).</li>
+                <li>Cada tipo de comida debe incluir al menos dos platos típicos como subelementos.</li>
+            </ul>
+        </li>
+        <li>Utiliza atributos como <code>type</code> y <code>start</code> en al menos una de las listas ordenadas.</li>
+        <li>Utiliza diferentes estilos de viñeta en las listas no ordenadas aplicando CSS
+            (<code>list-style-type</code>).</li>
+    </ol>
+
+    <h2>Respuestas</h2>
+
+    <h3>1. Mis películas favoritas</h3>
+    <ol type="I">
+        <li>El Señor de los Anillos</li>
+        <li>Origen</li>
+        <li>Interstellar</li>
+    </ol>
+
+    <h3>2. Mis hobbies</h3>
+    <ul style="list-style-type: circle;">
+        <li>Jugar al fútbol</li>
+        <li>Leer novelas</li>
+        <li>Tocar la guitarra</li>
+    </ul>
+
+    <h3>3. Tipos de comida</h3>
+    <ol start="3">
+        <li>Italiana
+            <ul>
+                <li>Pizza</li>
+                <li>Pasta carbonara</li>
+            </ul>
+        </li>
+        <li>Japonesa
+            <ul>
+                <li>Sushi</li>
+                <li>Ramen</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+
+</html>
+

@@ -1,0 +1,25 @@
+<script>
+    //Pide al usuario la duración de una llamada (en minutos) y calcula el coste total según estas reglas:
+
+
+    let duracionLlamada = Number(prompt("¿Cuántos minutos has estado hablando?"))
+
+    let coste1 = 0.50
+    let coste2 = 0.30
+
+    let costeTotal1 = 0.50 * duracionLlamada
+    let costeTotal2 = 0.30 * duracionLlamada
+
+
+    if (duracionLlamada < 3) {
+        console.log("Llamada gratuita")
+    } else if (duracionLlamada < 10) {
+        console.log("Tu llamada cuesta " + costeTotal1 + " euros ")
+    } else {
+        console.log("Tu llamada cuesta " + costeTotal2 + " euros ")
+    }
+
+
+
+
+</script>

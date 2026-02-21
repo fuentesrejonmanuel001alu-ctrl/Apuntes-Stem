@@ -1,0 +1,43 @@
+<script>
+
+    let nombreProducto = prompt("🎁 Dime el nombre del producto o escribe 'FINALIZAR' 🏃‍♂️")
+
+    let almacenProductos = []
+    let almacenPrecios = []
+    let bandera = false
+    let ventaMayorista = false
+    let mensaje = ""
+    let importeTotalVentas = 0
+    let precioMedioProductosVendidos = 0
+
+    while (nombreProducto.toLocaleUpperCase() != "FINALIZAR") {
+        if (nombreProducto == "FINALIZAR") {
+            bandera = true
+        } else {
+            almacenProductos.push(nombreProducto)
+            let precioProducto = parseFloat(prompt("💶 Dime el precio del producto"))
+            almacenPrecios.push(precioProducto)
+            nombreProducto = prompt("🎁 Dime el nombre del producto o escribe 'FINALIZAR' 🏃‍♂️")
+        }
+    }
+    for (let i = 0; i < almacenPrecios.length; i++) {
+        importeTotalVentas += almacenPrecios[i]
+        precioMedioProductosVendidos = (importeTotalVentas / almacenPrecios.length)
+
+        if (almacenPrecios[i] > 1000) {
+            ventaMayorista = true
+            mensaje = "🔔 Venta mayorista"
+        } else {
+
+        }
+    }
+
+    console.log(`Los productos que han entrado en el almacén son: ${almacenProductos.join(", ")}
+    🏭 Los precios son: ${almacenPrecios.join(", ")} €
+    💰 El importe total de las ventas asciende a: ${importeTotalVentas.toFixed(2)} €
+    🧱 El precio medio de los productos vendidos es: ${precioMedioProductosVendidos.toFixed(2)} €
+    ${mensaje}`)
+
+
+
+</script>

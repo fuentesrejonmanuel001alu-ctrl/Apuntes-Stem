@@ -1,0 +1,167 @@
+/*1. Estilos Globales*/
+
+* {
+    /* Es el selector universal y afecta a todas las etiquetas sin excepción.
+    En el *: Solo ponemos el "reset" (margin, padding, box-sizing) para limpiar la web*/
+    margin: 0;
+    /* Elimina el margen por defecto del navegador*/
+    padding: 0;
+    /* Elimina el relleno por defecto */
+    box-sizing: border-box;
+    /* Incluye padding y borde en el ancho total.Es vital. Hace que si una caja mide 300px, el padding y el borde 
+    se queden dentro, evitando que la caja se ensanche y rompa el diseño*/
+
+}
+
+body {
+    /*En el body: Ponemos la fuente y el fondo, porque son estilos 
+    que deben heredarse a todo el documento de forma organizada, no forzada.*/
+
+    background-color: #e0f7fa;
+    /* Azul cielo suave */
+    font-family: 'Verdana', sans-serif;
+    /* Fuente legible para párrafos */
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Georgia', serif;
+    /* Fuente decorativa para encabezados */
+
+}
+
+/*2. Encabezado de Bienvenida*/
+header {
+    display: flex;
+    /* Activa Flexbox */
+    justify-content: space-between;
+    /* Título a la izquierda y menú a la derecha para que quede horizontal */
+    align-items: center;
+    /* Centra verticalmente */
+    padding: 15px 5%;
+    background-color: white;
+    color white
+    /*Color de la letra
+    border-bottom: 3px solid #ff4081; /* Borde decorativo solicitado.*/
+}
+
+nav ul {
+    display: flex;
+    /* Pone los enlaces en fila */
+    list-style: none;
+    /* Quita los puntos de la lista */
+}
+
+nav ul li {
+    margin-left: 20px;
+    /* Separa los enlaces entre sí */
+}
+
+/*hover transform scale 1.1 cambia el tamaño del botón*/
+/*hero atraer la atención del usuario inmediatamente, ocupando el 100% del ancho y, a menudo, gran parte de la altura de la pantalla*/
+/*flex grow muestra cuánto puede crecer un contenedor si hay espacio sobrante*/
+
+1. Propiedades de Texto (Tipografía)
+
+    font-family: Define la fuente o tipo de letra. En tu código dice Arial, sans-serif. Esto significa: "Usa Arial, y si el ordenador del usuario no tiene Arial, usa cualquier letra que no tenga remates (sans-serif)".
+
+    line-height: Es el interlineado. Si el texto tiene 16px de alto y pones line-height: 1.6, el espacio entre líneas será 1.6 veces el tamaño de la letra. Sirve para que el texto no se vea "apretado" y sea fácil de leer.
+
+2. Propiedades del Box Model (Espaciado)
+
+    margin: Es el espacio por fuera de la caja. Sirve para separar un elemento de sus vecinos o de los bordes de la pantalla. En tu body, margin: 0 quita el margen que los navegadores ponen por defecto (para que tu web pegue al borde).
+
+    margin-bottom: Es lo mismo, pero solo para el lado de abajo. Tu profe lo usó en las section para que cada ejercicio no esté pegado al siguiente.
+
+    padding: Es el espacio por dentro de la caja. Imagina que es el aire comprimido que protege un objeto dentro de una caja de envío. Separa el contenido (texto) de los bordes de la propia caja.
+
+3. Propiedades Visuales
+
+    background-color: Define el color de fondo. Puede ser un nombre de color (red), un código hexadecimal (#f4f4f4) o un código RGB.
+
+¿Te dejaste alguno?
+
+En el código que me pasaste arriba, también aparecen estos dos que son importantes:
+
+    color: (Lo ves en el h2). A diferencia de background-color, esta propiedad cambia el color del texto.
+
+    display: flex: (Del ejercicio 5). Es el interruptor que convierte la caja en un "contenedor flexible" para alinear lo que haya dentro.
+
+Resumen visual rápido:
+
+    ¿Texto? -> font-family, line-height, color.
+
+    ¿Espacio fuera? -> margin.
+
+    ¿Espacio dentro? -> padding.
+
+    ¿Color de la caja? -> background-color.
+
+¿Te ha quedado clara la diferencia entre el margin y el padding? Es lo que más suele costar al principio, pero si dominas eso, ya tienes medio Box Model en el bolsillo.
+
+Este ejercicio es el que mejor explica por qué esto se llama Flexbox. La propiedad flex-grow le dice a un elemento: "Si sobra espacio en la fila, ¿qué tan avaricioso debes ser para quedártelo?".
+
+Aquí tienes el código para montarlo:
+1. El HTML (Añádelo al final)
+HTML
+
+<section>
+    <h2>Ejercicio 3: Flexbox - flex-grow</h2>
+    <div class="contenedor-crecimiento">
+        <div class="hijo item1">Item 1 (Grow: 1)</div>
+        <div class="hijo item2">Item 2 (Grow: 2)</div>
+        <div class="hijo item3">Item 3 (Grow: 1)</div>
+    </div>
+</section>
+
+2. El CSS (Añádelo al final)
+
+Aquí es donde ocurre la magia matemática:
+CSS
+
+.contenedor-crecimiento {
+    display: flex;
+    background-color: #eee;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.item1 {
+    flex-grow: 1;
+    background-color: #f1c40f; /* Amarillo */
+}
+
+.item2 {
+    flex-grow: 2; /* Este crecerá el doble que sus hermanos */
+    background-color: #e67e22; /* Naranja */
+}
+
+.item3 {
+    flex-grow: 1;
+    background-color: #e74c3c; /* Rojo */
+}
+
+/* Estilo común para que se vean las letras */
+.contenedor-crecimiento div {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+3. ¿Qué es lo que tienes que observar? (La explicación)
+
+Imagina que el contenedor tiene 100px de espacio libre después de haber dibujado las cajas originales.
+
+    El navegador suma todos los valores de flex-grow: 1+2+1=4 partes totales.
+
+    Divide el espacio libre en 4 trozos (25px cada uno).
+
+    Item 1 se queda con 1 trozo (+25px).
+
+    Item 2 se queda con 2 trozos (+50px). ¡Por eso se ve más grande!
+
+    Item 3 se queda con 1 trozo (+25px).
+
+    Dato importante: flex-grow solo funciona si hay espacio sobrante. Si el contenedor está muy apretado, no notarás la diferencia. ¡Prueba a estirar la ventana de tu navegador para ver cómo el Item 2 "come" mucho más espacio que los otros dos!
+    

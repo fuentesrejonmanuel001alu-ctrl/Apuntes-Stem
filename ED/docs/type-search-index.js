@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"nivel1","l":"Calculadora"},{"p":"nivel3","l":"ConstantesFactura"},{"p":"nivel3","l":"Factura"},{"p":"nivel3","l":"LineaFactura"},{"p":"nivel1","l":"Usuario"}];updateSearchResults();

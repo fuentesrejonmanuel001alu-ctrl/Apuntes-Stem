@@ -1,0 +1,34 @@
+<!DOCTYPE entrenamientos SYSTEM "PT1.dtd">
+
+<entrenamientos>
+    <sesion codigo="TR-01" intensidad="media">
+        <fecha>2026-01-11</fecha>
+        <horax>18:30</horax>
+        <tipo>tecnica</tipo>
+        <duracionrv>90</duracionrv>
+        <ubicacion>Gimnasio Olimpia</ubicacion>
+        <coach>Marcos</coach>
+        <participantes>
+            <boxeador>
+                <nombre>Juan</nombre>
+                <pais>España</pais>
+                <alias>El Martillo</alias>
+            </boxeador>
+            <boxeador>
+                <nombre>Luis</nombre>
+                <pais>México</pais>
+            </boxeador>
+        </participantes>
+        <ejercicios>
+            <ejercicio>
+                <nombre>Saco pesado</nombre>
+                <repeticiones>10</repeticiones>
+            </ejercicio>
+            <ejercicio>
+                <nombre>Sombra</nombre>
+                <duracionbloque>15</duracionbloque>
+            </ejercicio>
+        </ejercicios>
+        <notas>Mejorar el juego de pies en la siguiente sesión.</notas>
+    </sesion>
+</entrenamientos>

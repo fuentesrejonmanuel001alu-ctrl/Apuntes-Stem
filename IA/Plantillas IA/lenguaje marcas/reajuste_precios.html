@@ -1,0 +1,27 @@
+<script>
+
+    const productos = ["Silla Gaming", "Escritorio", "Ratón", "Monitor", "Teclado"];
+    const costes = [250, 450, 30, 200, 80];
+    const estados = ["Enviado", "Cancelado", "Enviado", "Cancelado", "Enviado"];
+    const descuento = 0.1
+    let estadoDescuento = 0
+    let productoDescontado = 0
+    let listaProductosConDescuento = []
+    let productosDescontados = []
+    let productosIgnorados = []
+
+    for (let i = 0; i < estados.length; i++) {
+        if (estados[i] == "Enviado") {
+            estadoDescuento = costes[i] * descuento
+            productoDescontado = costes[i] - estadoDescuento
+            listaProductosConDescuento.push(productoDescontado)
+            listaProductosConDescuento = productosDescontados
+        } else {
+            productosIgnorados.push(productos[i])
+        }
+    }
+    console.log(`Se han aplicado descuentos a ${productosDescontados.length} productos: ${productosDescontados.join(", ")}`);
+    console.log(`Precios finales: ${listaProductosConDescuento.join(", ")}`);
+    console.log(`Se han ignorado ${productosIgnorados.length} productos cancelados.`);
+
+</script>

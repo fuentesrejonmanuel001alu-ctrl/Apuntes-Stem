@@ -1,0 +1,76 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="animales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tipos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="perros">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="perro" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="raza" type="xs:string"/>
+                          <xs:element name="peso" type="xs:string"/>
+                          <xs:element name="color" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="gatos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gato" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="raza" type="xs:string"/>
+                          <xs:element name="peso" type="xs:string"/>
+                          <xs:element name="color" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+
+
+    <animales>
+    <tipos>
+        <perros>
+            <perro>
+                <raza>caniche</raza>
+                <peso>4</peso>
+                <color>blanco</color>
+            </perro>
+            <perro>
+                <raza>pekines</raza>
+                <peso>5</peso>
+                <color>marron</color>
+            </perro>
+        </perros>
+        <gatos>
+            <gato>
+                <raza>siames</raza>
+                <peso>3</peso>
+                <color>gris</color>
+            </gato>
+            <gato>
+                <raza>persa</raza>
+                <peso>2</peso>
+                <color>negro</color>
+            </gato>
+        </gatos>
+    </tipos>
+</animales>

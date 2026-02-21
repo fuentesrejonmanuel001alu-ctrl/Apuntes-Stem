@@ -1,0 +1,43 @@
+<script>
+
+    //Crea un programa que simule el paso por boxes de N coches. 
+    //El programa pedirá el nombre del coche y el tiempo que ha tardado en el pit stop. 
+    //Finaliza cuando se introduzca "FIN" como nombre.
+
+// 1. Preparamos las herramientas 🛠️
+let sumaTiempos = 0;
+let totalCoches = 0;
+let tiempoMasRapido = Infinity; // Empezamos con el valor más alto posible
+let nombreMasRapido = "";
+
+// 2. Pedimos el primer nombre fuera del bucle 🚗
+let nombreCoche = prompt("Nombre del coche 1:");
+
+while (nombreCoche.toUpperCase() !== "FIN") {
+    // 3. Pedimos el tiempo del coche actual
+    let tiempo = parseFloat(prompt("Tiempo en boxes de " + nombreCoche + ":"));
+
+    // 4. Actualizamos las estadísticas 📊
+    sumaTiempos += tiempo;
+    totalCoches += 1;
+
+    // 5. ¿Es este el más rápido? (Lógica del mínimo) ⚡
+    if (tiempo < tiempoMasRapido) {
+        tiempoMasRapido = tiempo;
+        nombreMasRapido = nombreCoche;
+    }
+
+    // 6. Preguntamos por el siguiente coche ANTES de volver a empezar el bucle
+    nombreCoche = prompt("Nombre del coche " + (totalCoches + 1) + " (o FIN para terminar):");
+}
+
+// 7. Mostramos los resultados finales 🏆
+if (totalCoches > 0) {
+    let promedio = sumaTiempos / totalCoches;
+    console.log("Total de coches: " + totalCoches);
+    console.log("Tiempo medio: " + promedio.toFixed(1) + " segundos");
+    console.log("El coche más rápido fue " + nombreMasRapido + " con " + tiempoMasRapido + " segundos");
+}
+
+
+</script>

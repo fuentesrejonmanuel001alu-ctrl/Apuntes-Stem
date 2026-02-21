@@ -1,0 +1,12 @@
+<peliculas>
+  <pelicula>
+    <titulo>El Padrino</titulo>
+    <director>Francis Ford Coppola</director>
+    <anio>1972</anio>
+  </pelicula>
+  <pelicula>
+    <titulo>Inception</titulo>
+    <director>Christopher Nolan</director>
+    <anio>2010</anio>
+  </pelicula>
+</peliculas>

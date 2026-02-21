@@ -1,0 +1,15 @@
+/* 1. Selector universal: elimina márgenes y relleno */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Selector de hijo directo: color a los li (hijos de ul) */
+ul > li {
+    color: green;
+}
+
+/* 3. Selector de hermano adyacente: fondo al párrafo después del div */
+div + p {
+    background-color: lightblue;
+}

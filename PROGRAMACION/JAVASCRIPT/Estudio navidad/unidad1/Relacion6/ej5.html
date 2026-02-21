@@ -1,0 +1,24 @@
+<script>
+
+    //Calculadora de temperatura media. 
+    //El programa debe pedir la temperatura de la semana (7 días) y calcular la temperatura promedio. 
+    //Se deben descartar los valores fuera del rango (-20 y 50).
+
+    let promedio = 0
+    let semana = ["lunes", " martes", " miércoles", " jueves", " viernes", " sábado", " domingo"]
+    let sumaTotal = 0
+    let i = 0
+
+    while (i < 7) {
+        let temperaturaSemana = parseFloat(prompt("Dime la temperatura del " + semana[i]))
+        if (temperaturaSemana >= - 20 && temperaturaSemana <= 50) {
+            sumaTotal += temperaturaSemana
+            i++
+        } else {
+            alert("Temperatura no válida")
+        }
+        promedio = sumaTotal / 7
+    }
+    console.log("La suma total es " + sumaTotal.toFixed(2) + " ºC" + " y la temperatura media semanal ha sido " + promedio.toFixed(2) + " ºC")
+
+</script>

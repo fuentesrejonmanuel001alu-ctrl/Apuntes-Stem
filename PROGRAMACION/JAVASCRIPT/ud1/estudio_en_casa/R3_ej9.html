@@ -1,0 +1,13 @@
+<script>
+    //Pide un número de dos cifras e imprime la suma de sus dígitos.
+    // Si el número introducido no es de dos cifras, se debe avisar al usuario.
+    let numero = prompt("Introduce un número de dos cifras:");
+    if (numero < 10 || numero > 99) {
+        console.log("El número no es de dos cifras.");
+    } else {
+        let digito1 = parseInt(numero.charAt(0));
+        let digito2 = parseInt(numero.charAt(1));
+        let suma = digito1 + digito2;
+        console.log("La suma de los dígitos es: " + suma);
+    }
+</script>

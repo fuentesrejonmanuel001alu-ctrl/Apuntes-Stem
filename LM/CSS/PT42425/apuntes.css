@@ -1,0 +1,63 @@
+/*1. Estilos Globales*/
+
+* {
+    /* Es el selector universal y afecta a todas las etiquetas sin excepción.
+    En el *: Solo ponemos el "reset" (margin, padding, box-sizing) para limpiar la web*/
+    margin: 0;
+    /* Elimina el margen por defecto del navegador*/
+    padding: 0;
+    /* Elimina el relleno por defecto */
+    box-sizing: border-box;
+    /* Incluye padding y borde en el ancho total.Es vital. Hace que si una caja mide 300px, el padding y el borde 
+    se queden dentro, evitando que la caja se ensanche y rompa el diseño*/
+
+}
+
+body {
+    /*En el body: Ponemos la fuente y el fondo, porque son estilos 
+    que deben heredarse a todo el documento de forma organizada, no forzada.*/
+
+    background-color: #e0f7fa;
+    /* Azul cielo suave */
+    font-family: 'Verdana', sans-serif;
+    /* Fuente legible para párrafos */
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Georgia', serif;
+    /* Fuente decorativa para encabezados */
+
+}
+
+/*2. Encabezado de Bienvenida*/
+header {
+    display: flex;
+    /* Activa Flexbox */
+    justify-content: space-between;
+    /* Título a la izquierda y menú a la derecha para que quede horizontal */
+    align-items: center;
+    /* Centra verticalmente */
+    padding: 15px 5%;
+    background-color: white;
+    color white
+    /*Color de la letra
+    border-bottom: 3px solid #ff4081; /* Borde decorativo solicitado.*/
+}
+
+nav ul {
+    display: flex;
+    /* Pone los enlaces en fila */
+    list-style: none;
+    /* Quita los puntos de la lista */
+}
+
+nav ul li {
+    margin-left: 20px;
+    /* Separa los enlaces entre sí */
+}
+
+/*hover transform scale 1.1 cambia el tamaño del botón*/
+/*hero atraer la atención del usuario inmediatamente, ocupando el 100% del ancho y, a menudo, gran parte de la altura de la pantalla*/
+/*flex grow muestra cuánto puede crecer un contenedor si hay espacio sobrante*/
