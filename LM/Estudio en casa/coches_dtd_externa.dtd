@@ -1,6 +1,0 @@
- 
-    <!ELEMENT coches (coche+)>
-    <!ELEMENT coche (marca, modelo, año)>
-    <!ELEMENT marca (#PCDATA)>
-    <!ELEMENT modelo (#PCDATA)>
-    <!ELEMENT año (#PCDATA)>
