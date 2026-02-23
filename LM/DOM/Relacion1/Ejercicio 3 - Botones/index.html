@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control de Botones</title>
+    <style>
+        /* Estilos básicos para que las imágenes se vean ordenadas */
+        #visor img {
+            width: 200px;
+            margin: 10px;
+            border: 2px solid #333;
+            display: inline-block;
+        }
+        #visor {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px dashed #ccc;
+            min-height: 100px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Panel de Control de Botones 🎛️</h1>
+    <p><strong>Saludos: </strong>Esto es un párrafo</p>
+
+    <div id="contenedorBotones">
+        <button class="boton">Iniciar</button>
+        <button class="boton">Detener</button>
+        <button class="boton" id="reiniciar">Reiniciar</button>
+        
+        <br><br>
+        
+        <button id="btnImagen1">Insertar Imagen 1</button>
+        <button id="btnImagen2">Insertar Imagen 2</button>
+    </div>
+
+    <div id="visor"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
