@@ -2,7 +2,7 @@ package ED;
 
 /**
  * Representa un perro del colegio
- * @author Manuel
+ * @author Tu nombre
  */
 public class Perro {
     String raza;

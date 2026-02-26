@@ -1,29 +1,39 @@
-// 1. Seleccionamos la lista donde están los álbumes
-const lista = document.querySelector("ul");
+// 1. Seleccionamos los elementos necesarios
+const lista = document.getElementById("lista");
+const btnAniadir = document.getElementById("btnAniadir");
+const btnBorrar = document.getElementById("btnBorrar");
+const btnEditar = document.getElementById("btnEditar");
 
-// --- PASO 1: Crear e insertar "Xapomelon" antes de "L'odore Della Morte" ---
+// --- AÑADIR ELEMENTO ---
+btnAniadir.addEventListener("click", () => {
+    const nuevoLi = document.createElement("li"); //
+    const numero = lista.children.length + 1; // Contamos cuántos hay para poner el número
+    nuevoLi.textContent = `Elemento ${numero}`;
+    lista.appendChild(nuevoLi); //
+});
 
-// Creamos el nuevo elemento
-const albumPegatina = document.createElement("li");
-albumPegatina.textContent = "Xapomelon - La Pegatina";
-
-// Buscamos el álbum de referencia para saber dónde insertar
-const todosLosAlbumes = document.querySelectorAll("li");
-let referencia = null;
-
-todosLosAlbumes.forEach(li => {
-    if (li.textContent.includes("L'odore Della Morte")) {
-        referencia = li;
+// --- BORRAR EL ÚLTIMO ELEMENTO ---
+btnBorrar.addEventListener("click", () => {
+    const ultimo = lista.lastElementChild; // Selecciona el último de la lista
+    if (ultimo) {
+        ultimo.remove(); // Elimina el nodo del DOM
+    } else {
+        alert("No hay más elementos para borrar");
     }
 });
 
-// Lo insertamos antes de la referencia
-if (referencia) {
-    lista.insertBefore(albumPegatina, referencia);
-}
-
-// --- PASO 2: Agregar "Street Gigs" al final de la lista ---
-
-const albumLocos = document.createElement("li");
-albumLocos.textContent = "Street Gigs - The Locos";
-lista.appendChild(albumLocos);
+// --- EDITAR (REEMPLAZAR) EL PRIMERO ---
+btnEditar.addEventListener("click", () => {
+    const primero = lista.firstElementChild; // Selecciona el primero
+    
+    if (primero) {
+        const liEditado = document.createElement("li");
+        liEditado.textContent = "¡Elemento Editado! ✨";
+        liEditado.style.color = "blue";
+        
+        // Reemplazamos el antiguo por el nuevo
+        lista.replaceChild(liEditado, primero);
+    } else {
+        alert("No hay elementos para editar");
+    }
+});
