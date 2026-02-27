@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Pedido de Cerámica</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Realizar Pedido</h1>
+    <div id="formulario-container">
+        <form id="pedidoForm">
+            <label for="nombre">Nombre:</labelF>
+            <input id="nombre" type="text" required><br>
+
+            <label for="email">Correo Electrónico:</label>
+            <input id="email" type="email" required><br>
+
+            <label for="producto">Producto:</label>
+            <select id="producto">
+                <option value="Plato decorativo">Plato decorativo</option>
+                <option value="Jarra artesanal">Jarra artesanal</option>
+                <option value="Azulejo pintado">Azulejo pintado</option>
+            </select><br>
+
+            <label for="cantidad">Cantidad:</label>
+            <input id="cantidad" type="number" min="1" required><br>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </div>
+</body>
+
+</html>
