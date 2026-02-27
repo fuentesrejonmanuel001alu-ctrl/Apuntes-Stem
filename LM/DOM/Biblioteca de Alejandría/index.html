@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Alejandría</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🏛️ Biblioteca de Alejandría</h1>
+        <input type="text" id="buscador" placeholder="Buscar por título o autor...">
+        <div class="controles">
+            <button id="ordenarTitulo">Ordenar por Título</button>
+            <button id="ordenarAutor">Ordenar por Autor</button>
+        </div>
+    </header>
+    <main>
+        <section id="seccion-libros">
+            <h2>Libros Disponibles</h2>
+            <ul id="lista-libros">
+                <li data-autor="Homero"><span class="titulo">La Ilíada</span> - <span class="autor">Homero</span> <button class="btn-fav">⭐</button></li>
+                <li data-autor="Platón"><span class="titulo">La República</span> - <span class="autor">Platón</span> <button class="btn-fav">⭐</button></li>
+                <li data-autor="Aristóteles"><span class="titulo">Ética a Nicómaco</span> - <span class="autor">Aristóteles</span> <button class="btn-fav">⭐</button></li>
+            </ul>
+        </section>
+        <section id="favoritos">
+            <h2>📜 Libros Favoritos (<span id="contador-favs">0</span>)</h2>
+            <ul id="lista-favoritos"></ul>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
