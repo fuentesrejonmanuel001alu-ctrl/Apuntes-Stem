@@ -1,0 +1,23 @@
+<script>
+
+    function claveDeSeguridad(intentos, contrasenia) {
+
+        let acertado = false
+
+        while (intentos > 0 && acertado != true) {
+            contrasenia = Number(prompt("Dime la contraseña. Intentos: " + intentos))
+            if (contrasenia == 1234) {
+                alert("Correcto")
+                acertado = true
+            } else {
+                intentos--
+                alert("error")
+            }
+        }
+        if (intentos == 0 && acertado == false) {
+            alert("Te quedaste sin intentos")
+        }
+    }
+    claveDeSeguridad(3, 1234)
+
+</script>
