@@ -1,0 +1,12 @@
+/* Estilo por defecto */
+#texto {
+    transition: 0.3s; /* Para que el cambio no sea brusco */
+}
+
+/* Clase que activaremos con JS */
+.activado {
+    color: white;
+    background-color: royalblue;
+    padding: 20px;
+    border-radius: 10px;
+}

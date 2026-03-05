@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Contador: <span id="numero">0</span></h1>
+    <button id="btnSubir">Aumentar</button>
+
+    <script>
+        // 1. Seleccionamos (Ojo a la 'D' mayúscula)
+const numero = document.getElementById("numero");
+const boton = document.getElementById("btnSubir");
+
+// Necesitamos una variable "memoria" para guardar el número
+let cuenta = 0; 
+
+// 2. El evento se lo damos al BOTÓN
+boton.addEventListener("click", function() {
+    // 3. Sumamos 1 a la memoria
+    cuenta = cuenta + 1;
+    
+    // 4. Pintamos el resultado en el HTML (Sección 4.1)
+    numero.textContent = cuenta;
+
+    if (cuenta == 5){
+        numero.style.color="red"
+    } else {
+        numero.style.color="black"
+    }
+
+    if (cuenta == 10){
+        numero.style.color="green"
+    }
+
+});
+
+    
+    </script>
+</body>
+
+</html>

@@ -7,3 +7,19 @@ function volumen_cubo(){
 }
 resultado=$(volumen_cubo 4)
 echo $resultado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
