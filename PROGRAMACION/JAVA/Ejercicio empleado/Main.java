@@ -6,10 +6,16 @@
 
 // Implementa una clase Main para probar la creación de objetos y la llamada al método calcularSueldo().
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
 
-       Programador fran = new fran(nombre)
+        Programador fran = new Programador("Fran", 2000);
+        System.out.println(fran);
+        System.out.println(fran.calcularSueldo());
+        Gerente victoria = new Gerente("Victoria", 2100);
+        System.out.println(victoria.calcularSueldo());
+        Diseniador patricia = new Diseniador("Patricia", 2200);
+        System.out.println(patricia.calcularSueldo());
 
     }
 }
