@@ -1,0 +1,25 @@
+<script>
+
+    let mensaje = ""
+    let boolean = false
+
+
+    while (boolean == false) {
+
+        let edad = Number(prompt("Dime tu edad"))
+        let invitacion = prompt("¿Tienes invitación?").toLocaleLowerCase()
+
+
+        if (edad >= 18 && invitacion == "si") {
+            mensaje = "Acceso concedido. ¡Bienvenido a la empresa!"
+            boolean = true
+        } else {
+            alert("Acceso denegado. No cumples los requisitos.")
+        }
+    }
+
+console.log(mensaje)
+
+
+
+</script>
